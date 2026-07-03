@@ -1,0 +1,1484 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Live Music in Summerland Key | Tonio's Seafood Shack</title>
+  <meta name="description" content="See the live-music calendar at Tonio's Seafood Shack in Summerland Key. Enjoy local performers, fresh seafood, cold drinks, and waterfront Florida Keys nights." />
+  <link rel="canonical" href="https://www.toniostiki.com/live-music.html" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Live Music | Tonio's Seafood Shack &amp; Tiki Bar" />
+  <meta property="og:description" content="Live music from Florida Keys local favorites — Mile Marker 25, Summerland Key, FL. Fresh seafood, cold drinks, and great nights on the water." />
+  <meta property="og:image" content="https://www.toniostiki.com/images/live-music-tonies-5.png" />
+  <link rel="icon" type="image/x-icon" href="images/favicon.ico" />
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="inner-page-style.css" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://www.toniostiki.com/live-music.html",
+        "url": "https://www.toniostiki.com/live-music.html",
+        "name": "Live Music in Summerland Key | Tonio's Seafood Shack",
+        "description": "See the live-music calendar at Tonio's Seafood Shack in Summerland Key. Enjoy local performers, fresh seafood, cold drinks, and waterfront Florida Keys nights.",
+        "isPartOf": { "@id": "https://www.toniostiki.com/" }
+      },
+      {
+        "@type": ["MusicVenue", "Restaurant"],
+        "@id": "https://www.toniostiki.com/#restaurant",
+        "name": "Tonio's Seafood Shack & Tiki Bar",
+        "url": "https://www.toniostiki.com",
+        "telephone": "+13057453322",
+        "servesCuisine": ["Seafood", "Florida Keys", "American"],
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Mile Marker 25, US-1",
+          "addressLocality": "Summerland Key",
+          "addressRegion": "FL",
+          "postalCode": "33042",
+          "addressCountry": "US"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 24.6634,
+          "longitude": -81.4521
+        },
+        "priceRange": "$$"
+      }
+    ]
+  }
+  </script>
+
+<style>
+/* ═══════════════════════════════════════════════════════════
+   LIVE MUSIC PAGE — scoped styles
+   ═══════════════════════════════════════════════════════════ */
+
+/* ── HERO ──────────────────────────────────────────────────── */
+.lm-hero {
+  position: relative;
+  min-height: 88vh;
+  display: flex;
+  align-items: flex-end;
+  overflow: hidden;
+  clip-path: polygon(0 0, 100% 0, 100% calc(100% - 4vw), 0 100%);
+  margin-bottom: -4vw;
+}
+.lm-hero-bg {
+  position: absolute;
+  inset: 0;
+  background-image: url('images/pierce-art-tonies.png');
+  background-size: cover;
+  background-position: center 30%;
+  transform: scale(1.04);
+  transition: transform 10s ease;
+  filter: brightness(1.05) saturate(1.08);
+}
+.lm-hero:hover .lm-hero-bg { transform: scale(1); }
+.lm-hero-scrim {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(to right, rgba(10,28,32,.52) 0%, rgba(10,28,32,.1) 50%, transparent 100%),
+    linear-gradient(to top,   rgba(10,28,32,.45) 0%, transparent 35%);
+}
+.lm-hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 680px;
+  padding: clamp(4rem,10vw,8rem) clamp(1.5rem,6vw,4rem) clamp(7rem,13vw,10rem);
+  color: var(--cream);
+}
+.lm-hero-eyebrow {
+  font-family: var(--f-sans);
+  font-size: .62rem;
+  font-weight: 700;
+  letter-spacing: .34em;
+  text-transform: uppercase;
+  color: var(--aqua);
+  display: block;
+  margin-bottom: 1rem;
+}
+.lm-hero-h1 {
+  font-family: var(--f-display);
+  font-size: clamp(2.8rem,9vw,7rem);
+  font-weight: 900;
+  line-height: .9;
+  letter-spacing: -.03em;
+  text-transform: uppercase;
+  margin-bottom: 1.25rem;
+}
+.lm-hero-h1 em { font-style: italic; color: var(--aqua); font-weight: 300; }
+.lm-hero-hand {
+  font-family: var(--f-hand);
+  font-size: clamp(1.1rem,2.5vw,1.5rem);
+  color: rgba(243,236,220,.6);
+  display: block;
+  margin-bottom: 1.25rem;
+}
+.lm-hero-sub {
+  font-size: clamp(.9rem,1.5vw,1.1rem);
+  line-height: 1.7;
+  opacity: .72;
+  max-width: 46ch;
+  margin-bottom: 2rem;
+}
+.lm-hero-actions { display: flex; flex-wrap: wrap; gap: .75rem; }
+
+/* ── PHOTO GALLERY ─────────────────────────────────────────── */
+.lm-gallery {
+  background: var(--navy);
+  padding: clamp(4rem,9vw,7rem) clamp(1.2rem,5vw,3rem) clamp(3rem,7vw,6rem);
+  color: var(--cream);
+}
+.lm-gallery-intro {
+  max-width: 1100px;
+  margin: 0 auto clamp(2.5rem,5vw,4rem);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(2rem,5vw,4rem);
+  align-items: end;
+}
+@media (max-width: 700px) { .lm-gallery-intro { grid-template-columns: 1fr; } }
+.lm-gallery-intro-left { }
+.lm-gallery-intro-eyebrow {
+  font-family: var(--f-sans);
+  font-size: .6rem;
+  font-weight: 700;
+  letter-spacing: .3em;
+  text-transform: uppercase;
+  color: var(--aqua);
+  display: block;
+  margin-bottom: .75rem;
+}
+.lm-gallery-intro-h2 {
+  font-family: var(--f-display);
+  font-size: clamp(2.2rem,6vw,4rem);
+  font-weight: 900;
+  text-transform: uppercase;
+  line-height: .92;
+  letter-spacing: -.02em;
+}
+.lm-gallery-intro-right p {
+  font-family: var(--f-sans);
+  font-size: clamp(.9rem,1.4vw,1.05rem);
+  line-height: 1.75;
+  opacity: .68;
+}
+
+/* 2×2 photo grid */
+.lm-photo-grid {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(.75rem,1.5vw,1.25rem);
+}
+@media (max-width: 640px) { .lm-photo-grid { grid-template-columns: 1fr; } }
+
+.lm-photo-card {
+  position: relative;
+  aspect-ratio: 4/3;
+  overflow: hidden;
+  background: #0d1e24;
+}
+.lm-photo-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform .6s ease;
+}
+.lm-photo-card:hover img { transform: scale(1.04); }
+.lm-photo-card-label {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 1.25rem 1rem .9rem;
+  background: linear-gradient(to top, rgba(10,28,32,.85) 0%, transparent 100%);
+  font-family: var(--f-hand);
+  font-size: clamp(.9rem,1.8vw,1.15rem);
+  color: var(--cream);
+  opacity: .85;
+}
+
+/* ── CALENDAR SECTION ──────────────────────────────────────── */
+.lm-cal {
+  background: var(--cream);
+  color: var(--navy);
+  padding: clamp(4rem,9vw,7rem) clamp(1.2rem,5vw,3rem);
+  clip-path: polygon(0 4vw, 100% 0, 100% 100%, 0 100%);
+  margin-top: -4vw;
+}
+.lm-cal-wrap { max-width: 1000px; margin: 0 auto; }
+.lm-cal-header { text-align: center; margin-bottom: clamp(2rem,5vw,3.5rem); }
+.lm-cal-eyebrow {
+  font-family: var(--f-sans);
+  font-size: .6rem;
+  font-weight: 700;
+  letter-spacing: .32em;
+  text-transform: uppercase;
+  color: var(--rust);
+  display: block;
+  margin-bottom: .75rem;
+}
+.lm-cal-h2 {
+  font-family: var(--f-display);
+  font-size: clamp(2.2rem,7vw,4.5rem);
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: -.02em;
+  line-height: .92;
+  margin-bottom: .75rem;
+}
+.lm-cal-h2 em { font-style: italic; color: var(--aqua); font-weight: 300; }
+.lm-cal-sub {
+  font-size: clamp(.9rem,1.4vw,1.05rem);
+  line-height: 1.7;
+  opacity: .65;
+  max-width: 52ch;
+  margin: 0 auto 1.5rem;
+}
+/* Month nav */
+.lm-month-nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+.lm-month-nav button {
+  background: var(--navy);
+  color: var(--cream);
+  border: none;
+  width: 38px; height: 38px;
+  border-radius: 50%;
+  font-size: 1.1rem;
+  cursor: pointer;
+  display: flex; align-items: center; justify-content: center;
+  transition: background .2s;
+}
+.lm-month-nav button:hover { background: var(--rust); }
+.lm-month-label {
+  font-family: var(--f-display);
+  font-size: clamp(1.2rem,3vw,1.8rem);
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: .04em;
+  min-width: 220px;
+  text-align: center;
+}
+.lm-view-toggle {
+  display: flex;
+  justify-content: center;
+  gap: .5rem;
+  margin-bottom: 2rem;
+}
+.lm-view-btn {
+  font-family: var(--f-sans);
+  font-size: .68rem;
+  font-weight: 700;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  padding: .45rem 1rem;
+  border: 2px solid rgba(20,36,43,.2);
+  background: transparent;
+  color: var(--navy);
+  cursor: pointer;
+  transition: all .2s;
+}
+.lm-view-btn.active { background: var(--navy); color: var(--cream); border-color: var(--navy); }
+
+/* Calendar grid */
+.lm-grid-wrap { display: block; }
+.lm-grid-head {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 2px;
+  margin-bottom: 2px;
+}
+.lm-grid-head-cell {
+  font-family: var(--f-sans);
+  font-size: .6rem;
+  font-weight: 700;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  text-align: center;
+  padding: .5rem .25rem;
+  color: var(--rust);
+  opacity: .8;
+}
+.lm-grid-days {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 2px;
+}
+.lm-day {
+  min-height: clamp(72px,10vw,110px);
+  background: rgba(232,222,200,.3);
+  padding: .5rem .5rem .4rem;
+  cursor: default;
+  position: relative;
+  transition: background .15s;
+  border-bottom: 2px solid transparent;
+}
+.lm-day--empty { background: rgba(232,222,200,.1); }
+.lm-day--today {
+  background: rgba(111,163,160,.15);
+  outline: 2px solid var(--aqua);
+  outline-offset: -2px;
+}
+.lm-day--has-event {
+  cursor: pointer;
+  background: #fff;
+  border-bottom: 3px solid var(--rust);
+  box-shadow: 0 1px 4px rgba(20,36,43,.08);
+}
+.lm-day--has-event:hover {
+  background: rgba(194,83,46,.06);
+  transform: translateY(-1px);
+  box-shadow: 0 3px 8px rgba(20,36,43,.12);
+}
+.lm-day-num {
+  font-family: var(--f-display);
+  font-size: clamp(.85rem,1.8vw,1.15rem);
+  font-weight: 700;
+  line-height: 1;
+  color: var(--navy);
+}
+.lm-day--has-event .lm-day-num { color: var(--rust); font-weight: 900; }
+.lm-day--empty .lm-day-num { opacity: .2; }
+
+/* Event pill inside calendar day */
+.lm-event-dot {
+  display: flex;
+  align-items: center;
+  gap: .25rem;
+  margin-top: .35rem;
+  background: var(--rust);
+  color: #fff;
+  border-radius: 3px;
+  padding: .18rem .4rem;
+  font-family: var(--f-sans);
+  font-size: clamp(.5rem,.75vw,.62rem);
+  font-weight: 700;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: 1.2;
+}
+.lm-event-dot::before {
+  content: '♪';
+  font-size: .7em;
+  flex-shrink: 0;
+}
+
+@media (max-width: 640px) {
+  .lm-day { min-height: 56px; padding: .35rem .3rem; }
+  .lm-event-dot { font-size: .5rem; padding: .15rem .3rem; }
+}
+@media (max-width: 500px) {
+  .lm-event-dot { display: none; }
+  .lm-day--has-event::after {
+    content: '♪';
+    position: absolute;
+    bottom: 5px;
+    right: 4px;
+    font-size: .65rem;
+    color: var(--rust);
+    font-weight: 900;
+  }
+  .lm-day { min-height: 42px; padding: .3rem .25rem; }
+  .lm-day-num { font-size: .78rem; }
+  .lm-grid-head-cell { font-size: .52rem; padding: .35rem .1rem; letter-spacing: .06em; }
+}
+
+/* List view */
+.lm-list-wrap { display: none; }
+.lm-list-item {
+  display: grid;
+  grid-template-columns: clamp(60px,18vw,80px) 1fr auto;
+  gap: clamp(.6rem,2vw,1.25rem);
+  align-items: center;
+  padding: 1.1rem 0;
+  border-bottom: 1px solid rgba(20,36,43,.1);
+  cursor: pointer;
+  transition: padding-left .2s;
+}
+.lm-list-item:hover { padding-left: .5rem; }
+.lm-list-date-box {
+  background: var(--navy);
+  color: var(--cream);
+  text-align: center;
+  padding: .5rem .25rem;
+  flex-shrink: 0;
+}
+.lm-list-date-mo {
+  font-family: var(--f-sans);
+  font-size: .6rem;
+  font-weight: 700;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--aqua);
+  display: block;
+}
+.lm-list-date-day {
+  font-family: var(--f-display);
+  font-size: 2rem;
+  font-weight: 900;
+  line-height: 1;
+}
+.lm-list-info h3 {
+  font-family: var(--f-display);
+  font-size: clamp(1.1rem,2.5vw,1.5rem);
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: -.01em;
+  margin-bottom: .2rem;
+}
+.lm-list-info p {
+  font-family: var(--f-sans);
+  font-size: .82rem;
+  opacity: .6;
+}
+.lm-list-arrow {
+  font-family: var(--f-sans);
+  font-size: 1.1rem;
+  color: var(--aqua);
+  flex-shrink: 0;
+}
+.lm-no-events {
+  text-align: center;
+  padding: 3rem 1rem;
+  font-family: var(--f-hand);
+  font-size: 1.2rem;
+  opacity: .45;
+}
+
+/* ── EVENT MODAL ───────────────────────────────────────────── */
+.lm-modal-bg {
+  position: fixed;
+  inset: 0;
+  background: rgba(10,28,32,.82);
+  z-index: 9000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .25s;
+}
+.lm-modal-bg.open { opacity: 1; pointer-events: all; }
+.lm-modal {
+  background: var(--cream);
+  max-width: 540px;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  position: relative;
+  transform: translateY(20px);
+  transition: transform .25s;
+}
+.lm-modal-bg.open .lm-modal { transform: translateY(0); }
+.lm-modal-photo {
+  width: 100%;
+  aspect-ratio: 3/2;
+  object-fit: cover;
+  object-position: center 20%;
+  display: block;
+}
+.lm-modal-body { padding: clamp(1.5rem,4vw,2.5rem); color: var(--navy); }
+.lm-modal-eyebrow {
+  font-family: var(--f-sans);
+  font-size: .6rem;
+  font-weight: 700;
+  letter-spacing: .24em;
+  text-transform: uppercase;
+  color: var(--rust);
+  display: block;
+  margin-bottom: .5rem;
+}
+.lm-modal-name {
+  font-family: var(--f-display);
+  font-size: clamp(1.8rem,5vw,2.8rem);
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: -.02em;
+  line-height: .92;
+  margin-bottom: .5rem;
+}
+.lm-modal-time {
+  font-family: var(--f-sans);
+  font-size: .82rem;
+  opacity: .6;
+  margin-bottom: 1rem;
+}
+.lm-modal-bio {
+  font-size: .95rem;
+  line-height: 1.75;
+  opacity: .75;
+  margin-bottom: 1.5rem;
+}
+.lm-modal-actions { display: flex; flex-wrap: wrap; gap: .6rem; }
+.lm-modal-close {
+  position: absolute;
+  top: .75rem; right: .75rem;
+  background: rgba(10,28,32,.7);
+  color: #fff;
+  border: none;
+  width: 36px; height: 36px;
+  border-radius: 50%;
+  font-size: 1.1rem;
+  cursor: pointer;
+  display: flex; align-items: center; justify-content: center;
+  z-index: 1;
+}
+
+/* ── FEATURED PERFORMER ────────────────────────────────────── */
+.lm-featured {
+  background: var(--navy);
+  color: var(--cream);
+  padding: clamp(4rem,9vw,7rem) clamp(1.2rem,5vw,3rem);
+  clip-path: polygon(0 0, 100% 4vw, 100% 100%, 0 100%);
+  margin-top: -4vw;
+}
+.lm-featured-wrap {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(2.5rem,6vw,5rem);
+  align-items: center;
+}
+@media (max-width: 700px) { .lm-featured-wrap { grid-template-columns: 1fr; } }
+.lm-featured-photo-wrap {
+  position: relative;
+  aspect-ratio: 3/4;
+  overflow: hidden;
+  clip-path: polygon(0 0, 100% 0, 100% calc(100% - 3vw), 0 100%);
+}
+.lm-featured-photo-wrap img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  object-position: center 15%;
+  display: block;
+}
+.lm-featured-eyebrow {
+  font-family: var(--f-sans);
+  font-size: .6rem;
+  font-weight: 700;
+  letter-spacing: .32em;
+  text-transform: uppercase;
+  color: var(--rust);
+  display: block;
+  margin-bottom: .75rem;
+}
+.lm-featured-h2 {
+  font-family: var(--f-display);
+  font-size: clamp(2rem,5.5vw,3.8rem);
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: -.02em;
+  line-height: .9;
+  margin-bottom: .75rem;
+}
+.lm-featured-h2 em { font-style: italic; color: var(--aqua); font-weight: 300; }
+.lm-featured-name {
+  font-family: var(--f-display);
+  font-size: clamp(1.4rem,3.5vw,2.2rem);
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: -.01em;
+  color: var(--aqua);
+  margin-bottom: .5rem;
+}
+.lm-featured-meta {
+  font-family: var(--f-hand);
+  font-size: 1rem;
+  color: rgba(243,236,220,.55);
+  margin-bottom: 1rem;
+}
+.lm-featured-bio {
+  font-size: clamp(.88rem,1.4vw,1rem);
+  line-height: 1.75;
+  opacity: .68;
+  margin-bottom: 1.5rem;
+}
+.lm-featured-actions { display: flex; flex-wrap: wrap; gap: .65rem; }
+
+/* ── CTA SECTION ───────────────────────────────────────────── */
+.lm-cta {
+  position: relative;
+  min-height: clamp(340px,45vw,560px);
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+.lm-cta-bg {
+  position: absolute;
+  inset: 0;
+  background-image: url('images/live-music-tonies-2.png');
+  background-size: cover;
+  background-position: center 8%;
+  filter: brightness(1.0) saturate(1.05);
+}
+.lm-cta-scrim {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(to right, rgba(10,28,32,.85) 0%, rgba(10,28,32,.4) 65%, rgba(10,28,32,.1) 100%),
+    linear-gradient(to top,   rgba(10,28,32,.6) 0%, transparent 50%);
+}
+.lm-cta-content {
+  position: relative;
+  z-index: 2;
+  max-width: 580px;
+  padding: clamp(3rem,7vw,6rem) clamp(1.5rem,6vw,4rem);
+  color: var(--cream);
+}
+.lm-cta-h2 {
+  font-family: var(--f-display);
+  font-size: clamp(2.5rem,7vw,5rem);
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: -.02em;
+  line-height: .9;
+  margin-bottom: 1rem;
+}
+.lm-cta-h2 em { font-style: italic; color: var(--aqua); font-weight: 300; }
+.lm-cta-p { font-size: clamp(.9rem,1.4vw,1.05rem); line-height: 1.7; opacity: .7; margin-bottom: 1.75rem; max-width: 46ch; }
+.lm-cta-actions { display: flex; flex-wrap: wrap; gap: .65rem; }
+
+/* ── BOOKING SECTION ───────────────────────────────────────── */
+.lm-booking {
+  background: var(--cream-d, #E8DEC8);
+  color: var(--navy);
+  padding: clamp(3.5rem,8vw,6rem) clamp(1.2rem,5vw,3rem);
+}
+.lm-booking-wrap {
+  max-width: 860px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(2.5rem,6vw,5rem);
+  align-items: start;
+}
+@media (max-width: 640px) { .lm-booking-wrap { grid-template-columns: 1fr; } }
+.lm-booking-eyebrow {
+  font-family: var(--f-sans);
+  font-size: .6rem;
+  font-weight: 700;
+  letter-spacing: .3em;
+  text-transform: uppercase;
+  color: var(--rust);
+  display: block;
+  margin-bottom: .75rem;
+}
+.lm-booking-h2 {
+  font-family: var(--f-display);
+  font-size: clamp(1.8rem,4.5vw,3rem);
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: -.02em;
+  line-height: .92;
+  margin-bottom: 1rem;
+}
+.lm-booking-p { font-size: clamp(.88rem,1.4vw,1rem); line-height: 1.75; opacity: .7; margin-bottom: 1.5rem; }
+
+/* inline booking form */
+.lm-form { display: flex; flex-direction: column; gap: .65rem; }
+.lm-form label {
+  font-family: var(--f-sans);
+  font-size: .65rem;
+  font-weight: 700;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  opacity: .6;
+  display: block;
+  margin-bottom: .2rem;
+}
+.lm-form input, .lm-form select, .lm-form textarea {
+  width: 100%;
+  background: rgba(20,36,43,.06);
+  border: 1px solid rgba(20,36,43,.18);
+  padding: .7rem .85rem;
+  font-family: var(--f-sans);
+  font-size: .9rem;
+  color: var(--navy);
+  outline: none;
+  transition: border-color .2s;
+  box-sizing: border-box;
+}
+.lm-form input:focus, .lm-form select:focus, .lm-form textarea:focus {
+  border-color: var(--aqua);
+}
+.lm-form textarea { min-height: 100px; resize: vertical; }
+
+/* ── SOCIAL SECTION ────────────────────────────────────────── */
+.lm-social {
+  background: var(--navy);
+  color: var(--cream);
+  padding: clamp(3rem,7vw,5rem) clamp(1.2rem,5vw,3rem);
+  text-align: center;
+}
+.lm-social-h2 {
+  font-family: var(--f-display);
+  font-size: clamp(2rem,5vw,3.5rem);
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: -.02em;
+  margin-bottom: .75rem;
+}
+.lm-social-h2 em { font-style: italic; color: var(--aqua); font-weight: 300; }
+.lm-social-p { font-size: clamp(.9rem,1.4vw,1rem); line-height: 1.7; opacity: .65; max-width: 50ch; margin: 0 auto 2rem; }
+.lm-social-links { display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap; }
+.lm-social-link {
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
+  padding: .75rem 1.75rem;
+  border: 2px solid rgba(243,236,220,.25);
+  color: var(--cream);
+  font-family: var(--f-sans);
+  font-size: .72rem;
+  font-weight: 700;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: border-color .2s, background .2s;
+}
+.lm-social-link:hover { border-color: var(--aqua); background: rgba(111,163,160,.1); }
+
+/* ── btn-ghost-light ───────────────────────────────────────── */
+.btn-ghost-light {
+  display: inline-flex;
+  align-items: center;
+  gap: .4rem;
+  padding: .75rem 1.5rem;
+  border: 2px solid rgba(243,236,220,.3);
+  color: var(--cream);
+  font-family: var(--f-sans);
+  font-size: .72rem;
+  font-weight: 700;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  text-decoration: none;
+  background: transparent;
+  transition: border-color .25s, background .25s;
+  cursor: pointer;
+}
+.btn-ghost-light:hover { border-color: rgba(243,236,220,.7); background: rgba(243,236,220,.07); }
+
+.btn-sm-dark {
+  display: inline-flex;
+  align-items: center;
+  gap: .4rem;
+  padding: .65rem 1.25rem;
+  background: var(--navy);
+  color: var(--cream);
+  font-family: var(--f-sans);
+  font-size: .72rem;
+  font-weight: 700;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: background .2s;
+}
+.btn-sm-dark:hover { background: var(--rust); }
+
+/* ── NOTICE BAR (hidden unless needed) ────────────────────── */
+.lm-notice {
+  background: var(--rust);
+  color: #fff;
+  text-align: center;
+  padding: .6rem 1rem;
+  font-family: var(--f-sans);
+  font-size: .78rem;
+  font-weight: 700;
+  letter-spacing: .08em;
+  display: none; /* set to block to activate */
+}
+</style>
+</head>
+<body class="page-inner">
+
+<a href="#main" class="skip-link">Skip to main content</a>
+
+<!-- Notice bar — set display:block in CSS above to show -->
+<div class="lm-notice" role="alert" id="lm-notice-bar"></div>
+
+<nav id="nav" role="navigation" aria-label="Main navigation">
+  <div class="nav-wrap">
+    <a href="/" class="nav-logo" aria-label="Tonio's Seafood Shack &amp; Tiki Bar — Home">
+      <img src="images/mascot-icon.png" alt="" aria-hidden="true" class="nav-mascot" />
+      <img src="images/logo-2.png" alt="Tonio's Seafood Shack &amp; Tiki Bar" class="nav-logo-img" />
+    </a>
+    <div class="nav-links">
+      <a href="/">Home</a>
+      <div class="has-drop">
+        <a href="menu-lunch.html">Menus ▾</a>
+        <div class="nav-drop">
+          <a href="menu-breakfast.html">Breakfast &amp; Brunch</a>
+          <a href="menu-lunch.html">Lunch</a>
+          <a href="menu-dinner.html">Dinner</a>
+          <a href="menu-drinks.html">Drinks</a>
+          <a href="menu-happy-hour.html">Happy Hour</a>
+          <a href="special-menus.html">Special Menus</a>
+        </div>
+      </div>
+      <a href="fresh-catch.html">Market</a>
+      <div class="has-drop">
+        <a href="live-music.html" aria-current="page">Entertainment ▾</a>
+        <div class="nav-drop">
+          <a href="live-music.html" aria-current="page">Live Music</a>
+          <a href="events.html">Events</a>
+        </div>
+      </div>
+      <a href="meet-the-crew.html">Crew</a>
+      <a href="shop-the-shack.html">Shop</a>
+      <a href="visit.html">Visit</a>
+      <a href="tel:+13057453322" class="nav-cta">Call Tonio's</a>
+    </div>
+    <button class="burger" id="burger" aria-label="Toggle menu" aria-expanded="false" aria-controls="mob-menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<div id="mob-menu" role="dialog" aria-modal="true" aria-label="Mobile navigation">
+  <a href="/">Home</a>
+  <a href="menu-lunch.html">Menus</a>
+  <div class="mob-sub">
+    <a href="menu-breakfast.html">Breakfast &amp; Brunch</a>
+    <a href="menu-lunch.html">Lunch</a>
+    <a href="menu-dinner.html">Dinner</a>
+    <a href="menu-drinks.html">Drinks</a>
+    <a href="menu-happy-hour.html">Happy Hour</a>
+    <a href="special-menus.html">Special Menus</a>
+  </div>
+  <a href="fresh-catch.html">Market</a>
+  <a href="live-music.html">Entertainment</a>
+  <div class="mob-sub">
+    <a href="live-music.html">Live Music</a>
+    <a href="events.html">Events</a>
+  </div>
+  <a href="meet-the-crew.html">Crew</a>
+  <a href="shop-the-shack.html">Shop</a>
+  <a href="visit.html">Visit</a>
+  <div class="mob-social">
+    <a href="https://www.instagram.com/toniostiki/" target="_blank" rel="noopener">Instagram</a>
+    <a href="tel:+13057453322">Call Tonio's</a>
+  </div>
+</div>
+
+<main id="main">
+
+<!-- ══════════════════════════════════════
+     HERO
+══════════════════════════════════════ -->
+<header class="lm-hero">
+  <div class="lm-hero-bg"></div>
+  <div class="lm-hero-scrim"></div>
+  <div class="lm-hero-content">
+    <span class="lm-hero-eyebrow">Live from the Shack</span>
+    <h1 class="lm-hero-h1">Cold Drinks.<br><em>Fresh Seafood.</em><br>Live Music.</h1>
+    <span class="lm-hero-hand">Good food sounds even better with a little live music.</span>
+    <p class="lm-hero-sub">Pull up a seat, grab something cold, and enjoy live music from some of the Florida Keys' favorite local performers.</p>
+    <div class="lm-hero-actions">
+      <a href="#music-calendar" class="btn btn-primary">View This Month's Music</a>
+      <a href="tel:+13057453322" class="btn-ghost-light">Call the Shack</a>
+    </div>
+  </div>
+</header>
+
+<!-- ══════════════════════════════════════
+     PHOTO GALLERY
+══════════════════════════════════════ -->
+<section class="lm-gallery" aria-labelledby="lm-gallery-heading">
+  <div class="lm-gallery-intro">
+    <div class="lm-gallery-intro-left">
+      <span class="lm-gallery-intro-eyebrow">Music at Tonio's</span>
+      <h2 class="lm-gallery-intro-h2" id="lm-gallery-heading">LOCAL MUSIC.<br>ISLAND NIGHTS.</h2>
+    </div>
+    <div class="lm-gallery-intro-right">
+      <p>There is nothing quite like live music on the water. Tonio's welcomes local musicians, traveling performers, longtime favorites, and new faces to the Shack throughout the month.</p>
+      <p style="margin-top:.75rem;opacity:.55;font-size:.88rem;">Come early for dinner, stay for the music, and let the night unfold.</p>
+    </div>
+  </div>
+
+  <div class="lm-photo-grid">
+
+    <div class="lm-photo-card">
+      <img src="images/live-music-tonies-1.png"
+           alt="Guitarist performing at Tonio's Seafood Shack — white panama hat, acoustic guitar, tips jar"
+           width="1122" height="1402" loading="lazy"
+           style="object-position: center 12%;" />
+      <span class="lm-photo-card-label">Meet Us Under the Tiki.</span>
+    </div>
+
+    <div class="lm-photo-card">
+      <img src="images/live-music-tonies-2.png"
+           alt="Bearded guitarist playing acoustic at Tonio's outdoor stage"
+           width="1254" height="1254" loading="lazy"
+           style="object-position: center 18%;" />
+      <span class="lm-photo-card-label">Dinner, Drinks &amp; a Front-Row Seat.</span>
+    </div>
+
+    <div class="lm-photo-card">
+      <img src="images/live-music-tonies-5.png"
+           alt="Drummer performing at sunset with Florida Keys waterway in the background"
+           width="1254" height="1254" loading="lazy"
+           style="object-position: center 20%;" />
+      <span class="lm-photo-card-label">The Keys Sound Better From the Shack.</span>
+    </div>
+
+    <div class="lm-photo-card">
+      <img src="images/pierce-tonies.png"
+           alt="Guitarist and vocalist performing under stage lighting at Tonio's"
+           width="1254" height="1254" loading="lazy"
+           style="object-position: center 25%;" />
+      <span class="lm-photo-card-label">Local Music. Island Nights.</span>
+    </div>
+
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════
+     MONTHLY CALENDAR
+══════════════════════════════════════ -->
+<section class="lm-cal" id="music-calendar" aria-labelledby="lm-cal-heading">
+  <div class="lm-cal-wrap">
+    <div class="lm-cal-header">
+      <span class="lm-cal-eyebrow">What's Playing</span>
+      <h2 class="lm-cal-h2" id="lm-cal-heading">THIS MONTH<br><em>AT THE SHACK</em></h2>
+      <p class="lm-cal-sub">Live music, local favorites, special performances, and waterfront nights worth planning around.</p>
+    </div>
+
+    <div class="lm-month-nav">
+      <button id="lm-prev" aria-label="Previous month">&#8592;</button>
+      <span class="lm-month-label" id="lm-month-label">July 2026</span>
+      <button id="lm-next" aria-label="Next month">&#8594;</button>
+    </div>
+
+    <div class="lm-view-toggle">
+      <button class="lm-view-btn active" id="lm-btn-grid" aria-pressed="true">Calendar</button>
+      <button class="lm-view-btn" id="lm-btn-list" aria-pressed="false">List View</button>
+    </div>
+
+    <!-- Grid view -->
+    <div class="lm-grid-wrap" id="lm-grid-wrap">
+      <div class="lm-grid-head">
+        <div class="lm-grid-head-cell">Sun</div>
+        <div class="lm-grid-head-cell">Mon</div>
+        <div class="lm-grid-head-cell">Tue</div>
+        <div class="lm-grid-head-cell">Wed</div>
+        <div class="lm-grid-head-cell">Thu</div>
+        <div class="lm-grid-head-cell">Fri</div>
+        <div class="lm-grid-head-cell">Sat</div>
+      </div>
+      <div class="lm-grid-days" id="lm-grid-days"></div>
+    </div>
+
+    <!-- List view -->
+    <div class="lm-list-wrap" id="lm-list-wrap">
+      <div id="lm-list-items"></div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════
+     FEATURED PERFORMER
+══════════════════════════════════════ -->
+<section class="lm-featured" id="featured-performer" aria-labelledby="lm-featured-heading">
+  <div class="lm-featured-wrap">
+    <div class="lm-featured-photo-wrap">
+      <img src="images/live-music-tonies-1.png"
+           alt="Featured live performer at Tonio's Seafood Shack"
+           width="1122" height="1402" loading="lazy"
+           style="object-position: center 10%;" />
+    </div>
+    <div class="lm-featured-copy">
+      <span class="lm-featured-eyebrow">Featured This Month</span>
+      <h2 class="lm-featured-h2" id="lm-featured-heading">MEET THE MUSIC<br><em>BEHIND THE NIGHT</em></h2>
+      <!-- UPDATE: Replace performer name below -->
+      <p class="lm-featured-name" id="featured-name">Tonio's Featured Performer</p>
+      <p class="lm-featured-meta" id="featured-meta">Check the calendar above for upcoming dates &amp; times</p>
+      <p class="lm-featured-bio" id="featured-bio">This month, Tonio's welcomes another great local performer to the Shack. Grab your friends, come hungry, and settle in for a night of music by the water.</p>
+      <div class="lm-featured-actions" id="featured-actions">
+        <a href="#music-calendar" class="btn btn-primary">View the Calendar</a>
+        <a href="https://www.instagram.com/toniostiki/" target="_blank" rel="noopener" class="btn-ghost-light">Follow on Instagram</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════
+     CTA
+══════════════════════════════════════ -->
+<section class="lm-cta" aria-labelledby="lm-cta-heading">
+  <div class="lm-cta-bg"></div>
+  <div class="lm-cta-scrim"></div>
+  <div class="lm-cta-content">
+    <h2 class="lm-cta-h2" id="lm-cta-heading">COME HUNGRY.<br><em>STAY FOR THE MUSIC.</em></h2>
+    <p class="lm-cta-p">Plan your night at Tonio's Seafood Shack with fresh seafood, cold drinks, local characters, and live music under the tiki.</p>
+    <div class="lm-cta-actions">
+      <a href="menu-lunch.html" class="btn btn-primary">View the Menu</a>
+      <a href="https://maps.google.com/?q=Tonio%27s+Seafood+Shack+Summerland+Key+FL" target="_blank" rel="noopener" class="btn-ghost-light">Get Directions</a>
+      <a href="https://www.instagram.com/toniostiki/" target="_blank" rel="noopener" class="btn-ghost-light">Follow Tonio's</a>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════
+     BOOKING
+══════════════════════════════════════ -->
+<section class="lm-booking" aria-labelledby="lm-booking-heading">
+  <div class="lm-booking-wrap">
+    <div>
+      <span class="lm-booking-eyebrow">Musicians Welcome</span>
+      <h2 class="lm-booking-h2" id="lm-booking-heading">WANT TO PLAY<br>THE SHACK?</h2>
+      <p class="lm-booking-p">Are you a local musician or traveling performer interested in playing at Tonio's? Send us your music, available dates, and social-media links. We love discovering new talent and supporting local artists.</p>
+      <p class="lm-booking-p">Have questions first? Call us at <a href="tel:+13057453322" style="color:var(--rust);font-weight:700;">(305) 745-3322</a> and ask about booking.</p>
+    </div>
+    <div>
+      <form class="lm-form" name="music-booking" method="POST" action="#" onsubmit="handleBooking(event)">
+        <div>
+          <label for="bk-performer">Performer / Band Name</label>
+          <input type="text" id="bk-performer" name="performer" required placeholder="Your name or band name" />
+        </div>
+        <div>
+          <label for="bk-contact">Contact Name</label>
+          <input type="text" id="bk-contact" name="contact" required placeholder="Full name" />
+        </div>
+        <div>
+          <label for="bk-email">Email</label>
+          <input type="email" id="bk-email" name="email" required placeholder="your@email.com" />
+        </div>
+        <div>
+          <label for="bk-phone">Phone</label>
+          <input type="tel" id="bk-phone" name="phone" placeholder="(305) 000-0000" />
+        </div>
+        <div>
+          <label for="bk-style">Music Style</label>
+          <select id="bk-style" name="style">
+            <option value="">Select a style…</option>
+            <option>Acoustic / Singer-Songwriter</option>
+            <option>Classic Rock</option>
+            <option>Country</option>
+            <option>Blues</option>
+            <option>Reggae / Island</option>
+            <option>Jazz</option>
+            <option>Pop</option>
+            <option>Original / Other</option>
+          </select>
+        </div>
+        <div>
+          <label for="bk-instagram">Instagram or Facebook</label>
+          <input type="url" id="bk-instagram" name="instagram" placeholder="https://instagram.com/yourhandle" />
+        </div>
+        <div>
+          <label for="bk-dates">Available Dates</label>
+          <input type="text" id="bk-dates" name="dates" placeholder="e.g. Fridays in August, weekends" />
+        </div>
+        <div>
+          <label for="bk-notes">Anything else we should know?</label>
+          <textarea id="bk-notes" name="notes" placeholder="Your website link, video link, or additional info…"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary" style="border:none;cursor:pointer;">Contact Tonio's</button>
+        <p id="bk-confirm" style="display:none;font-family:var(--f-hand);font-size:1.1rem;color:var(--aqua);margin-top:.5rem;">Thanks! We'll be in touch soon.</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════
+     SOCIAL FOLLOW
+══════════════════════════════════════ -->
+<section class="lm-social" aria-labelledby="lm-social-heading">
+  <h2 class="lm-social-h2" id="lm-social-heading">FOLLOW<br><em>THE MUSIC</em></h2>
+  <p class="lm-social-p">Follow Tonio's on social media for new performers, schedule changes, special events, and a little behind-the-scenes chaos from the Shack.</p>
+  <div class="lm-social-links">
+    <a href="https://www.instagram.com/toniostiki/" target="_blank" rel="noopener" class="lm-social-link">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+      @toniostiki on Instagram
+    </a>
+    <a href="https://www.facebook.com/ToniosTiki/" target="_blank" rel="noopener" class="lm-social-link">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+      Tonio's on Facebook
+    </a>
+  </div>
+</section>
+
+</main>
+
+<footer id="footer" role="contentinfo">
+  <div class="footer-top">
+    <div>
+      <div class="foot-brand">
+        <img src="images/mascot-icon.png" alt="" aria-hidden="true" class="mascot mascot--footer foot-mascot" />
+        <img src="images/logo-2.png" alt="Tonio's Seafood Shack &amp; Tiki Bar" class="foot-logo" />
+      </div>
+      <p class="foot-tagline">A waterfront seafood shack, fish market and neighborhood tiki bar at Mile Marker 25, Summerland Key, FL.</p>
+      <div class="foot-soc">
+        <a href="https://www.instagram.com/toniostiki/" target="_blank" rel="noopener">IG</a>
+        <a href="https://www.facebook.com/ToniosTiki/" target="_blank" rel="noopener">FB</a>
+        <a href="https://www.tiktok.com/@toniostiki" target="_blank" rel="noopener">TK</a>
+      </div>
+    </div>
+    <nav class="foot-col" aria-label="Eat and Drink">
+      <h4>Eat &amp; Drink</h4>
+      <ul>
+        <li><a href="menu-breakfast.html">Breakfast &amp; Brunch</a></li>
+        <li><a href="menu-lunch.html">Lunch</a></li>
+        <li><a href="menu-dinner.html">Dinner</a></li>
+        <li><a href="menu-drinks.html">Drinks</a></li>
+        <li><a href="menu-happy-hour.html">Happy Hour</a></li>
+        <li><a href="special-menus.html">Special Menus</a></li>
+      </ul>
+    </nav>
+    <nav class="foot-col" aria-label="At the Shack">
+      <h4>At the Shack</h4>
+      <ul>
+        <li><a href="fresh-catch.html">Market</a></li>
+        <li><a href="live-music.html">Live Music</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a href="meet-the-crew.html">Crew</a></li>
+        <li><a href="shop-the-shack.html">Shop</a></li>
+      </ul>
+    </nav>
+    <nav class="foot-col" aria-label="Visit">
+      <h4>Visit</h4>
+      <ul>
+        <li><a href="visit.html">Hours &amp; Location</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="tel:+13057453322">Call Tonio's</a></li>
+      </ul>
+    </nav>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2026 Tonio's Seafood Shack &amp; Tiki Bar · Summerland Key, FL</p>
+  </div>
+</footer>
+<div class="credit-bar">Website designed by <a href="https://www.keywestkate.com" target="_blank" rel="noopener">Baldwin &amp; Co.</a> &middot; Kate Baldwin &middot; <a href="https://www.keywestkate.com" target="_blank" rel="noopener">www.keywestkate.com</a></div>
+
+<nav id="mob-bar" aria-label="Quick actions">
+  <a href="menu-lunch.html" class="mbb"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/></svg>Menu</a>
+  <a href="live-music.html" class="mbb" aria-current="page"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>Music</a>
+  <a href="https://maps.google.com/?q=Tonio%27s+Seafood+Shack+Summerland+Key+FL" target="_blank" rel="noopener" class="mbb"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>Directions</a>
+  <a href="tel:+13057453322" class="mbb mbb-call"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.8a19.79 19.79 0 01-3.07-8.67A2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14.92z"/></svg>Call</a>
+</nav>
+
+<!-- ══════════════════════════════════════
+     EVENT MODAL
+══════════════════════════════════════ -->
+<div class="lm-modal-bg" id="lm-modal-bg" role="dialog" aria-modal="true" aria-labelledby="lm-modal-name" aria-hidden="true">
+  <div class="lm-modal" id="lm-modal">
+    <button class="lm-modal-close" id="lm-modal-close" aria-label="Close">✕</button>
+    <img class="lm-modal-photo" id="lm-modal-photo" src="" alt="" />
+    <div class="lm-modal-body">
+      <span class="lm-modal-eyebrow" id="lm-modal-date"></span>
+      <h3 class="lm-modal-name" id="lm-modal-name"></h3>
+      <p class="lm-modal-time" id="lm-modal-time"></p>
+      <p class="lm-modal-bio" id="lm-modal-bio"></p>
+      <div class="lm-modal-actions" id="lm-modal-actions"></div>
+    </div>
+  </div>
+</div>
+
+<script src="cms-data.js"></script>
+<script src="sanity-client.js"></script>
+<script src="script.js"></script>
+<script>
+/* ═══════════════════════════════════════════════════════════
+   TONIO'S LIVE MUSIC CALENDAR
+   Powered by Sanity CMS — falls back to hardcoded data if
+   Sanity is unavailable. To add events, use Sanity Studio:
+   https://tonios.sanity.studio/ → Live Music & Events
+   ═══════════════════════════════════════════════════════════ */
+
+/* Fallback event data (used before Sanity loads or if offline) */
+const LM_FALLBACK = [
+  { id:'f1', date:'2026-07-04', name:'July 4th Celebration',  performer:'Independence Day Special', time:'5:00 PM', endTime:'9:00 PM', photo:'images/live-music-tonies-1.png', description:'Celebrate the Fourth of July at Tonio\'s with live music, cold drinks, fresh seafood, and waterfront fireworks views.', cover:'No Cover', featured:true,  type:'Holiday Event'  },
+  { id:'f2', date:'2026-07-11', name:'Live Music Night',      performer:'Live Music',              time:'6:00 PM', endTime:'9:00 PM', photo:'images/live-music-tonies-2.png', description:'Live music at the Shack. Pull up a seat, order something fresh, and enjoy a Friday night on the water.',              cover:'No Cover', featured:false, type:'Live Music'      },
+  { id:'f3', date:'2026-07-18', name:'Live Music Night',      performer:'Live Music',              time:'6:00 PM', endTime:'9:00 PM', photo:'images/pierce-tonies.png',        description:'Another great night of live music. Cold drinks, fresh catch, and local music under the tiki.',                       cover:'No Cover', featured:false, type:'Live Music'      },
+  { id:'f4', date:'2026-07-25', name:'Live Music Night',      performer:'Live Music',              time:'6:00 PM', endTime:'9:00 PM', photo:'images/live-music-tonies-1.png',  description:'Live music to close out the month. Come by water or road and settle in for a Keys evening.',                        cover:'No Cover', featured:false, type:'Live Music'      },
+];
+
+/* Working event array — replaced by Sanity data on load */
+let lmEvents = LM_FALLBACK;
+
+/* ──────────────────────────────────────────────────────── */
+(function() {
+  const MONTHS   = ['January','February','March','April','May','June','July','August','September','October','November','December'];
+  const SHORT_MO = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+  const DAY_FULL = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+  const today    = new Date();
+  let curYear    = today.getFullYear();
+  let curMonth   = today.getMonth();
+
+  /* ── Google Calendar link ──────────────────────────────── */
+  function gcalLink(ev) {
+    function parseTime12(str) {
+      if (!str) return null;
+      const m = str.match(/(\d+):(\d+)\s*(AM|PM)/i);
+      if (!m) return null;
+      let h = parseInt(m[1]), min = parseInt(m[2]);
+      const pm = m[3].toUpperCase() === 'PM';
+      if (pm && h !== 12) h += 12;
+      if (!pm && h === 12) h = 0;
+      return { h, min };
+    }
+    const dateParts = ev.date.split('-');
+    const y = dateParts[0], mo = dateParts[1], d = dateParts[2];
+    const start = parseTime12(ev.time || ev.startTime);
+    const end   = parseTime12(ev.endTime);
+    let dates;
+    if (start) {
+      const sh = String(start.h).padStart(2,'0'), sm = String(start.min).padStart(2,'0');
+      let eh, em;
+      if (end) { eh = String(end.h).padStart(2,'0'); em = String(end.min).padStart(2,'0'); }
+      else      { eh = String((start.h + 3) % 24).padStart(2,'0'); em = sm; }
+      dates = `${y}${mo}${d}T${sh}${sm}00/${y}${mo}${d}T${eh}${em}00`;
+    } else {
+      dates = `${y}${mo}${d}/${y}${mo}${d}`;
+    }
+    const title    = encodeURIComponent(ev.name || ev.performer || 'Live Music at Tonio\'s');
+    const location = encodeURIComponent("Tonio's Seafood Shack, Mile Marker 25, Summerland Key, FL 33042");
+    const details  = encodeURIComponent((ev.description || '') + '\n\nTonio\'s Seafood Shack & Tiki Bar · (305) 745-8664');
+    return `https://calendar.google.com/calendar/render?action=TEMPLATE&text=${title}&dates=${dates}&location=${location}&details=${details}`;
+  }
+
+  /* ── Event lookup ──────────────────────────────────────── */
+  function eventsForMonth(y, m) {
+    return lmEvents.filter(e => {
+      const d = new Date(e.date + 'T12:00:00');
+      return d.getFullYear() === y && d.getMonth() === m;
+    });
+  }
+
+  /* ── Calendar grid ─────────────────────────────────────── */
+  function buildGrid(y, m) {
+    const days = document.getElementById('lm-grid-days');
+    if (!days) return;
+    days.innerHTML = '';
+    const firstDay    = new Date(y, m, 1).getDay();
+    const daysInMonth = new Date(y, m + 1, 0).getDate();
+    const evs         = eventsForMonth(y, m);
+
+    for (let i = 0; i < firstDay; i++) {
+      const el = document.createElement('div');
+      el.className = 'lm-day lm-day--empty';
+      el.innerHTML = '<span class="lm-day-num">·</span>';
+      days.appendChild(el);
+    }
+    for (let d = 1; d <= daysInMonth; d++) {
+      const dateStr = `${y}-${String(m+1).padStart(2,'0')}-${String(d).padStart(2,'0')}`;
+      const ev      = evs.find(e => e.date === dateStr);
+      const isToday = today.getFullYear()===y && today.getMonth()===m && today.getDate()===d;
+      const el      = document.createElement('div');
+      let cls = 'lm-day';
+      if (isToday) cls += ' lm-day--today';
+      if (ev)      { cls += ' lm-day--has-event'; el.setAttribute('tabindex','0'); }
+      el.className = cls;
+      const dotLabel = ev ? (ev.performer && ev.performer !== 'Live Music' ? ev.performer : ev.name || 'Live Music') : '';
+      el.innerHTML = `<span class="lm-day-num">${d}</span>${ev ? `<span class="lm-event-dot">${dotLabel}</span>` : ''}`;
+      if (ev) {
+        el.addEventListener('click',   () => openModal(ev));
+        el.addEventListener('keydown', e => { if (e.key==='Enter'||e.key===' ') openModal(ev); });
+      }
+      days.appendChild(el);
+    }
+  }
+
+  /* ── List view ─────────────────────────────────────────── */
+  function buildList(y, m) {
+    const wrap = document.getElementById('lm-list-items');
+    if (!wrap) return;
+    const evs = eventsForMonth(y, m);
+    if (!evs.length) {
+      wrap.innerHTML = '<p class="lm-no-events">No events scheduled this month — check back soon or follow us on Instagram for updates.</p>';
+      return;
+    }
+    wrap.innerHTML = evs.map(ev => {
+      const d = new Date(ev.date + 'T12:00:00');
+      const performer = ev.performer && ev.performer !== 'Live Music' ? ev.performer : '';
+      const subtitle  = [performer, ev.time, ev.cover !== 'No Cover' ? ev.cover : ''].filter(Boolean).join(' · ');
+      return `<div class="lm-list-item" tabindex="0" data-evid="${ev.id}">
+        <div class="lm-list-date-box">
+          <span class="lm-list-date-mo">${SHORT_MO[d.getMonth()]}</span>
+          <span class="lm-list-date-day">${d.getDate()}</span>
+        </div>
+        <div class="lm-list-info">
+          <h3>${ev.name || ev.performer}</h3>
+          <p>${subtitle}</p>
+        </div>
+        <span class="lm-list-arrow">→</span>
+      </div>`;
+    }).join('');
+    wrap.querySelectorAll('.lm-list-item').forEach(item => {
+      const id = item.dataset.evid;
+      const ev = lmEvents.find(e => String(e.id) === id);
+      if (!ev) return;
+      item.addEventListener('click',   () => openModal(ev));
+      item.addEventListener('keydown', e => { if (e.key==='Enter') openModal(ev); });
+    });
+  }
+
+  /* ── Featured performer section ────────────────────────── */
+  function renderFeatured() {
+    const featuredEl = document.getElementById('featured-performer');
+    if (!featuredEl) return;
+    const now = new Date(); now.setHours(0,0,0,0);
+    const featured = lmEvents.find(e =>
+      e.featured && new Date(e.date + 'T12:00:00') >= now
+    );
+    if (!featured) return;
+    const d    = new Date(featured.date + 'T12:00:00');
+    const name = featured.performer && featured.performer !== 'Live Music'
+      ? featured.performer : featured.name;
+    const dateStr = `${DAY_FULL[d.getDay()]}, ${MONTHS[d.getMonth()]} ${d.getDate()}`;
+    const nameEl  = document.getElementById('featured-name');
+    const metaEl  = document.getElementById('featured-meta');
+    const bioEl   = document.getElementById('featured-bio');
+    const actEl   = document.getElementById('featured-actions');
+    if (nameEl) nameEl.textContent = name;
+    if (metaEl) metaEl.textContent = `${dateStr} · ${featured.time}`;
+    if (bioEl)  bioEl.textContent  = featured.description || 'Join us for a great night at Tonio\'s.';
+    if (actEl) {
+      actEl.innerHTML = `
+        <a href="#music-calendar" class="btn btn-primary">View the Calendar</a>
+        <a href="${gcalLink(featured)}" target="_blank" rel="noopener" class="btn-ghost-light">Add to Calendar</a>
+        <a href="https://www.instagram.com/toniostiki/" target="_blank" rel="noopener" class="btn-ghost-light">Follow on Instagram</a>
+      `;
+    }
+    if (featured.photo) {
+      const img = featuredEl.querySelector('.lm-featured-photo-wrap img');
+      if (img) { img.src = featured.photo; img.alt = `${name} at Tonio's`; }
+    }
+  }
+
+  /* ── Render everything ─────────────────────────────────── */
+  function render() {
+    document.getElementById('lm-month-label').textContent = `${MONTHS[curMonth]} ${curYear}`;
+    buildGrid(curYear, curMonth);
+    buildList(curYear, curMonth);
+    renderFeatured();
+  }
+
+  /* ── Month navigation ──────────────────────────────────── */
+  document.getElementById('lm-prev')?.addEventListener('click', () => {
+    curMonth--; if (curMonth < 0) { curMonth = 11; curYear--; } render();
+  });
+  document.getElementById('lm-next')?.addEventListener('click', () => {
+    curMonth++; if (curMonth > 11) { curMonth = 0; curYear++; } render();
+  });
+
+  /* ── Calendar/List toggle ──────────────────────────────── */
+  const btnGrid = document.getElementById('lm-btn-grid');
+  const btnList = document.getElementById('lm-btn-list');
+  const gridWrap = document.getElementById('lm-grid-wrap');
+  const listWrap = document.getElementById('lm-list-wrap');
+
+  btnGrid?.addEventListener('click', () => {
+    gridWrap.style.display = 'block'; listWrap.style.display = 'none';
+    btnGrid.classList.add('active'); btnList.classList.remove('active');
+    btnGrid.setAttribute('aria-pressed','true'); btnList.setAttribute('aria-pressed','false');
+  });
+  btnList?.addEventListener('click', () => {
+    listWrap.style.display = 'block'; gridWrap.style.display = 'none';
+    btnList.classList.add('active'); btnGrid.classList.remove('active');
+    btnList.setAttribute('aria-pressed','true'); btnGrid.setAttribute('aria-pressed','false');
+  });
+
+  /* ── Event modal ───────────────────────────────────────── */
+  function openModal(ev) {
+    const d = new Date(ev.date + 'T12:00:00');
+    const timeDisplay = ev.endTime ? `${ev.time} – ${ev.endTime}` : ev.time;
+    const name = ev.name || ev.performer;
+    const performer = (ev.performer && ev.performer !== 'Live Music' && ev.performer !== name) ? ev.performer : '';
+
+    const photoEl = document.getElementById('lm-modal-photo');
+    if (photoEl) {
+      if (ev.photo) { photoEl.src = ev.photo; photoEl.alt = `${name} at Tonio's`; photoEl.style.display='block'; }
+      else          { photoEl.style.display = 'none'; }
+    }
+    document.getElementById('lm-modal-date').textContent = `${DAY_FULL[d.getDay()]}, ${MONTHS[d.getMonth()]} ${d.getDate()}, ${d.getFullYear()}`;
+    document.getElementById('lm-modal-name').textContent = name;
+    document.getElementById('lm-modal-time').textContent = [timeDisplay, performer, ev.cover !== 'No Cover' ? ev.cover : ''].filter(Boolean).join(' · ');
+    document.getElementById('lm-modal-bio').textContent  = ev.description || '';
+
+    const actions = document.getElementById('lm-modal-actions');
+    let btns = `<a href="${gcalLink(ev)}" target="_blank" rel="noopener" class="btn-sm-dark">📅 Add to Calendar</a>
+      <a href="https://maps.google.com/?q=Tonio%27s+Seafood+Shack+Summerland+Key+FL" target="_blank" rel="noopener" class="btn-sm-dark">Get Directions</a>
+      <a href="menu-lunch.html" class="btn-sm-dark">View Menu</a>`;
+    if (ev.buttonLink && ev.buttonText) {
+      btns += `<a href="${ev.buttonLink}" target="_blank" rel="noopener" class="btn-sm-dark">${ev.buttonText}</a>`;
+    }
+    if (ev.cover === 'Cover Charge' && ev.coverPrice) {
+      btns = `<span style="font-family:var(--f-sans);font-size:.75rem;opacity:.6;margin-bottom:.25rem;display:block;">Cover: ${ev.coverPrice}</span>` + btns;
+    }
+    actions.innerHTML = btns;
+
+    const bg = document.getElementById('lm-modal-bg');
+    bg.classList.add('open');
+    bg.setAttribute('aria-hidden','false');
+    document.getElementById('lm-modal-close').focus();
+  }
+  function closeModal() {
+    const bg = document.getElementById('lm-modal-bg');
+    bg.classList.remove('open');
+    bg.setAttribute('aria-hidden','true');
+  }
+  document.getElementById('lm-modal-close')?.addEventListener('click', closeModal);
+  document.getElementById('lm-modal-bg')?.addEventListener('click', e => { if (e.target===e.currentTarget) closeModal(); });
+  document.addEventListener('keydown', e => { if (e.key==='Escape') closeModal(); });
+
+  /* Initial render using fallback data */
+  render();
+
+  /* Re-render when Sanity data arrives */
+  document.addEventListener('sanityLoaded', () => {
+    const sanityEvs = CMS._allEvents || CMS._upcomingEvents;
+    if (sanityEvs && sanityEvs.length) {
+      lmEvents = sanityEvs.map(e => ({
+        id:          e.id,
+        date:        e.date,
+        name:        e.name,
+        performer:   e.performer || e.name,
+        time:        e.time,
+        endTime:     e.endTime || '',
+        photo:       e.photo   || '',
+        description: e.description || '',
+        cover:       e.cover   || 'No Cover',
+        coverPrice:  e.coverPrice || '',
+        featured:    e.featured || false,
+        type:        e.type    || 'Live Music',
+        buttonText:  e.buttonText || '',
+        buttonLink:  e.buttonLink || '',
+      }));
+    }
+    render();
+  });
+
+  /* Booking form stub */
+  window.handleBooking = function(e) {
+    e.preventDefault();
+    document.getElementById('bk-confirm').style.display = 'block';
+    e.target.reset();
+  };
+})();
+</script>
+</body>
+</html>

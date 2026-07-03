@@ -1,0 +1,211 @@
+Menu Page,Category,Item Name,Description,Price,Market Price,Display Order,Source File,Owner Approval Needed
+lunch,Appetizers,Conch Fritters,,,,10,menu-lunch.html,No
+lunch,Appetizers,Wings (8),"Mild, hot, cajun sauce, BBQ or teriyaki",,No,20,menu-lunch.html,No
+lunch,Appetizers,Bang Bang Shrimp,,,,30,menu-lunch.html,No
+lunch,Appetizers,French Fries,,,,40,menu-lunch.html,No
+lunch,Appetizers,Tuna Tower,,,,50,menu-lunch.html,No
+lunch,Appetizers,Chicken Fingers,,,,60,menu-lunch.html,No
+lunch,Appetizers,Scallops,Horseradish bacon sauce,,No,70,menu-lunch.html,No
+lunch,Appetizers,Fish Dip & Homemade Chips,,,,80,menu-lunch.html,No
+lunch,Appetizers,Fried Calamari,Side marinara,,No,90,menu-lunch.html,No
+lunch,Appetizers,Stuffed Mushrooms,With crabmeat,,No,100,menu-lunch.html,No
+lunch,Appetizers,Wasabi Tuna,,,,110,menu-lunch.html,No
+lunch,Appetizers,Fried Mozzarella,,,,120,menu-lunch.html,No
+lunch,Appetizers,Escargots,Pesto sauce,,No,130,menu-lunch.html,No
+lunch,Appetizers,Onion Rings,,,,140,menu-lunch.html,No
+lunch,Appetizers,Lamb Chop Lollipops,,,,150,menu-lunch.html,No
+lunch,Appetizers,Homemade Shrimp & Mahi Ceviche,,,,160,menu-lunch.html,No
+lunch,Appetizers,Baby Clams,Lemon garlic white wine sauce,,No,170,menu-lunch.html,No
+lunch,Appetizers,Mussels,"Marinara, lemon garlic white wine or fra diavolo",,No,180,menu-lunch.html,No
+lunch,Sandwiches,Angus Beef Cheeseburger,"Cheese, lettuce, tomato",,No,10,menu-lunch.html,No
+lunch,Sandwiches,Tonio's Burger,"Lettuce, tomato, bacon, blue cheese crumbles & avocado",,No,20,menu-lunch.html,No
+lunch,Sandwiches,Big Joe's BLT Chicken,"Grilled chicken, bacon, lettuce, tomato, avocado & ranch",,No,30,menu-lunch.html,No
+lunch,Sandwiches,Grilled Chicken,"Cheese, lettuce, tomato, onion",,No,40,menu-lunch.html,No
+lunch,Sandwiches,Buffalo Chicken Wrap,Grilled chicken & lettuce & tomato,,No,50,menu-lunch.html,No
+lunch,Sandwiches,Chicken or Meatball Parm,Mozzarella cheese & marinara,,No,60,menu-lunch.html,No
+lunch,Sandwiches,Philly Cheesesteak,Mushrooms & onions and/or peppers extra,,No,70,menu-lunch.html,No
+lunch,Sandwiches,Pulled Pork,Provolone,,No,80,menu-lunch.html,No
+lunch,Sandwiches,Cuban,"Ham, pork, mustard, pickle & Swiss cheese",,No,90,menu-lunch.html,No
+lunch,Sandwiches,French Dip,Provolone & side of au jus & side horseradish sauce,,No,100,menu-lunch.html,No
+lunch,Sandwiches,Fried Lobster Tail,"7 oz fried tail, lettuce, tomato & spicy remoulade",,Yes — Market Price,110,menu-lunch.html,No
+lunch,Sandwiches,Cheesesteak or Chicken Quesadilla,Flour tortilla with onions & green peppers,,No,120,menu-lunch.html,No
+lunch,Sandwiches,Tacos (3) — Chicken Shrimp or Mahi,"Grilled, blackened or fried. Flour tortilla with cheese, lettuce & cilantro. Sour cream & salsa on the side.",,No,130,menu-lunch.html,No
+lunch,Sandwiches,Gyro,Lamb or chicken. Lettuce & tomato & onion & tzatziki sauce,,No,140,menu-lunch.html,No
+lunch,Sandwiches,Sloppy Joe,Toasted bun,,No,150,menu-lunch.html,No
+lunch,Sandwiches,Ham & Cheese Grinder,"Provolone, lettuce, tomato & onion",,No,160,menu-lunch.html,No
+lunch,Sandwiches,Hogfish,Grilled & blackened or fried with lettuce & tomato & spicy remoulade,,No,170,menu-lunch.html,No
+lunch,Sandwiches,Snapper or Mahi,Grilled & blackened or fried with lettuce & tomato,,No,180,menu-lunch.html,No
+lunch,Sandwiches,Grouper,Grilled & blackened or fried with lettuce & tomato,,No,190,menu-lunch.html,No
+lunch,Sandwiches,Fried Shrimp & Avocado BLT Wrap,Bacon & lettuce & tomato & spicy remoulade,,No,200,menu-lunch.html,No
+lunch,Sandwiches,Crabcake Grilled Cheese,American cheese,,No,210,menu-lunch.html,No
+lunch,Sandwiches,Fried Crabcake Sandwich,Lettuce & tomato,,No,220,menu-lunch.html,No
+lunch,Sandwiches,Kimmio's Famous Lobster Roll,Lettuce & tomato,,Yes — Market Price,230,menu-lunch.html,No
+lunch,Sandwiches,Lobster Reuben,Swiss cheese & sauerkraut & 1000 Island dressing,,Yes — Market Price,240,menu-lunch.html,No
+dinner,Soups & Salads,Conch Soup or New England Clam Chowder,Cup or bowl,,No,10,menu-dinner.html,No
+dinner,Soups & Salads,Soup of the Day,When available — ask your server,,No,20,menu-dinner.html,No
+dinner,Soups & Salads,House Salad,Lettuce & tomatoes & onions & green peppers,,No,30,menu-dinner.html,No
+dinner,Soups & Salads,Caesar Salad,Romaine & parmesan & croutons & Caesar dressing,,No,40,menu-dinner.html,No
+dinner,Soups & Salads,Spinach Salad,Baby spinach & tomatoes & onions & mozzarella & ranch dressing,,No,50,menu-dinner.html,No
+dinner,Soups & Salads,Wedge Salad,Iceberg lettuce & tomatoes & onions & bacon & blue cheese crumbles & blue cheese dressing,,No,60,menu-dinner.html,No
+dinner,Soups & Salads,Cobb Salad,Lettuce & tomatoes & blue cheese crumbles & bacon & avocado,,No,70,menu-dinner.html,No
+dinner,Soups & Salads,Caprese Salad,Tomatoes & fresh mozzarella & black olives & fresh basil & balsamic dressing,,No,80,menu-dinner.html,No
+dinner,Soups & Salads,Greek Salad,"Lettuce, tomatoes, onions, cucumber, kalamata olives, feta cheese, roasted red peppers, artichokes, pita bread & homemade red wine vinaigrette",,No,90,menu-dinner.html,No
+dinner,Pasta,Chicken Parm,Side is linguini,,No,10,menu-dinner.html,No
+dinner,Pasta,Linguini & Chicken,,,,20,menu-dinner.html,No
+dinner,Pasta,Linguini & Mussels,,,,30,menu-dinner.html,No
+dinner,Pasta,Linguini & Shrimp,,,,40,menu-dinner.html,No
+dinner,Pasta,Linguini & Jumbo Lump Crabmeat,Market price,,Yes — Market Price,50,menu-dinner.html,No
+dinner,Pasta,Tonio's Pescatore,Shrimp & scallops & mussels & clams,,No,60,menu-dinner.html,No
+dinner,Pasta,Shrimp & Scallops Rosa,Marinara mixed with heavy cream,,No,70,menu-dinner.html,No
+dinner,Pasta,Meat Lasagna,No side included,,No,80,menu-dinner.html,No
+dinner,Pasta,Linguini & Clams,,,,90,menu-dinner.html,No
+dinner,Pasta,Linguini & Calamari,,,,100,menu-dinner.html,No
+dinner,Pasta,Linguini & Scallops,,,,110,menu-dinner.html,No
+dinner,From the Sea,Shrimp,,,,10,menu-dinner.html,No
+dinner,From the Sea,Scallops,,,,20,menu-dinner.html,No
+dinner,From the Sea,Crabcakes (2),,,,30,menu-dinner.html,No
+dinner,From the Sea,Crabcake & Shrimp,,,,40,menu-dinner.html,No
+dinner,From the Sea,Crabcake & Scallops,,,,50,menu-dinner.html,No
+dinner,From the Sea,Shrimp & Scallops,,,,60,menu-dinner.html,No
+dinner,From the Sea,Coconut Shrimp,,,,70,menu-dinner.html,No
+dinner,From the Sea,Hogfish Topped with Tomato & Crabmeat,Lemon garlic white wine butter sauce,,No,80,menu-dinner.html,No
+dinner,From the Sea,Stuffed Hogfish,With crabmeat,,No,90,menu-dinner.html,No
+dinner,From the Sea,Tonio's Combo,Shrimp & scallops & crabcake & mahi,,No,100,menu-dinner.html,No
+dinner,From the Sea,Ahi Tuna,,,,110,menu-dinner.html,No
+dinner,From the Sea,Mahi Mahi,Market price,,Yes — Market Price,120,menu-dinner.html,No
+dinner,From the Sea,Snapper of the Day,Market price,,Yes — Market Price,130,menu-dinner.html,No
+dinner,From the Sea,Hogfish,Market price,,Yes — Market Price,140,menu-dinner.html,No
+dinner,From the Sea,Grouper,Seasonal — market price,,Yes — Market Price,150,menu-dinner.html,No
+dinner,From the Sea,Fish & Chips (2 pieces),,,,160,menu-dinner.html,No
+dinner,From the Sea,Lobster Tail,Market price,,Yes — Market Price,170,menu-dinner.html,No
+dinner,From the Sea,Stuffed Lobster Tail,Market price,,Yes — Market Price,180,menu-dinner.html,No
+dinner,From the Sea,Two Lobster Tails,Market price,,Yes — Market Price,190,menu-dinner.html,No
+dinner,From the Land,Jr's Pork & Rice,Side is rice,,No,10,menu-dinner.html,No
+dinner,From the Land,NY Strip,,,,20,menu-dinner.html,No
+dinner,From the Land,Ribeye with Blue Cheese & Crabmeat,,,,30,menu-dinner.html,No
+dinner,From the Land,Ribeye (16 oz),,,,40,menu-dinner.html,No
+dinner,Sides,French Fries,,,,10,menu-dinner.html,No
+dinner,Sides,Potato Salad,,,,20,menu-dinner.html,No
+dinner,Sides,Saffron Rice,,,,30,menu-dinner.html,No
+dinner,Sides,Mashed Potatoes,,,,40,menu-dinner.html,No
+dinner,Sides,Veggie of the Day,,,,50,menu-dinner.html,No
+dinner,Sides,Side Salad,Substitute upcharge,,No,60,menu-dinner.html,No
+dinner,Desserts,Key Lime Pie,"House-made, Graham cracker crust, torched meringue. This is the one.",,No,10,menu-dinner.html,No
+dinner,Desserts,Coconut Flan,Creamy coconut custard with a dark caramel top and toasted coconut.,,No,20,menu-dinner.html,No
+breakfast,Eggs & Plates,Dock Breakfast,"Two eggs any style, choice of smoked fish hash or country sausage, grits and toast. The daily staple.",,No,10,menu-breakfast.html,YES — website build content
+breakfast,Eggs & Plates,Shrimp & Grits,"Key West pink shrimp sautéed in garlic butter and Old Bay over stone-ground white grits. Finished with scallions and a splash of hot sauce.",,No,20,menu-breakfast.html,YES — website build content
+breakfast,Eggs & Plates,Grouper Hash,"Flaked local grouper with roasted potatoes, peppers and onions. Topped with two poached eggs and hollandaise.",,No,30,menu-breakfast.html,YES — website build content
+breakfast,Eggs & Plates,Smoked Fish Dip Eggs Benedict,"Toasted English muffin with house-smoked fish dip, two poached eggs, Old Bay hollandaise and capers. A Keys classic done right.",,No,40,menu-breakfast.html,YES — website build content
+breakfast,Eggs & Plates,Breakfast Tacos (2),"Scrambled eggs, cotija, pico, avocado and your choice of grilled shrimp or smoked fish on warm flour tortillas.",,No,50,menu-breakfast.html,YES — website build content
+breakfast,Eggs & Plates,Two Eggs Any Style,Two farm eggs cooked to order with grits and toast. Simple and honest.,,No,60,menu-breakfast.html,YES — website build content
+breakfast,Eggs & Plates,Crab Cake Benedict,"Two house-made crab cakes on toasted English muffins, topped with poached eggs, lemon-caper hollandaise and fresh dill. Weekend showstopper.",,No,70,menu-breakfast.html,YES — website build content
+breakfast,Eggs & Plates,Keys Fisherman's Plate,"Three eggs any style, shrimp, smoked fish hash, stone-ground grits, home fries and toast.",,No,80,menu-breakfast.html,YES — website build content
+breakfast,Eggs & Plates,Mahi Mahi Hash,"Pan-seared mahi with sweet potatoes, roasted corn, red pepper and lime crema. Two eggs on top, your style.",,No,90,menu-breakfast.html,YES — website build content
+breakfast,Eggs & Plates,Lobster Scramble,"Florida Keys lobster tossed with three scrambled eggs, chives, crème fraîche and a little heat. Seasonal — ask your server.",,Yes — Market Price,100,menu-breakfast.html,YES — website build content
+breakfast,Eggs & Plates,Conch Omelette,"Three-egg omelette stuffed with diced conch, peppers, onions and pepper jack. Served with grits and toast.",,No,110,menu-breakfast.html,YES — website build content
+breakfast,Eggs & Plates,Avocado Toast with Smoked Fish,"Thick-cut sourdough, smashed avocado, house smoked fish dip, everything seasoning, pickled red onion and two poached eggs.",,No,120,menu-breakfast.html,YES — website build content
+breakfast,Eggs & Plates,Stone Crab & Egg Scramble,"Cracked stone crab claws scrambled with eggs, Old Bay butter, scallions and cheddar. Seasonal October–May.",,Yes — Market Price,130,menu-breakfast.html,YES — website build content
+breakfast,Eggs & Plates,Snapper Huevos Rancheros,"Crispy corn tortillas topped with ranchero sauce, two fried eggs, flaked yellowtail snapper, cotija, avocado and fresh cilantro.",,No,140,menu-breakfast.html,YES — website build content
+breakfast,Eggs & Plates,Build Your Own Omelette,"Three eggs, choice of three fillings: shrimp, smoked fish, bacon, sausage, peppers, onions, mushrooms, cheddar, Swiss or pepper jack. Served with grits or home fries.",,No,150,menu-breakfast.html,YES — website build content
+breakfast,Morning Sweets,Keys Lime French Toast,"Thick brioche soaked in a Keys lime custard, griddle-toasted gold, whipped cream, toasted coconut and a drizzle of honey. Weekend only.",,No,10,menu-breakfast.html,YES — website build content
+breakfast,Morning Sweets,Coconut Pancakes (3),"Fluffy coconut-milk pancakes with toasted coconut flakes, macadamia butter and warm pineapple syrup. Add bacon or sausage +$4.",,No,20,menu-breakfast.html,YES — website build content
+breakfast,Morning Sweets,Banana Foster Waffle,"Belgian-style waffle topped with caramelized banana, dark rum butter sauce, candied pecans and vanilla cream.",,No,30,menu-breakfast.html,YES — website build content
+breakfast,Morning Sweets,Mango Açaí Bowl,"Frozen açaí blended with mango and banana, topped with granola, fresh tropical fruit, honey and shredded coconut.",,No,40,menu-breakfast.html,YES — website build content
+breakfast,Morning Sandwiches & Wraps,The Dock Egg Sandwich,"Two eggs, American cheese, choice of bacon, sausage or smoked fish on a toasted brioche bun.",,No,10,menu-breakfast.html,YES — website build content
+breakfast,Morning Sandwiches & Wraps,Shrimp Roll Breakfast Style,"Warm shrimp with Old Bay butter, a fried egg and pickled jalapeño on a toasted split-top roll.",,No,20,menu-breakfast.html,YES — website build content
+breakfast,Morning Sandwiches & Wraps,Grouper Breakfast Sandwich,"Grilled local grouper fillet, a fried egg, chipotle aioli, lettuce and tomato on a toasted ciabatta roll. Served with home fries.",,No,30,menu-breakfast.html,YES — website build content
+breakfast,Morning Sandwiches & Wraps,Keys Breakfast Burrito,"Flour tortilla stuffed with scrambled eggs, choice of shrimp or smoked fish, cheddar, home fries, pico and sour cream.",,No,40,menu-breakfast.html,YES — website build content
+breakfast,Morning Sandwiches & Wraps,Smoked Fish BLT,"House-smoked fish dip on toasted sourdough with crispy bacon, beefsteak tomato, lettuce and Old Bay mayo.",,No,50,menu-breakfast.html,YES — website build content
+breakfast,Morning Sandwiches & Wraps,Lobster Grilled Cheese,"Florida lobster, Gruyère, sharp cheddar and Dijon on thick-cut sourdough, griddled golden brown. Seasonal.",,Yes — Market Price,60,menu-breakfast.html,YES — website build content
+breakfast,Morning Sandwiches & Wraps,Veggie Wrap,"Scrambled eggs, roasted peppers, spinach, avocado, black beans, pepper jack and salsa verde in a whole wheat wrap.",,No,70,menu-breakfast.html,YES — website build content
+breakfast,Morning Sandwiches & Wraps,The Captain's Club,"Triple-decker with smoked fish, bacon, egg, cheddar, lettuce and tomato on white toast.",,No,80,menu-breakfast.html,YES — website build content
+breakfast,Starters & Sides,Conch Fritters,Six golden fritters & aioli and hot sauce.,,No,10,menu-breakfast.html,YES — website build content
+breakfast,Starters & Sides,Smoked Fish Dip,"House-smoked fish, cream cheese, crackers and pickled peppers.",,No,20,menu-breakfast.html,YES — website build content
+breakfast,Starters & Sides,Shrimp Cocktail,Six chilled Key West pink shrimp & house cocktail sauce and lemon.,,No,30,menu-breakfast.html,YES — website build content
+breakfast,Starters & Sides,Shrimp Ceviche,"Fresh local shrimp, citrus, tomato, cucumber, red onion and cilantro. Served with plantain chips.",,No,40,menu-breakfast.html,YES — website build content
+breakfast,Starters & Sides,Stone-Ground Grits,Plain or with butter and sharp cheddar.,,No,50,menu-breakfast.html,YES — website build content
+breakfast,Starters & Sides,Cheese Grits,"Stone-ground grits loaded with sharp cheddar, smoked gouda and a hit of hot sauce.",,No,60,menu-breakfast.html,YES — website build content
+breakfast,Starters & Sides,Home Fries,Seasoned potatoes with peppers and onions.,,No,70,menu-breakfast.html,YES — website build content
+breakfast,Starters & Sides,Sweet Potato Fries,Crispy sweet potato fries with cinnamon sugar and honey dipping sauce.,,No,80,menu-breakfast.html,YES — website build content
+breakfast,Starters & Sides,Toast (2),White & wheat or sourdough.,,No,90,menu-breakfast.html,YES — website build content
+breakfast,Starters & Sides,Avocado Slices,"Ripe avocado, sea salt, lemon, red pepper flakes.",,No,100,menu-breakfast.html,YES — website build content
+breakfast,Starters & Sides,Bacon (3 strips),Thick-cut applewood smoked bacon & cooked crispy.,,No,110,menu-breakfast.html,YES — website build content
+breakfast,Starters & Sides,Country Sausage Links (3),Mild pork sausage & pan-fried golden.,,No,120,menu-breakfast.html,YES — website build content
+breakfast,Starters & Sides,Seasonal Fruit Bowl,Local and tropical fruit & honey drizzle.,,No,130,menu-breakfast.html,YES — website build content
+breakfast,Starters & Sides,Yogurt Parfait,"Greek yogurt layered with house granola, fresh mango, pineapple and local honey.",,No,140,menu-breakfast.html,YES — website build content
+breakfast,Starters & Sides,Cup of Soup,Ask your server for today's soup. Usually something with seafood in it.,,No,150,menu-breakfast.html,YES — website build content
+breakfast,Starters & Sides,Brunch Side Salad,"Mixed greens, cucumber, grape tomatoes, red onion and citrus vinaigrette.",,No,160,menu-breakfast.html,YES — website build content
+breakfast,Brunch Drinks,Mimosa,"Classic, mango, guava or grapefruit.",,No,10,menu-breakfast.html,YES — website build content
+breakfast,Brunch Drinks,Keys Bloody Mary,"House mix, Old Bay rim, shrimp garnish.",,No,20,menu-breakfast.html,YES — website build content
+breakfast,Brunch Drinks,Rum Punch,"Dark rum, pineapple, orange and grenadine.",,No,30,menu-breakfast.html,YES — website build content
+breakfast,Brunch Drinks,Tiki Sunrise,"Coconut rum, fresh OJ, passionfruit, grenadine.",,No,40,menu-breakfast.html,YES — website build content
+breakfast,Brunch Drinks,Brunch Paloma,"Tequila, fresh grapefruit, lime and a salted rim.",,No,50,menu-breakfast.html,YES — website build content
+breakfast,Brunch Drinks,Aperol Spritz,"Aperol, prosecco, splash of soda, orange slice.",,No,60,menu-breakfast.html,YES — website build content
+breakfast,Brunch Drinks,Sparkling Rosé,Glass or half-bottle. Ask your server for the current pour.,,No,70,menu-breakfast.html,YES — website build content
+breakfast,Brunch Drinks,Draft Beer,Ask your server what's on tap. Usually something cold and local.,,No,80,menu-breakfast.html,YES — website build content
+breakfast,Brunch Drinks,Coffee,"Drip, iced, espresso or Cuban colada.",,No,90,menu-breakfast.html,YES — website build content
+drinks,Signature Cocktails,The Keys Mule,"Dark rum, fresh squeezed lime, house-made ginger beer, mint. Served in a copper mug.",,No,10,menu-drinks.html,YES — website build content
+drinks,Signature Cocktails,Summerland Rum Punch,"Light and dark rum, pineapple, orange and passion fruit juice, grenadine float, orange slice.",,No,20,menu-drinks.html,YES — website build content
+drinks,Signature Cocktails,Coconut Old Fashioned,"Coconut-washed bourbon, toasted coconut syrup, Angostura bitters, king ice cube.",,No,30,menu-drinks.html,YES — website build content
+drinks,Signature Cocktails,MM 25 Paloma,"Tequila blanco, fresh grapefruit and lime, pink salt rim, splash of sparkling water.",,No,40,menu-drinks.html,YES — website build content
+drinks,Signature Cocktails,The Pink Shrimp,"Gin, elderflower liqueur, fresh strawberry, lime and a hibiscus salt rim.",,No,50,menu-drinks.html,YES — website build content
+drinks,Signature Cocktails,Tinio's Tiki Punch (for 2) [⚠️ POSSIBLE TYPO — HTML says Tinio's not Tonio's — owner must confirm],"A full bowl: rum, passion fruit, mango, lime, ginger.",,No,60,menu-drinks.html,YES — website build content + spelling confirmation needed
+drinks,Beer,Rotating Local IPA,Ask your server what's on tap. We keep it Florida.,,No,10,menu-drinks.html,YES — website build content
+drinks,Beer,Yuengling Lager,The American classic. Cold and reliable.,,No,20,menu-drinks.html,YES — website build content
+drinks,Beer,Blue Moon,With an orange & because it's the right move.,,No,30,menu-drinks.html,YES — website build content
+drinks,Beer,Seasonal Florida Craft,Changes with the season. Ask your server.,,No,40,menu-drinks.html,YES — website build content
+drinks,Beer,Bud Light / Budweiser,,,,50,menu-drinks.html,YES — website build content
+drinks,Beer,Miller Lite,,,,60,menu-drinks.html,YES — website build content
+drinks,Beer,Modelo Especial,,,,70,menu-drinks.html,YES — website build content
+drinks,Beer,Corona Extra,,,,80,menu-drinks.html,YES — website build content
+drinks,Beer,Dos Equis Lager,,,,90,menu-drinks.html,YES — website build content
+drinks,Beer,Cigar City Jai Alai IPA,,,,100,menu-drinks.html,YES — website build content
+drinks,Beer,Truly / White Claw,,,,110,menu-drinks.html,YES — website build content
+drinks,Beer,Heineken 0.0 (N/A),,,,120,menu-drinks.html,YES — website build content
+drinks,Wine & Spirit-Free,House White (Pinot Grigio),,,,10,menu-drinks.html,YES — website build content
+drinks,Wine & Spirit-Free,House Rosé,,,,20,menu-drinks.html,YES — website build content
+drinks,Wine & Spirit-Free,House Red (Malbec),,,,30,menu-drinks.html,YES — website build content
+drinks,Wine & Spirit-Free,Sparkling Wine,,,,40,menu-drinks.html,YES — website build content
+drinks,Wine & Spirit-Free,Keys Mule — Zero Proof,"Ginger beer, fresh lime, cucumber, mint.",,No,50,menu-drinks.html,YES — website build content
+drinks,Wine & Spirit-Free,Agua Fresca,"Seasonal fruit, water, lime, honey. Ask your server.",,No,60,menu-drinks.html,YES — website build content
+drinks,Non-Alcoholic,Drip Coffee,,,,10,menu-drinks.html,YES — website build content
+drinks,Non-Alcoholic,Iced Coffee,,,,20,menu-drinks.html,YES — website build content
+drinks,Non-Alcoholic,Cuban Colada,,,,30,menu-drinks.html,YES — website build content
+drinks,Non-Alcoholic,Fresh-Squeezed Lemonade,,,,40,menu-drinks.html,YES — website build content
+drinks,Non-Alcoholic,Arnold Palmer,,,,50,menu-drinks.html,YES — website build content
+drinks,Non-Alcoholic,Soft Drinks,"Coke, Diet Coke, Sprite, ginger ale.",,No,60,menu-drinks.html,YES — website build content
+happy-hour,Happy Hour Drinks,Draft Beer,All drafts on tap,,No,10,menu-happy-hour.html,YES — verify against printed happy hour card
+happy-hour,Happy Hour Drinks,House Well Spirits,"Vodka, rum, gin, tequila, whiskey",,No,20,menu-happy-hour.html,YES — verify against printed happy hour card
+happy-hour,Happy Hour Drinks,House Cocktails,"Keys Mule, Rum Punch, Paloma, house specials",,No,30,menu-happy-hour.html,YES — verify against printed happy hour card
+happy-hour,Happy Hour Drinks,House Wine,Glass — white & red or rosé,,No,40,menu-happy-hour.html,YES — verify against printed happy hour card
+happy-hour,Happy Hour Drinks,Domestic Canned Beer,"Bud Light, Miller Lite, Coors Light",,No,50,menu-happy-hour.html,YES — verify against printed happy hour card
+happy-hour,Happy Hour Drinks,Import & Craft Cans,"Corona, Modelo, Cigar City, rotating craft",,No,60,menu-happy-hour.html,YES — verify against printed happy hour card
+happy-hour,Happy Hour Drinks,Frozen Drink of the Day,,,,70,menu-happy-hour.html,YES — verify against printed happy hour card
+happy-hour,Happy Hour Food,Shrimp Basket,"One dozen fried Key West pink shrimp with Old Bay fries and cocktail sauce.",,No,10,menu-happy-hour.html,YES — verify against printed happy hour card
+happy-hour,Happy Hour Food,Fish Tacos (2),Two grilled or blackened local fish tacos with slaw and aioli.,,No,20,menu-happy-hour.html,YES — verify against printed happy hour card
+happy-hour,Happy Hour Food,Conch Fritters (6),Six golden conch fritters with chipotle aioli.,,No,30,menu-happy-hour.html,YES — verify against printed happy hour card
+happy-hour,Happy Hour Food,Smoked Fish Dip,House-smoked fish with crackers and pickled peppers.,,No,40,menu-happy-hour.html,YES — verify against printed happy hour card
+happy-hour,Happy Hour Food,Double-Fried Fries,Seasoned & fried twice & served with house aioli.,,No,50,menu-happy-hour.html,YES — verify against printed happy hour card
+happy-hour,Happy Hour Food,Ceviche of the Day,Today's fresh local fish or shrimp & lime-cured with mango & cucumber and cilantro.,,No,60,menu-happy-hour.html,YES — verify against printed happy hour card
+special-menus,Sushi Night (Thursdays),Shrimp & Avocado Roll,Fried shrimp & cucumber and avocado,,No,10,special-menus.html,No — from AVIF printed menu
+special-menus,Sushi Night (Thursdays),Kani Salad,Shredded crabmeat & cucumber and roe tossed in a spicy dressing,,No,20,special-menus.html,No — from AVIF printed menu
+special-menus,Sushi Night (Thursdays),Salmon Roll,Salmon & cucumber and avocado,,No,30,special-menus.html,No — from AVIF printed menu
+special-menus,Sushi Night (Thursdays),Spicy Tuna Roll,Spicy tuna and avocado,,No,40,special-menus.html,No — from AVIF printed menu
+special-menus,Sushi Night (Thursdays),San Diego Roll,Crab & cucumber and avocado topped with tuna,,No,50,special-menus.html,No — from AVIF printed menu
+special-menus,Sushi Night (Thursdays),Lover's Roll,Steamed shrimp & raw salmon and avocado topped with spicy mayo and eel sauce,,No,60,special-menus.html,No — from AVIF printed menu
+special-menus,Sushi Night (Thursdays),Spider Roll,Fried soft-shell crab & cucumber and avocado,,No,70,special-menus.html,No — from AVIF printed menu
+special-menus,Sushi Night (Thursdays),Pokey Bowl,Spicy tuna & seaweed salad and kani salad served over sushi rice,,No,80,special-menus.html,No — from AVIF printed menu
+special-menus,Sushi Night (Thursdays),Maryland Crab Roll,Crab & asparagus and avocado,,No,90,special-menus.html,No — from AVIF printed menu
+special-menus,Sushi Night (Thursdays),Philadelphia Roll,Salmon & avocado and cream cheese,,No,100,special-menus.html,No — from AVIF printed menu
+special-menus,Sushi Night (Thursdays),Veggie Roll,"Avocado, cucumber, asparagus and cream cheese",,No,110,special-menus.html,No — from AVIF printed menu
+special-menus,Sushi Night (Thursdays),Summerland Roll,"Fried lobster, cream cheese, avocado, kani salad and red tobiko topped with tempura flakes",,No,120,special-menus.html,No — from AVIF printed menu
+special-menus,Pasta Night (Mondays),Chicken Alfredo,,,,10,special-menus.html,No — from AVIF printed menu
+special-menus,Pasta Night (Mondays),Shrimp Alfredo,,,,20,special-menus.html,No — from AVIF printed menu
+special-menus,Pasta Night (Mondays),Lobster Fra Diavolo,,,,30,special-menus.html,No — from AVIF printed menu
+special-menus,Pasta Night (Mondays),Lobster Ravioli,In a blush sauce,,No,40,special-menus.html,No — from AVIF printed menu
+special-menus,Pasta Night (Mondays),Linguini & Homemade Meatballs,,,,50,special-menus.html,No — from AVIF printed menu
+special-menus,Pasta Night (Mondays),Linguini & Sausage,In homemade marinara,,No,60,special-menus.html,No — from AVIF printed menu
+special-menus,Pasta Night (Mondays),Linguini Bolognese,In a homemade meat sauce,,No,70,special-menus.html,No — from AVIF printed menu
+special-menus,Pasta Night (Mondays),Manicotti,Stuffed with ricotta,,No,80,special-menus.html,No — from AVIF printed menu
+special-menus,Pasta Night (Mondays),Chicken Francaise,Egg battered chicken in lemon white wine sauce,,No,90,special-menus.html,No — from AVIF printed menu
+special-menus,Pasta Night (Mondays),Penne Vodka,In a homemade vodka sauce,,No,100,special-menus.html,No — from AVIF printed menu

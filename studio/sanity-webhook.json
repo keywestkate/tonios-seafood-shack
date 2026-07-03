@@ -1,0 +1,32 @@
+{
+  "_comment": "Sanity webhook configuration — sets up automatic Vercel redeploys when content is published",
+
+  "instructions": {
+    "summary": "Create a webhook in the Sanity dashboard that calls your Vercel deploy hook URL every time content is published. This triggers a site rebuild so your changes go live automatically.",
+
+    "steps": [
+      "1. Go to https://sanity.io/manage and open the Tonio's project.",
+      "2. Click 'API' in the left sidebar, then 'Webhooks'.",
+      "3. Click 'Create webhook'.",
+      "4. Fill in the form with the settings below.",
+      "5. Click 'Save'.",
+      "6. In Vercel, go to your project → Settings → Git → Deploy Hooks.",
+      "7. Create a new deploy hook named 'Sanity CMS publish'.",
+      "8. Copy the URL Vercel gives you and paste it as the 'URL' in step 4."
+    ],
+
+    "webhook_settings": {
+      "name": "Vercel redeploy on publish",
+      "URL": "PASTE_YOUR_VERCEL_DEPLOY_HOOK_URL_HERE",
+      "dataset": "production",
+      "trigger_on": ["create", "update", "delete"],
+      "filter": "",
+      "projection": "{_id, _type}",
+      "HTTP_method": "POST",
+      "HTTP_headers": {
+        "Content-Type": "application/json"
+      },
+      "secret": "optional — leave blank to start"
+    }
+  }
+}

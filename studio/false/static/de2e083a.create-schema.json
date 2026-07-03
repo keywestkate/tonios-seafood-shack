@@ -1,0 +1,995 @@
+[
+  {
+    "fields": [
+      {
+        "description": "Each line scrolls across the top of the site",
+        "of": [
+          {
+            "type": "string"
+          }
+        ],
+        "name": "announcementMessages",
+        "type": "array",
+        "title": "Scrolling Announcement Bar Messages"
+      },
+      {
+        "name": "heroHeadline",
+        "type": "string"
+      },
+      {
+        "rows": 2,
+        "name": "heroSubheadline",
+        "type": "text"
+      },
+      {
+        "name": "todaySpecialEyebrow",
+        "type": "string",
+        "title": "Today's Special — Eyebrow Label"
+      },
+      {
+        "name": "todaySpecialHeadline",
+        "type": "string",
+        "title": "Today's Special — Headline"
+      },
+      {
+        "rows": 3,
+        "name": "todaySpecialDescription",
+        "type": "text",
+        "title": "Today's Special — Description"
+      },
+      {
+        "name": "todaySpecialTag",
+        "type": "string",
+        "title": "Today's Special — Tag"
+      },
+      {
+        "name": "todayBarEyebrow",
+        "type": "string",
+        "title": "At the Bar — Eyebrow Label"
+      },
+      {
+        "name": "todayBarHeadline",
+        "type": "string",
+        "title": "At the Bar — Headline"
+      },
+      {
+        "rows": 3,
+        "name": "todayBarDescription",
+        "type": "text",
+        "title": "At the Bar — Description"
+      },
+      {
+        "name": "todayBarTag",
+        "type": "string",
+        "title": "At the Bar — Tag"
+      },
+      {
+        "name": "todayStageEyebrow",
+        "type": "string",
+        "title": "On Stage — Eyebrow Label"
+      },
+      {
+        "name": "todayStageHeadline",
+        "type": "string",
+        "title": "On Stage — Headline"
+      },
+      {
+        "rows": 3,
+        "name": "todayStageDescription",
+        "type": "text",
+        "title": "On Stage — Description"
+      },
+      {
+        "name": "todayStageTag",
+        "type": "string",
+        "title": "On Stage — Tag"
+      },
+      {
+        "name": "ctaLabel1",
+        "type": "string",
+        "title": "Button 1 Label"
+      },
+      {
+        "name": "ctaUrl1",
+        "type": "string",
+        "title": "Button 1 Link"
+      },
+      {
+        "name": "ctaLabel2",
+        "type": "string",
+        "title": "Button 2 Label"
+      },
+      {
+        "name": "ctaUrl2",
+        "type": "string",
+        "title": "Button 2 Link"
+      },
+      {
+        "fields": [
+          {
+            "name": "pageTitle",
+            "type": "string"
+          },
+          {
+            "rows": 2,
+            "name": "metaDescription",
+            "type": "text"
+          },
+          {
+            "options": {
+              "hotspot": true
+            },
+            "name": "ogImage",
+            "type": "image",
+            "title": "Social Share Image"
+          }
+        ],
+        "name": "seo",
+        "type": "object",
+        "title": "SEO Settings"
+      }
+    ],
+    "name": "homepageContent",
+    "type": "document",
+    "title": "Homepage"
+  },
+  {
+    "fields": [
+      {
+        "options": {
+          "hotspot": true
+        },
+        "name": "mainLogo",
+        "type": "image",
+        "title": "Main Logo (nav bar)"
+      },
+      {
+        "options": {
+          "hotspot": true
+        },
+        "name": "footerLogo",
+        "type": "image"
+      },
+      {
+        "name": "favicon",
+        "type": "image"
+      },
+      {
+        "name": "primaryColor",
+        "type": "string",
+        "title": "Primary Color (hex e.g. #C2532E)"
+      },
+      {
+        "name": "secondaryColor",
+        "type": "string",
+        "title": "Accent Color (hex)"
+      }
+    ],
+    "name": "branding",
+    "type": "document",
+    "title": "Logo & Branding"
+  },
+  {
+    "fields": [
+      {
+        "initialValue": true,
+        "name": "announcementActive",
+        "type": "boolean",
+        "title": "Announcement Bar On/Off"
+      },
+      {
+        "description": "e.g. Monday – Friday",
+        "name": "happyHourDays",
+        "type": "string"
+      },
+      {
+        "description": "e.g. 3:00 PM – 6:00 PM",
+        "name": "happyHourTime",
+        "type": "string"
+      },
+      {
+        "of": [
+          {
+            "fields": [
+              {
+                "name": "item",
+                "type": "string"
+              },
+              {
+                "name": "price",
+                "type": "string"
+              }
+            ],
+            "type": "object"
+          }
+        ],
+        "name": "happyHourDeals",
+        "type": "array"
+      },
+      {
+        "name": "locationAddress",
+        "type": "string",
+        "title": "Address"
+      },
+      {
+        "name": "locationPhone",
+        "type": "string",
+        "title": "Phone Number"
+      },
+      {
+        "rows": 2,
+        "name": "locationParking",
+        "type": "text",
+        "title": "Parking Info"
+      },
+      {
+        "name": "instagramUrl",
+        "type": "string",
+        "title": "Instagram URL"
+      },
+      {
+        "name": "facebookUrl",
+        "type": "string",
+        "title": "Facebook URL"
+      },
+      {
+        "name": "tiktokUrl",
+        "type": "string",
+        "title": "TikTok URL"
+      },
+      {
+        "rows": 2,
+        "description": "Shown below the fresh catch list",
+        "name": "freshCatchNote",
+        "type": "text"
+      },
+      {
+        "description": "e.g. Today, June 30",
+        "name": "freshCatchLastUpdated",
+        "type": "string"
+      }
+    ],
+    "name": "siteSettings",
+    "type": "document"
+  },
+  {
+    "fields": [
+      {
+        "validation": [
+          {
+            "level": "error",
+            "rules": [
+              {
+                "flag": "presence",
+                "constraint": "required"
+              }
+            ]
+          }
+        ],
+        "name": "title",
+        "type": "string",
+        "title": "Special Name"
+      },
+      {
+        "options": {
+          "list": [
+            {
+              "title": "Monday",
+              "value": "Monday"
+            },
+            {
+              "title": "Tuesday",
+              "value": "Tuesday"
+            },
+            {
+              "title": "Wednesday",
+              "value": "Wednesday"
+            },
+            {
+              "title": "Thursday",
+              "value": "Thursday"
+            },
+            {
+              "title": "Friday",
+              "value": "Friday"
+            },
+            {
+              "title": "Saturday",
+              "value": "Saturday"
+            },
+            {
+              "title": "Sunday",
+              "value": "Sunday"
+            },
+            {
+              "title": "All Week",
+              "value": "All Week"
+            }
+          ],
+          "layout": "dropdown"
+        },
+        "name": "dayOfWeek",
+        "type": "string",
+        "title": "Day of the Week"
+      },
+      {
+        "rows": 3,
+        "name": "description",
+        "type": "text"
+      },
+      {
+        "description": "e.g. $24 — leave blank to hide",
+        "name": "price",
+        "type": "string"
+      },
+      {
+        "options": {
+          "hotspot": true
+        },
+        "name": "photo",
+        "type": "image"
+      },
+      {
+        "initialValue": true,
+        "name": "active",
+        "type": "boolean",
+        "title": "Show on website"
+      }
+    ],
+    "name": "dailySpecial",
+    "type": "document"
+  },
+  {
+    "fields": [
+      {
+        "validation": [
+          {
+            "level": "error",
+            "rules": [
+              {
+                "flag": "presence",
+                "constraint": "required"
+              }
+            ]
+          }
+        ],
+        "name": "name",
+        "type": "string",
+        "title": "Seafood Item"
+      },
+      {
+        "rows": 2,
+        "name": "description",
+        "type": "text"
+      },
+      {
+        "options": {
+          "list": [
+            {
+              "title": "Market Price",
+              "value": "market"
+            },
+            {
+              "title": "Fixed Price",
+              "value": "fixed"
+            }
+          ],
+          "layout": "radio"
+        },
+        "name": "priceType",
+        "type": "string",
+        "title": "Pricing"
+      },
+      {
+        "hidden": "conditional",
+        "name": "fixedPrice",
+        "type": "string",
+        "title": "Price (e.g. $28)"
+      },
+      {
+        "options": {
+          "list": [
+            {
+              "title": "Available Today",
+              "value": "available"
+            },
+            {
+              "title": "Sold Out",
+              "value": "sold-out"
+            },
+            {
+              "title": "Coming Soon",
+              "value": "coming-soon"
+            }
+          ],
+          "layout": "radio"
+        },
+        "initialValue": "available",
+        "name": "status",
+        "type": "string",
+        "title": "Availability"
+      },
+      {
+        "options": {
+          "hotspot": true
+        },
+        "name": "photo",
+        "type": "image"
+      },
+      {
+        "initialValue": false,
+        "name": "featured",
+        "type": "boolean",
+        "title": "Feature on Homepage"
+      }
+    ],
+    "name": "freshCatchItem",
+    "type": "document"
+  },
+  {
+    "fields": [
+      {
+        "validation": [
+          {
+            "level": "error",
+            "rules": [
+              {
+                "flag": "presence",
+                "constraint": "required"
+              }
+            ]
+          }
+        ],
+        "name": "name",
+        "type": "string",
+        "title": "Category Name"
+      },
+      {
+        "description": "Lower numbers appear first",
+        "name": "sortOrder",
+        "type": "number",
+        "title": "Order on menu"
+      },
+      {
+        "options": {
+          "list": [
+            {
+              "title": "Breakfast & Brunch",
+              "value": "breakfast"
+            },
+            {
+              "title": "Lunch",
+              "value": "lunch"
+            },
+            {
+              "title": "Dinner",
+              "value": "dinner"
+            },
+            {
+              "title": "Drinks",
+              "value": "drinks"
+            },
+            {
+              "title": "Happy Hour",
+              "value": "happy-hour"
+            }
+          ],
+          "layout": "dropdown"
+        },
+        "name": "menuPage",
+        "type": "string",
+        "title": "Which Menu Page"
+      }
+    ],
+    "name": "menuCategory",
+    "type": "document"
+  },
+  {
+    "fields": [
+      {
+        "validation": [
+          {
+            "level": "error",
+            "rules": [
+              {
+                "flag": "presence",
+                "constraint": "required"
+              }
+            ]
+          }
+        ],
+        "to": [
+          {
+            "type": "menuCategory"
+          }
+        ],
+        "name": "category",
+        "type": "reference",
+        "title": "Menu Category"
+      },
+      {
+        "validation": [
+          {
+            "level": "error",
+            "rules": [
+              {
+                "flag": "presence",
+                "constraint": "required"
+              }
+            ]
+          }
+        ],
+        "name": "name",
+        "type": "string",
+        "title": "Item Name"
+      },
+      {
+        "rows": 2,
+        "name": "description",
+        "type": "text"
+      },
+      {
+        "name": "price",
+        "type": "string",
+        "title": "Price — leave blank to hide"
+      },
+      {
+        "description": "e.g. Add shrimp $7",
+        "of": [
+          {
+            "type": "string"
+          }
+        ],
+        "name": "addOns",
+        "type": "array",
+        "title": "Add-On Options"
+      },
+      {
+        "of": [
+          {
+            "options": {
+              "list": [
+                {
+                  "title": "Spicy",
+                  "value": "Spicy"
+                },
+                {
+                  "title": "Popular",
+                  "value": "Popular"
+                },
+                {
+                  "title": "Market Price",
+                  "value": "Market Price"
+                },
+                {
+                  "title": "New",
+                  "value": "New"
+                },
+                {
+                  "title": "Staff Pick",
+                  "value": "Staff Pick"
+                }
+              ]
+            },
+            "type": "string"
+          }
+        ],
+        "name": "labels",
+        "type": "array"
+      },
+      {
+        "description": "Lower numbers appear first within the category",
+        "name": "sortOrder",
+        "type": "number",
+        "title": "Display Order"
+      },
+      {
+        "initialValue": true,
+        "name": "active",
+        "type": "boolean",
+        "title": "Show on menu"
+      }
+    ],
+    "name": "menuItem",
+    "type": "document"
+  },
+  {
+    "fields": [
+      {
+        "validation": [
+          {
+            "level": "error",
+            "rules": [
+              {
+                "flag": "presence",
+                "constraint": "required"
+              }
+            ]
+          }
+        ],
+        "name": "name",
+        "type": "string",
+        "title": "Roll Name"
+      },
+      {
+        "rows": 2,
+        "name": "ingredients",
+        "type": "text",
+        "title": "Ingredients / Description"
+      },
+      {
+        "name": "price",
+        "type": "string"
+      },
+      {
+        "options": {
+          "hotspot": true
+        },
+        "name": "photo",
+        "type": "image"
+      },
+      {
+        "description": "Lower numbers appear first",
+        "name": "sortOrder",
+        "type": "number",
+        "title": "Display Order"
+      },
+      {
+        "initialValue": false,
+        "name": "featured",
+        "type": "boolean",
+        "title": "Feature this roll"
+      }
+    ],
+    "name": "sushiRoll",
+    "type": "document"
+  },
+  {
+    "fields": [
+      {
+        "validation": [
+          {
+            "level": "error",
+            "rules": [
+              {
+                "flag": "presence",
+                "constraint": "required"
+              }
+            ]
+          }
+        ],
+        "name": "name",
+        "type": "string",
+        "title": "Pasta Dish Name"
+      },
+      {
+        "rows": 2,
+        "name": "description",
+        "type": "text"
+      },
+      {
+        "name": "price",
+        "type": "string"
+      },
+      {
+        "options": {
+          "hotspot": true
+        },
+        "name": "photo",
+        "type": "image"
+      },
+      {
+        "description": "Lower numbers appear first",
+        "name": "sortOrder",
+        "type": "number",
+        "title": "Display Order"
+      },
+      {
+        "initialValue": false,
+        "name": "comingSoon",
+        "type": "boolean",
+        "title": "Mark as Coming Soon"
+      }
+    ],
+    "name": "pastaItem",
+    "type": "document"
+  },
+  {
+    "fields": [
+      {
+        "validation": [
+          {
+            "level": "error",
+            "rules": [
+              {
+                "flag": "presence",
+                "constraint": "required"
+              }
+            ]
+          }
+        ],
+        "name": "title",
+        "type": "string",
+        "title": "Event Title"
+      },
+      {
+        "name": "performer",
+        "type": "string",
+        "title": "Performer / Band Name"
+      },
+      {
+        "validation": [
+          {
+            "level": "error",
+            "rules": [
+              {
+                "flag": "presence",
+                "constraint": "required"
+              }
+            ]
+          }
+        ],
+        "name": "date",
+        "type": "date"
+      },
+      {
+        "name": "time",
+        "type": "string",
+        "title": "Start Time (e.g. 8:00 PM)"
+      },
+      {
+        "rows": 3,
+        "name": "description",
+        "type": "text"
+      },
+      {
+        "options": {
+          "hotspot": true
+        },
+        "name": "photo",
+        "type": "image"
+      },
+      {
+        "initialValue": true,
+        "name": "active",
+        "type": "boolean",
+        "title": "Show on website"
+      },
+      {
+        "initialValue": false,
+        "name": "cancelled",
+        "type": "boolean",
+        "title": "Mark as Cancelled"
+      },
+      {
+        "initialValue": false,
+        "name": "featured",
+        "type": "boolean",
+        "title": "Feature on Homepage"
+      }
+    ],
+    "name": "liveEvent",
+    "type": "document"
+  },
+  {
+    "fields": [
+      {
+        "options": {
+          "hotspot": true
+        },
+        "validation": [
+          {
+            "level": "error",
+            "rules": [
+              {
+                "flag": "presence",
+                "constraint": "required"
+              }
+            ]
+          }
+        ],
+        "name": "photo",
+        "type": "image"
+      },
+      {
+        "name": "caption",
+        "type": "string"
+      },
+      {
+        "name": "sortOrder",
+        "type": "number",
+        "title": "Order (lower = first)"
+      },
+      {
+        "initialValue": true,
+        "name": "visible",
+        "type": "boolean",
+        "title": "Show in gallery"
+      }
+    ],
+    "name": "galleryPhoto",
+    "type": "document"
+  },
+  {
+    "fields": [
+      {
+        "validation": [
+          {
+            "level": "error",
+            "rules": [
+              {
+                "flag": "presence",
+                "constraint": "required"
+              }
+            ]
+          }
+        ],
+        "name": "title",
+        "type": "string"
+      },
+      {
+        "options": {
+          "source": "title"
+        },
+        "validation": [
+          {
+            "level": "error",
+            "rules": [
+              {
+                "flag": "custom"
+              },
+              {
+                "flag": "presence",
+                "constraint": "required"
+              }
+            ]
+          }
+        ],
+        "name": "slug",
+        "type": "slug"
+      },
+      {
+        "validation": [
+          {
+            "level": "error",
+            "rules": [
+              {
+                "flag": "presence",
+                "constraint": "required"
+              }
+            ]
+          }
+        ],
+        "name": "publishedAt",
+        "type": "datetime"
+      },
+      {
+        "name": "image",
+        "type": "image"
+      },
+      {
+        "of": [
+          {
+            "lists": [
+              {
+                "value": "bullet",
+                "title": "Bulleted list"
+              },
+              {
+                "value": "number",
+                "title": "Numbered list"
+              }
+            ],
+            "marks": {
+              "annotations": [
+                {
+                  "i18nTitleKey": "inputs.portable-text.annotation.link",
+                  "options": {
+                    "modal": {
+                      "type": "popover"
+                    }
+                  },
+                  "fields": [
+                    {
+                      "validation": [
+                        {
+                          "level": "error",
+                          "rules": [
+                            {
+                              "flag": "uri",
+                              "constraint": {
+                                "options": {
+                                  "scheme": [
+                                    "/^http$/",
+                                    "/^https$/",
+                                    "/^tel$/",
+                                    "/^mailto$/"
+                                  ],
+                                  "allowRelative": true,
+                                  "relativeOnly": false,
+                                  "allowCredentials": false
+                                }
+                              }
+                            }
+                          ]
+                        }
+                      ],
+                      "description": "A valid web, email, phone, or relative link.",
+                      "name": "href",
+                      "type": "url",
+                      "title": "Link"
+                    }
+                  ],
+                  "name": "link",
+                  "type": "object"
+                }
+              ],
+              "decorators": [
+                {
+                  "value": "strong",
+                  "title": "Strong"
+                },
+                {
+                  "value": "em",
+                  "title": "Italic"
+                },
+                {
+                  "value": "code",
+                  "title": "Code"
+                },
+                {
+                  "value": "underline",
+                  "title": "Underline"
+                },
+                {
+                  "value": "strike-through",
+                  "title": "Strike"
+                }
+              ]
+            },
+            "of": [],
+            "styles": [
+              {
+                "value": "normal",
+                "title": "Normal"
+              },
+              {
+                "value": "h1",
+                "title": "Heading 1"
+              },
+              {
+                "value": "h2",
+                "title": "Heading 2"
+              },
+              {
+                "value": "h3",
+                "title": "Heading 3"
+              },
+              {
+                "value": "h4",
+                "title": "Heading 4"
+              },
+              {
+                "value": "h5",
+                "title": "Heading 5"
+              },
+              {
+                "value": "h6",
+                "title": "Heading 6"
+              },
+              {
+                "value": "blockquote",
+                "title": "Quote"
+              }
+            ],
+            "type": "block"
+          }
+        ],
+        "name": "body",
+        "type": "array"
+      }
+    ],
+    "name": "post",
+    "type": "document"
+  }
+]

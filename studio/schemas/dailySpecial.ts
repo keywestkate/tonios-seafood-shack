@@ -1,0 +1,155 @@
+import { defineType, defineField } from 'sanity'
+
+export default defineType({
+  name: 'dailySpecial',
+  title: 'Daily Special',
+  type: 'document',
+  fields: [
+    defineField({
+      name: 'active',
+      title: 'Show on website',
+      type: 'boolean',
+      initialValue: true,
+      description: 'Turn off to hide this card without deleting it.',
+    }),
+    defineField({
+      name: 'label',
+      title: 'Card Label',
+      type: 'string',
+      description: 'Short category label shown above the title — e.g. "Lunch Special", "Dinner Feature", "Drink Special", "Fresh Catch Today"',
+      options: {
+        list: [
+          { title: 'Lunch Special',     value: 'Lunch Special' },
+          { title: 'Dinner Feature',    value: 'Dinner Feature' },
+          { title: 'Drink Special',     value: 'Drink Special' },
+          { title: 'Fresh Catch Today', value: 'Fresh Catch Today' },
+          { title: 'Happy Hour Pick',   value: 'Happy Hour Pick' },
+          { title: 'Chef\'s Feature',   value: "Chef's Feature" },
+          { title: 'Weekend Only',      value: 'Weekend Only' },
+        ],
+        layout: 'dropdown',
+      },
+    }),
+    defineField({
+      name: 'title',
+      title: 'Special Name',
+      type: 'string',
+      description: 'The dish or drink name shown large on the card.',
+      validation: (Rule) => Rule.required(),
+    }),
+    defineField({
+      name: 'description',
+      title: 'Description',
+      type: 'text',
+      rows: 3,
+      description: 'One or two sentences — what makes this special today?',
+    }),
+    defineField({
+      name: 'price',
+      title: 'Price',
+      type: 'string',
+      description: 'e.g. $24 — leave blank if using Market Price',
+    }),
+    defineField({
+      name: 'marketPrice',
+      title: 'Market Price',
+      type: 'boolean',
+      initialValue: false,
+      description: 'Check this if the price changes daily — shows "Market Price" instead.',
+    }),
+    defineField({
+      name: 'tag',
+      title: 'Flair Tag',
+      type: 'string',
+      description: 'Small badge shown on the card — e.g. "Today Only", "Straight from the Dock", "Shack Favorite"',
+      options: {
+        list: [
+          { title: 'Today Only',             value: 'Today Only' },
+          { title: 'Straight from the Dock', value: 'Straight from the Dock' },
+          { title: 'Ask Before It\'s Gone',  value: "Ask Before It's Gone" },
+          { title: 'Fresh Catch Feature',    value: 'Fresh Catch Feature' },
+          { title: 'Shack Favorite',         value: 'Shack Favorite' },
+          { title: 'Limited Batch',          value: 'Limited Batch' },
+          { title: 'Weekend Special',        value: 'Weekend Special' },
+        ],
+        layout: 'dropdown',
+      },
+    }),
+    defineField({
+      name: 'icon',
+      title: 'Card Icon',
+      type: 'string',
+      description: 'Small icon shown on the card.',
+      options: {
+        list: [
+          { title: '🐟 Fish',     value: 'fish' },
+          { title: '🦐 Shrimp',   value: 'shrimp' },
+          { title: '🦞 Lobster',  value: 'lobster' },
+          { title: '🍹 Cocktail', value: 'cocktail' },
+          { title: '🌊 Wave',     value: 'wave' },
+        ],
+        layout: 'radio',
+      },
+      initialValue: 'fish',
+    }),
+    defineField({
+      name: 'buttonText',
+      title: 'Button Text',
+      type: 'string',
+      description: 'e.g. "See the Lunch Menu" — leave blank to hide the button',
+    }),
+    defineField({
+      name: 'buttonLink',
+      title: 'Button Link',
+      type: 'string',
+      description: 'e.g. menu-lunch.html or a full URL',
+    }),
+    defineField({
+      name: 'photo',
+      title: 'Photo',
+      type: 'image',
+      options: { hotspot: true },
+      description: 'Optional — adds a photo to the card. Leave blank for text-only card.',
+    }),
+    defineField({
+      name: 'dayOfWeek',
+      title: 'Day of the Week',
+      type: 'string',
+      description: 'Optional — if this special only runs on a specific day.',
+      options: {
+        list: [
+          { title: 'Monday',    value: 'Monday' },
+          { title: 'Tuesday',   value: 'Tuesday' },
+          { title: 'Wednesday', value: 'Wednesday' },
+          { title: 'Thursday',  value: 'Thursday' },
+          { title: 'Friday',    value: 'Friday' },
+          { title: 'Saturday',  value: 'Saturday' },
+          { title: 'Sunday',    value: 'Sunday' },
+          { title: 'All Week',  value: 'All Week' },
+        ],
+        layout: 'dropdown',
+      },
+    }),
+    defineField({
+      name: 'sortOrder',
+      title: 'Display Order',
+      type: 'number',
+      description: 'Lower numbers appear first. 1 = Lunch, 2 = Dinner, 3 = Drink, 4 = Fresh Catch',
+      initialValue: 1,
+    }),
+  ],
+  orderings: [
+    {
+      title: 'Display Order',
+      name: 'sortOrderAsc',
+      by: [{ field: 'sortOrder', direction: 'asc' }],
+    },
+  ],
+  preview: {
+    select: {
+      title: 'title',
+      subtitle: 'label',
+      media: 'photo',
+    },
+  },
+})
