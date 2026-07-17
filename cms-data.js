@@ -177,7 +177,7 @@ const CMS = {
   // SOCIAL LINKS
   // ─────────────────────────────────────────────
   social: {
-    instagram: "https://www.instagram.com/toniostiki/",
+    instagram: "https://www.instagram.com/toniosseafoodtiki/",
     facebook:  "https://www.facebook.com/ToniosTiki/",
     tiktok:    "https://www.tiktok.com/@toniostiki",
     website:   "https://www.toniostiki.com",
