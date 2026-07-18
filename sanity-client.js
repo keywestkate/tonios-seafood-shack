@@ -83,6 +83,7 @@ async function loadCMSFromSanity() {
     sushiRolls,
     pastaItems,
     newsletterSettingsData,
+    pageVisibilityData,
   ] = await Promise.all([
     fetchSanityData(`*[_type == "homepageContent"][0]`),
     fetchSanityData(`*[_type == "dailySpecial" && active != false] | order(sortOrder asc) { _id, title, label, description, price, marketPrice, tag, icon, buttonText, buttonLink, photo, dayOfWeek, active, sortOrder }`),
@@ -96,6 +97,7 @@ async function loadCMSFromSanity() {
     fetchSanityData(`*[_type == "sushiRoll"] | order(sortOrder asc)`),
     fetchSanityData(`*[_type == "pastaItem"] | order(sortOrder asc)`),
     fetchSanityData(`*[_type == "newsletterSettings"][0]{ showSection, eyebrow, headline, subheadline, tagline, buttonText, successTitle, successBody, backgroundImage }`),
+    fetchSanityData(`*[_type == "pageVisibility"][0]`),
   ]);
 
   // Make sure CMS object exists (cms-data.js should have created it already)
@@ -356,6 +358,34 @@ async function loadCMSFromSanity() {
       primaryColor:   brandingData.primaryColor   || null,
       secondaryColor: brandingData.secondaryColor || null,
     };
+  }
+
+  // ── Page Visibility ───────────────────────────────────────────────────────
+  if (pageVisibilityData) {
+    CMS.pageVisibility = pageVisibilityData;
+
+    // Hide nav links to pages that are toggled off
+    const pageNavMap = {
+      meetTheCrew: 'meet-the-crew.html',
+      menuBreakfast: 'menu-breakfast.html',
+      menuLunch: 'menu-lunch.html',
+      menuDinner: 'menu-dinner.html',
+      menuDrinks: 'menu-drinks.html',
+      menuHappyHour: 'menu-happy-hour.html',
+      specialMenus: 'special-menus.html',
+      freshCatch: 'fresh-catch.html',
+      liveMusic: 'live-music.html',
+      shopTheShack: 'shop-the-shack.html',
+      visit: 'visit.html',
+      faq: 'faq.html',
+    };
+    Object.entries(pageNavMap).forEach(([key, href]) => {
+      if (pageVisibilityData[key] === false) {
+        document.querySelectorAll(`a[href="${href}"]`).forEach(el => {
+          el.style.display = 'none';
+        });
+      }
+    });
   }
 
   // Dispatch an event so scripts can react when Sanity data is ready
