@@ -2931,6 +2931,114 @@ ul { list-style: none; }
   position: relative;
 }
 
+/* ════════════════════════════════════════════════════════════
+   WELCOME SECTION
+   ════════════════════════════════════════════════════════════ */
+.welcome-section {
+  background: #FBF8F2;
+  padding: 40px 40px 70px;
+  overflow: hidden;
+}
+
+/* Two-column: text | photo scatter */
+.welcome-layout {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+/* Text block */
+.wc-text {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.welcome-super-script {
+  font-family: var(--f-hand);
+  font-size: clamp(1.6rem, 3vw, 2.4rem);
+  color: var(--aqua);
+  margin: 0;
+  line-height: 1.2;
+}
+.welcome-heading {
+  font-family: var(--f-display);
+  font-size: clamp(2.6rem, 5vw, 4.4rem);
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: -.03em;
+  line-height: .92;
+  color: var(--navy);
+  margin: 0;
+  text-shadow:
+    -2px -2px 8px rgba(111,163,160,0.5),
+     2px  2px 8px rgba(111,163,160,0.5);
+}
+.welcome-body {
+  font-family: var(--f-sans);
+  font-size: clamp(.9rem, 1.5vw, 1.05rem);
+  color: var(--navy);
+  line-height: 1.75;
+  margin: 0;
+}
+.welcome-tagline {
+  font-family: var(--f-hand);
+  font-size: clamp(1.6rem, 3vw, 2.6rem);
+  color: var(--navy);
+  margin: 4px 0;
+  line-height: 1.2;
+}
+
+/* Freeform scatter — photos positioned individually */
+.wc-scatter {
+  position: relative;
+  height: 820px;
+}
+.scatter-photo {
+  position: absolute;
+  border: 4px solid var(--navy);
+  box-shadow: 4px 6px 20px rgba(0,0,0,0.22);
+  background: transparent;
+}
+.scatter-photo img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* Row 1 — top two photos, faces in upper half, only bottom corners overlap row 2 */
+.sp1 { width: 54%; top: 0;    left: 2%;   transform: rotate(-4deg); z-index: 2; }
+.sp2 { width: 46%; top: 15px; left: 50%;  transform: rotate(5deg);  z-index: 3; }
+
+/* Row 2 — middle two, top edge starts below faces of row 1 */
+.sp3 { width: 46%; top: 310px; left: 46%; transform: rotate(-5deg); z-index: 4; }
+.sp4 { width: 48%; top: 290px; left: 2%;  transform: rotate(3deg);  z-index: 3; }
+
+/* Row 3 — bottom center, peeks out below row 2 */
+.sp5 { width: 44%; top: 560px; left: 26%; transform: rotate(-2deg); z-index: 5; }
+
+/* Polaroid frame (for any remaining .polaroid elements) */
+.polaroid {
+  border: 4px solid var(--navy);
+  display: block;
+  width: 100%;
+  box-shadow: 3px 5px 18px rgba(0,0,0,0.2);
+  background: transparent;
+}
+.polaroid img { width: 100%; height: auto; display: block; }
+
+@media (max-width: 960px) {
+  .welcome-layout { grid-template-columns: 1fr; }
+  .wc-scatter { height: 700px; margin-top: 20px; }
+  .sp1 { width: 50%; }
+  .sp2 { width: 42%; }
+}
+@media (max-width: 600px) {
+  .wc-scatter { display: none; }
+}
+
 /* ── Wave top divider ──────────────────────────────────────── */
 .ds-wave-top {
   width: 100%;
