@@ -56,8 +56,13 @@
       const descHtml = item.description
         ? `<div class="menu-item-desc">${item.description}</div>`
         : '';
+      const photoUrl = typeof sanityImageUrl === 'function' ? sanityImageUrl(item.photo, 600) : null;
+      const photoHtml = photoUrl
+        ? `<div class="menu-item-photo"><img src="${photoUrl}" alt="${item.name}" loading="lazy" /></div>`
+        : '';
       return `
         <div class="menu-item-row">
+          ${photoHtml}
           <div class="menu-item-info">
             <div class="menu-item-name">${item.name}</div>
             ${descHtml}
@@ -112,7 +117,7 @@
 
     /* Fetch active items for those categories */
     const items = await fetchGroq(
-      `*[_type == "menuItem" && active != false && category._ref in $catIds] | order(sortOrder asc) { _id, name, description, price, labels, sortOrder, "catId": category._ref }`,
+      `*[_type == "menuItem" && active != false && category._ref in $catIds] | order(sortOrder asc) { _id, name, description, price, labels, sortOrder, photo, "catId": category._ref }`,
       { catIds }
     );
     if (!items) return;

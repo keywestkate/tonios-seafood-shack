@@ -25,6 +25,12 @@ export default defineType({
       rows: 2,
     }),
     defineField({
+      name: 'photo',
+      title: 'Photo',
+      type: 'image',
+      options: { hotspot: true },
+    }),
+    defineField({
       name: 'price',
       title: 'Price — leave blank to hide',
       type: 'string',
@@ -72,6 +78,7 @@ export default defineType({
     select: {
       title: 'name',
       subtitle: 'price',
+      media: 'photo',
     },
   },
 })
