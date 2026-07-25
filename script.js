@@ -161,6 +161,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
 /* ── Re-render live sections when Sanity data arrives ──── */
 document.addEventListener('sanityLoaded', () => {
+  renderHero();
+  renderAnnouncementBar();
+  renderIntro();
+  renderCatchTeaser();
+  renderCrew();
   renderTodayStrip();
   renderCatchBoard();
   renderMusicNext();
@@ -169,6 +174,62 @@ document.addEventListener('sanityLoaded', () => {
 });
 
 /* ── Renderers (called on DOMContentLoaded + sanityLoaded) ── */
+
+function renderHero() {
+  const h = CMS.hero || {};
+  const stamp  = document.getElementById('hero-stamp');
+  const sub    = document.getElementById('hero-sub');
+  const cta1   = document.getElementById('hero-cta1');
+  const cta2   = document.getElementById('hero-cta2');
+  if (stamp && h.stamp)       stamp.textContent = h.stamp;
+  if (sub   && h.subheadline) sub.textContent   = h.subheadline;
+  if (cta1  && h.ctaLabel1)   cta1.textContent  = h.ctaLabel1;
+  if (cta1  && h.ctaUrl1)     cta1.href         = h.ctaUrl1;
+  if (cta2  && h.ctaLabel2)   cta2.textContent  = h.ctaLabel2;
+  if (cta2  && h.ctaUrl2)     cta2.href         = h.ctaUrl2;
+}
+
+function renderIntro() {
+  const i = CMS.intro || {};
+  const body = document.getElementById('intro-body');
+  const cta  = document.getElementById('intro-cta');
+  if (body && i.body)     body.textContent = i.body;
+  if (cta  && i.ctaLabel) cta.textContent  = i.ctaLabel;
+  if (cta  && i.ctaUrl)   cta.href         = i.ctaUrl;
+}
+
+function renderCatchTeaser() {
+  const c = CMS.catchTeaser || {};
+  const cook = document.getElementById('catch-cook-label');
+  const body = document.getElementById('catch-body');
+  const cta1 = document.getElementById('catch-cta1');
+  const cta2 = document.getElementById('catch-cta2');
+  if (cook && c.cookLabel) cook.textContent = c.cookLabel;
+  if (body && c.body)      body.textContent = c.body;
+  if (cta1 && c.cta1Label) cta1.textContent = c.cta1Label;
+  if (cta2 && c.cta2Label) cta2.textContent = c.cta2Label;
+}
+
+function renderCrew() {
+  const cr = CMS.crew || {};
+  const eyebrow = document.getElementById('crew-eyebrow');
+  const body    = document.getElementById('crew-body');
+  const cta     = document.getElementById('crew-cta');
+  if (eyebrow && cr.eyebrow)  eyebrow.textContent = cr.eyebrow;
+  if (body    && cr.body)     body.textContent    = cr.body;
+  if (cta     && cr.ctaLabel) cta.textContent     = cr.ctaLabel;
+}
+
+function renderAnnouncementBar() {
+  const track = document.getElementById('marquee-track');
+  if (!track || !CMS.announcement.active) return;
+  const msgs = CMS.announcement.messages;
+  if (!msgs || !msgs.length) return;
+  const all = [...msgs, ...msgs, ...msgs, ...msgs, ...msgs, ...msgs];
+  track.innerHTML = all.map(m =>
+    `<span>${m}</span><span class="marquee-dot">·</span>`
+  ).join('');
+}
 
 function renderTodayStrip() {
   const hoursValueEl = document.getElementById('today-hours-value');
@@ -424,7 +485,7 @@ const DS_FALLBACK = [
     label:      'Drink Special',
     title:      'Tiki Shack Punch',
     description: "House rum, fresh OJ, pineapple and grenadine — served on the rocks with a toasted coconut rim.",
-    price:      '$8',
+    price:      '',
     marketPrice: false,
     tag:        'Shack Favorite',
     icon:       'cocktail',

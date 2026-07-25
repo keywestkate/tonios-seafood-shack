@@ -11,19 +11,6 @@
   const DATASET    = 'production';
   const CDN_URL    = `https://${PROJECT_ID}.apicdn.sanity.io/v2021-10-21/data/query/${DATASET}`;
 
-  /* ── Category IDs that get 2-column layout ──────────────── */
-  const TWO_COL_CATS = new Set([
-    'cat-lunch-appetizers',
-    'cat-dinner-sea',
-    'cat-dinner-land',
-    'cat-dinner-sides',
-    'cat-brk-sides',
-    'cat-brk-drinks',
-    'cat-drinks-beer',
-    'cat-drinks-wine',
-    'cat-drinks-na',
-  ]);
-
   /* ── Section notes by category ID ──────────────────────── */
   const SECTION_NOTES = {
     'cat-lunch-sandwiches': 'All sandwiches served with French fries.',
@@ -57,7 +44,7 @@
   /* ── Build one <section class="menu-section"> ───────────── */
   function buildSection(cat, items) {
     const note    = SECTION_NOTES[cat._id] || '';
-    const twoCol  = TWO_COL_CATS.has(cat._id);
+    const twoCol  = true;
 
     const itemsHtml = items.map(item => {
       const isMarketPrice = Array.isArray(item.labels) && item.labels.includes('Market Price');

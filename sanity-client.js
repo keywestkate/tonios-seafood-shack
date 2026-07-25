@@ -82,7 +82,11 @@ async function loadCMSFromSanity() {
     brandingData,
     sushiRolls,
     pastaItems,
+    crabDayItemsData,
+    wingsDayItemsData,
     newsletterSettingsData,
+    galleryPhotosData,
+    sitePhotosData,
     pageVisibilityData,
   ] = await Promise.all([
     fetchSanityData(`*[_type == "homepageContent"][0]`),
@@ -96,7 +100,11 @@ async function loadCMSFromSanity() {
     fetchSanityData(`*[_type == "branding"][0]`),
     fetchSanityData(`*[_type == "sushiRoll"] | order(sortOrder asc)`),
     fetchSanityData(`*[_type == "pastaItem"] | order(sortOrder asc)`),
+    fetchSanityData(`*[_type == "crabDayItem"] | order(sortOrder asc)`),
+    fetchSanityData(`*[_type == "wingsDayItem"] | order(sortOrder asc)`),
     fetchSanityData(`*[_type == "newsletterSettings"][0]{ showSection, eyebrow, headline, subheadline, tagline, buttonText, successTitle, successBody, backgroundImage }`),
+    fetchSanityData(`*[_type == "galleryPhoto" && visible != false] | order(sortOrder asc, _createdAt asc) { _id, photo, caption, category, featured, sortOrder }`),
+    fetchSanityData(`*[_type == "sitePhotos"][0]`),
     fetchSanityData(`*[_type == "pageVisibility"][0]`),
   ]);
 
@@ -114,38 +122,36 @@ async function loadCMSFromSanity() {
     }
 
     // Hero
-    if (homepage.heroHeadline)     CMS.hero = CMS.hero || {};
-    if (homepage.heroHeadline)     CMS.hero.headline    = homepage.heroHeadline;
-    if (homepage.heroSubheadline)  CMS.hero.subheadline = homepage.heroSubheadline;
+    CMS.hero = CMS.hero || {};
+    if (homepage.heroStamp)       CMS.hero.stamp      = homepage.heroStamp;
+    if (homepage.heroHeadline)    CMS.hero.headline   = homepage.heroHeadline;
+    if (homepage.heroSubheadline) CMS.hero.subheadline = homepage.heroSubheadline;
+    if (homepage.heroCta1Label)   CMS.hero.ctaLabel1  = homepage.heroCta1Label;
+    if (homepage.heroCta1Url)     CMS.hero.ctaUrl1    = homepage.heroCta1Url;
+    if (homepage.heroCta2Label)   CMS.hero.ctaLabel2  = homepage.heroCta2Label;
+    if (homepage.heroCta2Url)     CMS.hero.ctaUrl2    = homepage.heroCta2Url;
 
-    // Today panels
-    if (homepage.todaySpecialHeadline || homepage.todaySpecialDescription) {
-      if (homepage.todaySpecialEyebrow)    CMS.today.special.eyebrow     = homepage.todaySpecialEyebrow;
-      if (homepage.todaySpecialHeadline)   CMS.today.special.headline    = homepage.todaySpecialHeadline;
-      if (homepage.todaySpecialDescription) CMS.today.special.description = homepage.todaySpecialDescription;
-      if (homepage.todaySpecialTag)        CMS.today.special.tag         = homepage.todaySpecialTag;
-    }
-    if (homepage.todayBarHeadline || homepage.todayBarDescription) {
-      if (homepage.todayBarEyebrow)    CMS.today.bar.eyebrow     = homepage.todayBarEyebrow;
-      if (homepage.todayBarHeadline)   CMS.today.bar.headline    = homepage.todayBarHeadline;
-      if (homepage.todayBarDescription) CMS.today.bar.description = homepage.todayBarDescription;
-      if (homepage.todayBarTag)        CMS.today.bar.tag         = homepage.todayBarTag;
-    }
-    if (homepage.todayStageHeadline || homepage.todayStageDescription) {
-      if (homepage.todayStageEyebrow)    CMS.today.stage.eyebrow     = homepage.todayStageEyebrow;
-      if (homepage.todayStageHeadline)   CMS.today.stage.headline    = homepage.todayStageHeadline;
-      if (homepage.todayStageDescription) CMS.today.stage.description = homepage.todayStageDescription;
-      if (homepage.todayStageTag)        CMS.today.stage.tag         = homepage.todayStageTag;
-    }
+    // Intro section
+    CMS.intro = CMS.intro || {};
+    if (homepage.introHeadline)  CMS.intro.headline  = homepage.introHeadline;
+    if (homepage.introBody)      CMS.intro.body      = homepage.introBody;
+    if (homepage.introCtaLabel)  CMS.intro.ctaLabel  = homepage.introCtaLabel;
+    if (homepage.introCtaUrl)    CMS.intro.ctaUrl    = homepage.introCtaUrl;
 
-    // CTAs
-    if (homepage.ctaLabel1 || homepage.ctaUrl1) {
-      CMS.cta = CMS.cta || {};
-      if (homepage.ctaLabel1) CMS.cta.label1 = homepage.ctaLabel1;
-      if (homepage.ctaUrl1)   CMS.cta.url1   = homepage.ctaUrl1;
-      if (homepage.ctaLabel2) CMS.cta.label2 = homepage.ctaLabel2;
-      if (homepage.ctaUrl2)   CMS.cta.url2   = homepage.ctaUrl2;
-    }
+    // Fresh Catch teaser
+    CMS.catchTeaser = CMS.catchTeaser || {};
+    if (homepage.catchTeaserHeadline)  CMS.catchTeaser.headline  = homepage.catchTeaserHeadline;
+    if (homepage.catchTeaserCookLabel) CMS.catchTeaser.cookLabel = homepage.catchTeaserCookLabel;
+    if (homepage.catchTeaserBody)      CMS.catchTeaser.body      = homepage.catchTeaserBody;
+    if (homepage.catchTeaserCta1Label) CMS.catchTeaser.cta1Label = homepage.catchTeaserCta1Label;
+    if (homepage.catchTeaserCta2Label) CMS.catchTeaser.cta2Label = homepage.catchTeaserCta2Label;
+
+    // Crew section
+    CMS.crew = CMS.crew || {};
+    if (homepage.crewEyebrow)  CMS.crew.eyebrow  = homepage.crewEyebrow;
+    if (homepage.crewHeadline) CMS.crew.headline = homepage.crewHeadline;
+    if (homepage.crewBody)     CMS.crew.body     = homepage.crewBody;
+    if (homepage.crewCtaLabel) CMS.crew.ctaLabel = homepage.crewCtaLabel;
   }
 
   // ── Site Settings ────────────────────────────────────────────────────────
@@ -349,6 +355,30 @@ async function loadCMSFromSanity() {
     }));
   }
 
+  // ── Crab Day Items ────────────────────────────────────────────────────────
+  if (crabDayItemsData && crabDayItemsData.length) {
+    CMS.crabDayItems = crabDayItemsData.map(c => ({
+      id:          c._id,
+      name:        c.name,
+      description: c.description || '',
+      price:       c.price || '',
+      photo:       sanityImageUrl(c.photo, 600),
+      featured:    c.featured || false,
+    }));
+  }
+
+  // ── Wings Day Items ───────────────────────────────────────────────────────
+  if (wingsDayItemsData && wingsDayItemsData.length) {
+    CMS.wingsDayItems = wingsDayItemsData.map(w => ({
+      id:          w._id,
+      name:        w.name,
+      description: w.description || '',
+      price:       w.price || '',
+      photo:       sanityImageUrl(w.photo, 600),
+      featured:    w.featured || false,
+    }));
+  }
+
   // ── Branding ──────────────────────────────────────────────────────────────
   if (brandingData) {
     CMS.branding = {
@@ -358,6 +388,89 @@ async function loadCMSFromSanity() {
       primaryColor:   brandingData.primaryColor   || null,
       secondaryColor: brandingData.secondaryColor || null,
     };
+  }
+
+  // ── Site Photos ───────────────────────────────────────────────────────────
+  if (sitePhotosData) {
+    const sp = sitePhotosData;
+    // Helper: set background-image on an element by ID
+    function setBg(id, imageObj, width) {
+      const url = sanityImageUrl(imageObj, width);
+      if (!url) return;
+      const el = document.getElementById(id);
+      if (el) el.style.backgroundImage = `url('${url}')`;
+    }
+    // Helper: set src on an <img> by ID
+    function setImg(id, imageObj, width) {
+      const url = sanityImageUrl(imageObj, width);
+      if (!url) return;
+      const el = document.getElementById(id);
+      if (el) el.src = url;
+    }
+
+    // Homepage
+    if (sp.heroBackground)   setBg('hero-bg-photo',   sp.heroBackground,   1920);
+    if (sp.introPhoto)       setBg('intro-bg-photo',   sp.introPhoto,       1200);
+    if (sp.menusTeaserPhoto) setBg('menus-bg-photo',   sp.menusTeaserPhoto, 1400);
+    if (sp.catchTeaserPhoto) setImg('catch-main-photo', sp.catchTeaserPhoto, 1400);
+    if (sp.crewPhoto)        setImg('crew-bg-photo',    sp.crewPhoto,        1400);
+    if (sp.newsletterBg) {
+      const bgImg = document.querySelector('.vip-bg-img');
+      const url = sanityImageUrl(sp.newsletterBg, 1600);
+      if (bgImg && url) bgImg.src = url;
+    }
+
+    // Store for page-specific scripts to use
+    CMS.sitePhotos = {
+      visitHeroPhoto:  sanityImageUrl(sp.visitHeroPhoto,  1400),
+      visitDockPhoto:  sanityImageUrl(sp.visitDockPhoto,  1200),
+      visitViewPhoto:  sanityImageUrl(sp.visitViewPhoto,  1200),
+      visitRegulars1:  sanityImageUrl(sp.visitRegulars1,  800),
+      visitRegulars2:  sanityImageUrl(sp.visitRegulars2,  800),
+      musicPhoto1:     sanityImageUrl(sp.musicPhoto1,     1200),
+      musicPhoto2:     sanityImageUrl(sp.musicPhoto2,     1400),
+      musicPhoto3:     sanityImageUrl(sp.musicPhoto3,     1200),
+      musicPhoto4:     sanityImageUrl(sp.musicPhoto4,     800),
+      crewPageHero:    sanityImageUrl(sp.crewPageHero,    1600),
+      marketPhoto:     sanityImageUrl(sp.marketPhoto,     800),
+      marketExterior:  sanityImageUrl(sp.marketExterior,  800),
+    };
+
+    // Apply to any page-specific elements present on the current page
+    const pagePhotos = [
+      ['visit-hero-photo',  sp.visitHeroPhoto,  1400],
+      ['visit-dock-photo',  sp.visitDockPhoto,  1200],
+      ['visit-view-photo',  sp.visitViewPhoto,  1200],
+      ['visit-regulars-1',  sp.visitRegulars1,  800],
+      ['visit-regulars-2',  sp.visitRegulars2,  800],
+      ['music-photo-1',     sp.musicPhoto1,     1200],
+      ['music-photo-2',     sp.musicPhoto2,     1400],
+      ['music-photo-3',     sp.musicPhoto3,     1200],
+      ['music-photo-4',     sp.musicPhoto4,     800],
+      ['crew-page-hero',    sp.crewPageHero,    1600],
+      ['market-photo',      sp.marketPhoto,     800],
+      ['market-exterior',   sp.marketExterior,  800],
+    ];
+    pagePhotos.forEach(([id, obj, w]) => {
+      if (obj) {
+        const el = document.getElementById(id);
+        if (el) {
+          if (el.tagName === 'IMG') setImg(id, obj, w);
+          else setBg(id, obj, w);
+        }
+      }
+    });
+  }
+
+  // ── Gallery Photos ────────────────────────────────────────────────────────
+  if (galleryPhotosData && galleryPhotosData.length) {
+    CMS.galleryPhotos = galleryPhotosData.map(p => ({
+      id:       p._id,
+      photo:    sanityImageUrl(p.photo, 1200),
+      caption:  p.caption  || '',
+      category: p.category || 'food',
+      featured: p.featured || false,
+    })).filter(p => p.photo);
   }
 
   // ── Page Visibility ───────────────────────────────────────────────────────
@@ -375,6 +488,7 @@ async function loadCMSFromSanity() {
       specialMenus: 'special-menus.html',
       freshCatch: 'fresh-catch.html',
       liveMusic: 'live-music.html',
+      gallery: 'gallery.html',
       shopTheShack: 'shop-the-shack.html',
       visit: 'visit.html',
       faq: 'faq.html',

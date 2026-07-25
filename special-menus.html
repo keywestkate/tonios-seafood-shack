@@ -99,7 +99,7 @@
 
     /* ── Section shared ── */
     .sm-section {
-      padding: clamp(3rem,7vw,5.5rem) clamp(1.5rem,5vw,3rem);
+      padding: clamp(2.5rem,5.5vw,4rem) clamp(1.5rem,5vw,3rem);
     }
     .sm-section-wrap {
       max-width: 1100px;
@@ -116,7 +116,7 @@
     }
     .sm-night-h2 {
       font-family: var(--f-display);
-      font-size: clamp(2.8rem,8vw,5.5rem);
+      font-size: clamp(2.2rem,6vw,4.4rem);
       font-weight: 900;
       text-transform: uppercase;
       letter-spacing: -.02em;
@@ -125,13 +125,13 @@
     }
     .sm-night-day {
       font-family: var(--f-hand);
-      font-size: clamp(1.1rem,2.5vw,1.4rem);
+      font-size: clamp(1rem,2vw,1.2rem);
       display: block;
       margin-bottom: 1rem;
     }
     .sm-night-intro {
       font-family: var(--f-sans);
-      font-size: clamp(1.2rem, 2vw, 1.5rem);
+      font-size: clamp(1rem, 1.6vw, 1.2rem);
       line-height: 1.7;
       max-width: 58ch;
       margin-bottom: 2.5rem;
@@ -151,7 +151,7 @@
     /* ── Sign image in header area ── */
     .sm-sign-img {
       display: block;
-      width: clamp(280px, 42%, 520px);
+      width: clamp(220px, 34%, 400px);
       height: auto;
       float: right;
       margin: 0 0 1.5rem 2.5rem;
@@ -197,26 +197,36 @@
     }
     .sm-item:nth-child(odd)  { padding-right: 2rem; }
     .sm-item:nth-child(even) { padding-left: 1.5rem; border-left: 1px solid rgba(20,36,43,.08); }
+
+    /* Photo support — shown when Sanity item has a photo */
+    .sm-menu-grid--photos { grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 1.25rem; }
+    .sm-menu-grid--photos .sm-item { border: 1px solid rgba(20,36,43,.1); border-radius: 6px; padding: 0; overflow: hidden; display: flex; flex-direction: column; }
+    .sm-item-photo { width: 100%; aspect-ratio: 4/3; overflow: hidden; }
+    .sm-item-photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .sm-menu-grid--photos .sm-item-name { font-weight: 700; padding: .75rem 1rem .25rem; }
+    .sm-menu-grid--photos .sm-item-desc { font-size: .85rem; padding: 0 1rem .75rem; opacity: .7; }
     @media (max-width: 640px) {
       .sm-item:nth-child(even) { padding-left: 0; border-left: none; }
     }
     .sm-item-name {
       font-family: var(--f-display);
-      font-size: clamp(2rem, 4vw, 2.8rem);
+      font-size: clamp(1.5rem, 3vw, 2.1rem);
       font-weight: 700;
       font-style: italic;
       letter-spacing: -.01em;
       color: var(--navy);
       line-height: 1.2;
+      display: block;
     }
     .sm-item-desc {
       font-family: var(--f-body);
-      font-size: clamp(1.4rem, 2.5vw, 1.8rem);
+      font-size: clamp(1rem, 1.8vw, 1.3rem);
       color: var(--navy);
       opacity: .65;
       grid-column: 1;
       margin-top: .2rem;
       line-height: 1.55;
+      display: block;
     }
     .sm-item-price { display: none; }
 
@@ -360,9 +370,10 @@
         </div>
       </div>
       <a href="meet-the-crew.html">Crew</a>
+      <a href="gallery.html">Gallery</a>
       <a href="shop-the-shack.html">Shop</a>
       <a href="visit.html">Visit</a>
-      <a href="tel:+13057453322" class="nav-cta">Call Tonio's</a>
+
     </div>
     <button class="burger" id="burger" aria-label="Toggle menu" aria-expanded="false" aria-controls="mob-menu">
       <span></span><span></span><span></span>
@@ -388,6 +399,7 @@
     <a href="events.html">Events</a>
   </div>
   <a href="meet-the-crew.html">Crew</a>
+  <a href="gallery.html">Gallery</a>
   <a href="shop-the-shack.html">Shop</a>
   <a href="visit.html">Visit</a>
   <div class="mob-social">
@@ -396,14 +408,255 @@
   </div>
 </div>
 
+<section class="menu-page-hero">
+  <span class="menu-page-hero-letter" aria-hidden="true">S</span>
+  <div class="menu-page-hero-inner">
+    <img src="images/mascot-small.png" alt="" aria-hidden="true" class="menu-page-hero-mascot" />
+    <div class="menu-page-hero-text">
+      <span class="menu-page-eyebrow">Tonio's Weekly Specials</span>
+      <h1 class="menu-page-title"><em>Special Nights</em></h1>
+      <p class="menu-page-sub">Some nights deserve their own menu. Monday Pasta · Tuesday Crab · Wednesday Wings · Thursday Sushi.</p>
+    </div>
+  </div>
+</section>
+
+<nav class="menu-page-nav" aria-label="Menu pages">
+  <div class="menu-page-nav-inner">
+    <a href="menu-breakfast.html" class="menu-tab">Breakfast &amp; Brunch</a>
+    <a href="menu-lunch.html" class="menu-tab">Lunch</a>
+    <a href="menu-dinner.html" class="menu-tab">Dinner</a>
+    <a href="menu-drinks.html" class="menu-tab">Drinks</a>
+    <a href="menu-happy-hour.html" class="menu-tab">Happy Hour</a>
+    <a href="special-menus.html" class="menu-tab active">Special Menus</a>
+  </div>
+</nav>
+
 <main id="main">
 
-<!-- PAGE INTRO -->
-<div class="sm-intro">
-  <span class="sm-intro-eyebrow">Tonio's Weekly Specials</span>
-  <h1 class="sm-intro-h1">TONIO'S<br>SPECIAL NIGHTS</h1>
-  <p class="sm-intro-p">Some nights deserve their own menu. Monday &amp; Thursday Sushi · Tuesday Crab Night · Wednesday Wings Night. A different reason to come back every week.</p>
-</div>
+<!-- ══════════════════════════════════════
+     PASTA NIGHT
+══════════════════════════════════════ -->
+<span class="sm-anchor" id="pasta-night" aria-hidden="true"></span>
+<section class="sm-section sm-section--pasta" aria-labelledby="pasta-heading">
+  <div class="sm-section-wrap">
+
+
+    <span class="sm-night-eyebrow">Available Mondays</span>
+    <h2 class="sm-night-h2" id="pasta-heading">PASTA NIGHT</h2>
+    <span class="sm-night-day">Every Monday at the Shack</span>
+    <p class="sm-night-intro">Every Monday Tonio's goes full Italian. Rich sauces, fresh pasta and Keys-inspired twists on the classics.</p>
+
+    <span class="sm-menu-label">Pasta Monday Menu</span>
+    <p class="sm-night-intro" style="margin-bottom:1.5rem;font-size:.9rem;opacity:.75;">Side salads available as an add-on.</p>
+
+    <div class="sm-menu-grid" id="pasta-grid">
+
+      <div class="sm-item">
+        <span class="sm-item-name">Chicken Alfredo</span>
+        <span class="sm-item-price">&nbsp;</span>
+      </div>
+
+      <div class="sm-item">
+        <span class="sm-item-name">Shrimp Alfredo</span>
+        <span class="sm-item-price">&nbsp;</span>
+      </div>
+
+      <div class="sm-item">
+        <span class="sm-item-name">Lobster Fra Diavolo</span>
+        <span class="sm-item-price">&nbsp;</span>
+      </div>
+
+      <div class="sm-item">
+        <span class="sm-item-name">Lobster Ravioli</span>
+        <span class="sm-item-price">&nbsp;</span>
+        <span class="sm-item-desc">In a blush sauce</span>
+      </div>
+
+      <div class="sm-item">
+        <span class="sm-item-name">Linguini &amp; Homemade Meatballs</span>
+        <span class="sm-item-price">&nbsp;</span>
+      </div>
+
+      <div class="sm-item">
+        <span class="sm-item-name">Linguini &amp; Sausage</span>
+        <span class="sm-item-price">&nbsp;</span>
+        <span class="sm-item-desc">In homemade marinara</span>
+      </div>
+
+      <div class="sm-item">
+        <span class="sm-item-name">Linguini Bolognese</span>
+        <span class="sm-item-price">&nbsp;</span>
+        <span class="sm-item-desc">In a homemade meat sauce</span>
+      </div>
+
+      <div class="sm-item">
+        <span class="sm-item-name">Manicotti</span>
+        <span class="sm-item-price">&nbsp;</span>
+        <span class="sm-item-desc">Stuffed with ricotta</span>
+      </div>
+
+      <div class="sm-item">
+        <span class="sm-item-name">Chicken Francaise</span>
+        <span class="sm-item-price">&nbsp;</span>
+        <span class="sm-item-desc">Egg battered chicken in lemon white wine sauce</span>
+      </div>
+
+      <div class="sm-item">
+        <span class="sm-item-name">Penne Vodka</span>
+        <span class="sm-item-price">&nbsp;</span>
+        <span class="sm-item-desc">In a homemade vodka sauce</span>
+      </div>
+
+    </div>
+
+    <p class="sm-avail-note">Menu selections may vary. Ask your server about tonight's pasta specials.</p>
+
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════
+     CRAB NIGHT
+══════════════════════════════════════ -->
+<span class="sm-anchor" id="crab-night" aria-hidden="true"></span>
+<section class="sm-section sm-section--crab" aria-labelledby="crab-heading">
+  <div class="sm-section-wrap">
+
+
+    <span class="sm-night-eyebrow">Available Tuesdays</span>
+    <h2 class="sm-night-h2" id="crab-heading">CRAB NIGHT</h2>
+    <span class="sm-night-day">Every Tuesday at the Shack</span>
+    <p class="sm-night-intro">Tuesday is all about the crab. From stone crab to snow crab, crab cakes to crab-stuffed anything — if it's crab, it's on the table Tuesday night at Tonio's.</p>
+
+    <span class="sm-menu-label">Crab Night Menu</span>
+
+    <div class="sm-menu-grid" id="crab-grid">
+
+      <div class="sm-item">
+        <span class="sm-item-name">Stone Crab Claws</span>
+        <span class="sm-item-price">Market Price</span>
+        <span class="sm-item-desc">Chilled or warm, served with mustard sauce</span>
+      </div>
+
+      <div class="sm-item">
+        <span class="sm-item-name">Snow Crab Legs</span>
+        <span class="sm-item-price">Market Price</span>
+        <span class="sm-item-desc">Steamed with drawn butter and lemon</span>
+      </div>
+
+      <div class="sm-item">
+        <span class="sm-item-name">Crab Cakes</span>
+        <span class="sm-item-price">&nbsp;</span>
+        <span class="sm-item-desc">Jumbo lump blue crab, served with remoulade</span>
+      </div>
+
+      <div class="sm-item">
+        <span class="sm-item-name">Crab-Stuffed Shrimp</span>
+        <span class="sm-item-price">&nbsp;</span>
+        <span class="sm-item-desc">Jumbo shrimp stuffed with seasoned crab meat, broiled</span>
+      </div>
+
+      <div class="sm-item">
+        <span class="sm-item-name">Crab-Stuffed Grouper</span>
+        <span class="sm-item-price">&nbsp;</span>
+        <span class="sm-item-desc">Fresh grouper fillet stuffed with blue crab and herbs</span>
+      </div>
+
+      <div class="sm-item">
+        <span class="sm-item-name">Crab &amp; Corn Chowder</span>
+        <span class="sm-item-price">&nbsp;</span>
+        <span class="sm-item-desc">Creamy Keys-style chowder with sweet corn and blue crab</span>
+      </div>
+
+      <div class="sm-item">
+        <span class="sm-item-name">Soft Shell Crab</span>
+        <span class="sm-item-price">&nbsp;</span>
+        <span class="sm-item-desc">Lightly fried, served over greens with remoulade</span>
+      </div>
+
+      <div class="sm-item">
+        <span class="sm-item-name">Crab Mac &amp; Cheese</span>
+        <span class="sm-item-price">&nbsp;</span>
+        <span class="sm-item-desc">House mac topped with lump blue crab and Old Bay breadcrumbs</span>
+      </div>
+
+    </div>
+
+    <p class="sm-avail-note">Crab availability is subject to season and daily catch. Stone crab is available mid-October through mid-May.</p>
+
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════
+     WINGS NIGHT
+══════════════════════════════════════ -->
+<span class="sm-anchor" id="wings-night" aria-hidden="true"></span>
+<section class="sm-section sm-section--wings" aria-labelledby="wings-heading">
+  <div class="sm-section-wrap">
+
+
+    <span class="sm-night-eyebrow">Available Wednesdays</span>
+    <h2 class="sm-night-h2" id="wings-heading">WINGS NIGHT</h2>
+    <span class="sm-night-day">Every Wednesday at the Shack</span>
+    <p class="sm-night-intro">Hump day calls for wings. Crispy, saucy and piled high — Wednesday nights at Tonio's are all about the wings. Pick your sauce, grab a cold beer and settle in.</p>
+
+    <span class="sm-menu-label">Wings Night Menu</span>
+
+    <div class="sm-menu-grid" id="wings-grid">
+
+      <div class="sm-item">
+        <span class="sm-item-name">Classic Buffalo</span>
+        <span class="sm-item-price">&nbsp;</span>
+        <span class="sm-item-desc">Hot sauce and butter — the original, done right</span>
+      </div>
+
+      <div class="sm-item">
+        <span class="sm-item-name">Garlic Parmesan</span>
+        <span class="sm-item-price">&nbsp;</span>
+        <span class="sm-item-desc">Roasted garlic, real parm, fresh herbs</span>
+      </div>
+
+      <div class="sm-item">
+        <span class="sm-item-name">Honey Old Bay</span>
+        <span class="sm-item-price">&nbsp;</span>
+        <span class="sm-item-desc">A Florida Keys original — sweet heat with a coastal kick</span>
+      </div>
+
+      <div class="sm-item">
+        <span class="sm-item-name">Mango Habanero</span>
+        <span class="sm-item-price">&nbsp;</span>
+        <span class="sm-item-desc">Tropical sweet and blazing hot — island style</span>
+      </div>
+
+      <div class="sm-item">
+        <span class="sm-item-name">BBQ</span>
+        <span class="sm-item-price">&nbsp;</span>
+        <span class="sm-item-desc">Slow-smoked flavor, tangy house BBQ sauce</span>
+      </div>
+
+      <div class="sm-item">
+        <span class="sm-item-name">Naked (Dry Rub)</span>
+        <span class="sm-item-price">&nbsp;</span>
+        <span class="sm-item-desc">House-seasoned, crispy fried with no sauce — Tonio's dry rub</span>
+      </div>
+
+      <div class="sm-item">
+        <span class="sm-item-name">Tenders</span>
+        <span class="sm-item-price">&nbsp;</span>
+        <span class="sm-item-desc">Hand-breaded chicken tenders, choice of dipping sauce</span>
+      </div>
+
+      <div class="sm-item">
+        <span class="sm-item-name">Loaded Wing Platter</span>
+        <span class="sm-item-price">&nbsp;</span>
+        <span class="sm-item-desc">Your choice of two sauces with celery, carrots and house ranch</span>
+      </div>
+
+    </div>
+
+    <p class="sm-avail-note">Wing sauces and specials may vary weekly. Ask your server about Wednesday's featured sauce and deals.</p>
+
+  </div>
+</section>
 
 <!-- ══════════════════════════════════════
      SUSHI NIGHT
@@ -412,19 +665,15 @@
 <section class="sm-section sm-section--sushi" aria-labelledby="sushi-heading">
   <div class="sm-section-wrap">
 
-    <div class="sm-sign-pair">
-      <img src="images/special-monday-sushi.png" alt="Monday Sushi Night at Tonio's" class="sm-sign-img" />
-      <img src="images/special-thursday-sushi.png" alt="Thursday Sushi Night at Tonio's" class="sm-sign-img" />
-    </div>
 
-    <span class="sm-night-eyebrow">Every Monday &amp; Thursday</span>
+    <span class="sm-night-eyebrow">Every Thursday</span>
     <h2 class="sm-night-h2" id="sushi-heading">SUSHI NIGHT</h2>
-    <span class="sm-night-day">Mondays &amp; Thursdays at the Shack</span>
-    <p class="sm-night-intro">Twice a week, Tonio's rolls out fresh sushi, Keys-inspired combinations and signature favorites. Whether it's a Monday pick-me-up or Thursday night out — we've got you covered.</p>
+    <span class="sm-night-day">Thursdays at the Shack</span>
+    <p class="sm-night-intro">Every Thursday, Tonio's rolls out fresh sushi, Keys-inspired combinations and signature favorites. The perfect way to finish out the week.</p>
 
     <span class="sm-menu-label">Sushi Menu</span>
 
-    <div class="sm-menu-grid">
+    <div class="sm-menu-grid" id="sushi-grid">
 
       <div class="sm-item">
         <span class="sm-item-name">California Roll</span>
@@ -511,234 +760,6 @@
   </div>
 </section>
 
-<!-- ══════════════════════════════════════
-     PASTA NIGHT
-══════════════════════════════════════ -->
-<span class="sm-anchor" id="pasta-night" aria-hidden="true"></span>
-<section class="sm-section sm-section--pasta" aria-labelledby="pasta-heading">
-  <div class="sm-section-wrap">
-
-    <img src="images/sign-pasta.png" alt="Monday Night Pasta at Tonio's" class="sm-sign-img" style="filter:brightness(.92);" />
-
-    <span class="sm-night-eyebrow">Available Mondays</span>
-    <h2 class="sm-night-h2" id="pasta-heading">PASTA NIGHT</h2>
-    <span class="sm-night-day">Every Monday at the Shack</span>
-    <p class="sm-night-intro">Every Monday Tonio's goes full Italian. Rich sauces, fresh pasta and Keys-inspired twists on the classics.</p>
-
-    <span class="sm-menu-label">Pasta Monday Menu</span>
-    <p class="sm-night-intro" style="margin-bottom:1.5rem;font-size:.9rem;opacity:.75;">Side salads available as an add-on.</p>
-
-    <div class="sm-menu-grid">
-
-      <div class="sm-item">
-        <span class="sm-item-name">Chicken Alfredo</span>
-        <span class="sm-item-price">&nbsp;</span>
-      </div>
-
-      <div class="sm-item">
-        <span class="sm-item-name">Shrimp Alfredo</span>
-        <span class="sm-item-price">&nbsp;</span>
-      </div>
-
-      <div class="sm-item">
-        <span class="sm-item-name">Lobster Fra Diavolo</span>
-        <span class="sm-item-price">&nbsp;</span>
-      </div>
-
-      <div class="sm-item">
-        <span class="sm-item-name">Lobster Ravioli</span>
-        <span class="sm-item-price">&nbsp;</span>
-        <span class="sm-item-desc">In a blush sauce</span>
-      </div>
-
-      <div class="sm-item">
-        <span class="sm-item-name">Linguini &amp; Homemade Meatballs</span>
-        <span class="sm-item-price">&nbsp;</span>
-      </div>
-
-      <div class="sm-item">
-        <span class="sm-item-name">Linguini &amp; Sausage</span>
-        <span class="sm-item-price">&nbsp;</span>
-        <span class="sm-item-desc">In homemade marinara</span>
-      </div>
-
-      <div class="sm-item">
-        <span class="sm-item-name">Linguini Bolognese</span>
-        <span class="sm-item-price">&nbsp;</span>
-        <span class="sm-item-desc">In a homemade meat sauce</span>
-      </div>
-
-      <div class="sm-item">
-        <span class="sm-item-name">Manicotti</span>
-        <span class="sm-item-price">&nbsp;</span>
-        <span class="sm-item-desc">Stuffed with ricotta</span>
-      </div>
-
-      <div class="sm-item">
-        <span class="sm-item-name">Chicken Francaise</span>
-        <span class="sm-item-price">&nbsp;</span>
-        <span class="sm-item-desc">Egg battered chicken in lemon white wine sauce</span>
-      </div>
-
-      <div class="sm-item">
-        <span class="sm-item-name">Penne Vodka</span>
-        <span class="sm-item-price">&nbsp;</span>
-        <span class="sm-item-desc">In a homemade vodka sauce</span>
-      </div>
-
-    </div>
-
-    <p class="sm-avail-note">Menu selections may vary. Ask your server about tonight's pasta specials.</p>
-
-  </div>
-</section>
-
-<!-- ══════════════════════════════════════
-     CRAB NIGHT
-══════════════════════════════════════ -->
-<span class="sm-anchor" id="crab-night" aria-hidden="true"></span>
-<section class="sm-section sm-section--crab" aria-labelledby="crab-heading">
-  <div class="sm-section-wrap">
-
-    <img src="images/special-tuesday-crab.png" alt="Tuesday Crab Night at Tonio's" class="sm-sign-img" />
-
-    <span class="sm-night-eyebrow">Available Tuesdays</span>
-    <h2 class="sm-night-h2" id="crab-heading">CRAB NIGHT</h2>
-    <span class="sm-night-day">Every Tuesday at the Shack</span>
-    <p class="sm-night-intro">Tuesday is all about the crab. From stone crab to snow crab, crab cakes to crab-stuffed anything — if it's crab, it's on the table Tuesday night at Tonio's.</p>
-
-    <span class="sm-menu-label">Crab Night Menu</span>
-
-    <div class="sm-menu-grid">
-
-      <div class="sm-item">
-        <span class="sm-item-name">Stone Crab Claws</span>
-        <span class="sm-item-price">Market Price</span>
-        <span class="sm-item-desc">Chilled or warm, served with mustard sauce</span>
-      </div>
-
-      <div class="sm-item">
-        <span class="sm-item-name">Snow Crab Legs</span>
-        <span class="sm-item-price">Market Price</span>
-        <span class="sm-item-desc">Steamed with drawn butter and lemon</span>
-      </div>
-
-      <div class="sm-item">
-        <span class="sm-item-name">Crab Cakes</span>
-        <span class="sm-item-price">&nbsp;</span>
-        <span class="sm-item-desc">Jumbo lump blue crab, served with remoulade</span>
-      </div>
-
-      <div class="sm-item">
-        <span class="sm-item-name">Crab-Stuffed Shrimp</span>
-        <span class="sm-item-price">&nbsp;</span>
-        <span class="sm-item-desc">Jumbo shrimp stuffed with seasoned crab meat, broiled</span>
-      </div>
-
-      <div class="sm-item">
-        <span class="sm-item-name">Crab-Stuffed Grouper</span>
-        <span class="sm-item-price">&nbsp;</span>
-        <span class="sm-item-desc">Fresh grouper fillet stuffed with blue crab and herbs</span>
-      </div>
-
-      <div class="sm-item">
-        <span class="sm-item-name">Crab &amp; Corn Chowder</span>
-        <span class="sm-item-price">&nbsp;</span>
-        <span class="sm-item-desc">Creamy Keys-style chowder with sweet corn and blue crab</span>
-      </div>
-
-      <div class="sm-item">
-        <span class="sm-item-name">Soft Shell Crab</span>
-        <span class="sm-item-price">&nbsp;</span>
-        <span class="sm-item-desc">Lightly fried, served over greens with remoulade</span>
-      </div>
-
-      <div class="sm-item">
-        <span class="sm-item-name">Crab Mac &amp; Cheese</span>
-        <span class="sm-item-price">&nbsp;</span>
-        <span class="sm-item-desc">House mac topped with lump blue crab and Old Bay breadcrumbs</span>
-      </div>
-
-    </div>
-
-    <p class="sm-avail-note">Crab availability is subject to season and daily catch. Stone crab is available mid-October through mid-May.</p>
-
-  </div>
-</section>
-
-<!-- ══════════════════════════════════════
-     WINGS NIGHT
-══════════════════════════════════════ -->
-<span class="sm-anchor" id="wings-night" aria-hidden="true"></span>
-<section class="sm-section sm-section--wings" aria-labelledby="wings-heading">
-  <div class="sm-section-wrap">
-
-    <img src="images/special-wednesday-wings.png" alt="Wednesday Wings Night at Tonio's" class="sm-sign-img" />
-
-    <span class="sm-night-eyebrow">Available Wednesdays</span>
-    <h2 class="sm-night-h2" id="wings-heading">WINGS NIGHT</h2>
-    <span class="sm-night-day">Every Wednesday at the Shack</span>
-    <p class="sm-night-intro">Hump day calls for wings. Crispy, saucy and piled high — Wednesday nights at Tonio's are all about the wings. Pick your sauce, grab a cold beer and settle in.</p>
-
-    <span class="sm-menu-label">Wings Night Menu</span>
-
-    <div class="sm-menu-grid">
-
-      <div class="sm-item">
-        <span class="sm-item-name">Classic Buffalo</span>
-        <span class="sm-item-price">&nbsp;</span>
-        <span class="sm-item-desc">Hot sauce and butter — the original, done right</span>
-      </div>
-
-      <div class="sm-item">
-        <span class="sm-item-name">Garlic Parmesan</span>
-        <span class="sm-item-price">&nbsp;</span>
-        <span class="sm-item-desc">Roasted garlic, real parm, fresh herbs</span>
-      </div>
-
-      <div class="sm-item">
-        <span class="sm-item-name">Honey Old Bay</span>
-        <span class="sm-item-price">&nbsp;</span>
-        <span class="sm-item-desc">A Florida Keys original — sweet heat with a coastal kick</span>
-      </div>
-
-      <div class="sm-item">
-        <span class="sm-item-name">Mango Habanero</span>
-        <span class="sm-item-price">&nbsp;</span>
-        <span class="sm-item-desc">Tropical sweet and blazing hot — island style</span>
-      </div>
-
-      <div class="sm-item">
-        <span class="sm-item-name">BBQ</span>
-        <span class="sm-item-price">&nbsp;</span>
-        <span class="sm-item-desc">Slow-smoked flavor, tangy house BBQ sauce</span>
-      </div>
-
-      <div class="sm-item">
-        <span class="sm-item-name">Naked (Dry Rub)</span>
-        <span class="sm-item-price">&nbsp;</span>
-        <span class="sm-item-desc">House-seasoned, crispy fried with no sauce — Tonio's dry rub</span>
-      </div>
-
-      <div class="sm-item">
-        <span class="sm-item-name">Tenders</span>
-        <span class="sm-item-price">&nbsp;</span>
-        <span class="sm-item-desc">Hand-breaded chicken tenders, choice of dipping sauce</span>
-      </div>
-
-      <div class="sm-item">
-        <span class="sm-item-name">Loaded Wing Platter</span>
-        <span class="sm-item-price">&nbsp;</span>
-        <span class="sm-item-desc">Your choice of two sauces with celery, carrots and house ranch</span>
-      </div>
-
-    </div>
-
-    <p class="sm-avail-note">Wing sauces and specials may vary weekly. Ask your server about Wednesday's featured sauce and deals.</p>
-
-  </div>
-</section>
-
 </main>
 
 <footer id="footer" role="contentinfo">
@@ -750,9 +771,12 @@
       </div>
       <p class="foot-tagline">A waterfront seafood shack, fish market and neighborhood tiki bar at Mile Marker 25, Summerland Key, FL.</p>
       <div class="foot-soc">
-        <a href="https://www.instagram.com/toniosseafoodtiki/" target="_blank" rel="noopener">IG</a>
-        <a href="https://www.facebook.com/ToniosTiki/" target="_blank" rel="noopener">FB</a>
-        <a href="https://www.tiktok.com/@toniostiki" target="_blank" rel="noopener">TK</a>
+        <a href="https://www.instagram.com/toniosseafoodtiki/" target="_blank" rel="noopener" aria-label="Tonio's on Instagram" class="soc-ig">
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" width="20" height="20" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5.5" ry="5.5" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="4.5" stroke="currentColor" stroke-width="1.8"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>
+        </a>
+        <a href="https://www.facebook.com/ToniosTiki/" target="_blank" rel="noopener" aria-label="Tonio's on Facebook" class="soc-fb">
+          <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" aria-hidden="true"><path d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.41c0-3.025 1.792-4.697 4.533-4.697 1.312 0 2.686.236 2.686.236v2.97h-1.513c-1.491 0-1.956.93-1.956 1.886v2.268h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/></svg>
+        </a>
       </div>
     </div>
     <nav class="foot-col" aria-label="Eat and Drink">
@@ -773,6 +797,7 @@
         <li><a href="live-music.html">Live Music</a></li>
         <li><a href="events.html">Events</a></li>
         <li><a href="meet-the-crew.html">Crew</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
         <li><a href="shop-the-shack.html">Shop</a></li>
       </ul>
     </nav>
@@ -811,6 +836,32 @@
         setTimeout(() => target.scrollIntoView({ behavior: 'smooth', block: 'start' }), 120);
       }
     }
+  });
+
+  /* Render special menu items from Sanity with photos */
+  function renderSpecialItems(items, gridId) {
+    if (!items || !items.length) return;
+    const grid = document.getElementById(gridId);
+    if (!grid) return;
+    const hasPhotos = items.some(i => i.photo);
+    if (hasPhotos) {
+      grid.classList.add('sm-menu-grid--photos');
+    }
+    grid.innerHTML = items.map(item => `
+      <div class="sm-item${item.featured ? ' sm-item--featured' : ''}">
+        ${item.photo ? `<div class="sm-item-photo"><img src="${item.photo}" alt="${item.name}" loading="lazy" /></div>` : ''}
+        <span class="sm-item-name">${item.name}</span>
+        ${item.description ? `<span class="sm-item-desc">${item.description}</span>` : ''}
+      </div>
+    `).join('');
+  }
+
+  document.addEventListener('sanityLoaded', function(e) {
+    const cms = e.detail;
+    renderSpecialItems(cms.pastaItems,    'pasta-grid');
+    renderSpecialItems(cms.crabDayItems,  'crab-grid');
+    renderSpecialItems(cms.wingsDayItems, 'wings-grid');
+    renderSpecialItems(cms.sushiRolls,    'sushi-grid');
   });
 </script>
 </body>

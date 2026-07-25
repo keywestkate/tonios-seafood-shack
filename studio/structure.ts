@@ -67,6 +67,22 @@ export const structure = (S: StructureBuilder) =>
                     .title('Pasta Dishes')
                     .defaultOrdering([{ field: 'sortOrder', direction: 'asc' }])
                 ),
+              S.listItem()
+                .title('Crab Day')
+                .schemaType('crabDayItem')
+                .child(
+                  S.documentTypeList('crabDayItem')
+                    .title('Crab Day Items')
+                    .defaultOrdering([{ field: 'sortOrder', direction: 'asc' }])
+                ),
+              S.listItem()
+                .title('Wings Day')
+                .schemaType('wingsDayItem')
+                .child(
+                  S.documentTypeList('wingsDayItem')
+                    .title('Wings Day Items')
+                    .defaultOrdering([{ field: 'sortOrder', direction: 'asc' }])
+                ),
               S.divider(),
               S.listItem()
                 .title('All Menu Categories')
@@ -225,11 +241,39 @@ export const structure = (S: StructureBuilder) =>
             .title('Website Content')
             .items([
               singleton(S, 'Homepage Content',  'homepageContent', 'homepageContent'),
+              singleton(S, '🖼️ Site Photos',    'sitePhotos',      'sitePhotos'),
               singleton(S, 'Logo & Branding',   'branding',        'branding'),
+              S.divider(),
               S.listItem()
-                .title('Photo Gallery')
-                .schemaType('galleryPhoto')
-                .child(S.documentTypeList('galleryPhoto').title('Gallery Photos')),
+                .title('📸 Photo Gallery')
+                .child(
+                  S.list()
+                    .title('Photo Gallery')
+                    .items([
+                      S.listItem()
+                        .title('All Photos')
+                        .schemaType('galleryPhoto')
+                        .child(S.documentTypeList('galleryPhoto').title('All Photos').defaultOrdering([{ field: 'sortOrder', direction: 'asc' }])),
+                      S.listItem()
+                        .title('🍽️ Food & Drinks')
+                        .child(S.documentList().title('Food & Drinks').schemaType('galleryPhoto').filter('_type == "galleryPhoto" && category == "food"').defaultOrdering([{ field: 'sortOrder', direction: 'asc' }])),
+                      S.listItem()
+                        .title('🏠 The Shack')
+                        .child(S.documentList().title('The Shack').schemaType('galleryPhoto').filter('_type == "galleryPhoto" && category == "shack"').defaultOrdering([{ field: 'sortOrder', direction: 'asc' }])),
+                      S.listItem()
+                        .title('🎸 Live Music')
+                        .child(S.documentList().title('Live Music').schemaType('galleryPhoto').filter('_type == "galleryPhoto" && category == "music"').defaultOrdering([{ field: 'sortOrder', direction: 'asc' }])),
+                      S.listItem()
+                        .title('👥 People & Crew')
+                        .child(S.documentList().title('People & Crew').schemaType('galleryPhoto').filter('_type == "galleryPhoto" && category == "people"').defaultOrdering([{ field: 'sortOrder', direction: 'asc' }])),
+                      S.listItem()
+                        .title('🎉 Events')
+                        .child(S.documentList().title('Events').schemaType('galleryPhoto').filter('_type == "galleryPhoto" && category == "events"').defaultOrdering([{ field: 'sortOrder', direction: 'asc' }])),
+                      S.listItem()
+                        .title('⭐ Featured')
+                        .child(S.documentList().title('Featured Photos').schemaType('galleryPhoto').filter('_type == "galleryPhoto" && featured == true').defaultOrdering([{ field: 'sortOrder', direction: 'asc' }])),
+                    ])
+                ),
             ])
         ),
 
@@ -242,6 +286,8 @@ export const structure = (S: StructureBuilder) =>
           S.list()
             .title('Settings')
             .items([
+              singleton(S, '🔛 Page Visibility (On / Off)', 'pageVisibility', 'pageVisibility'),
+              S.divider(),
               singleton(S, 'Announcements & Happy Hour', 'siteSettings', 'siteSettings'),
               singleton(S, 'Hours & Location',           'siteSettings', 'siteSettings'),
             ])

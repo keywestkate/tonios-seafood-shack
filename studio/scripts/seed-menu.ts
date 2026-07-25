@@ -412,6 +412,49 @@ const pastaItems: PastaItem[] = [
   { _id: 'pasta-penne-vodka',        sortOrder: 100, name: 'Penne Vodka',                 description: 'In a homemade vodka sauce' },
 ]
 
+// ─── CRAB DAY ITEMS — Crab Night (Tuesdays) ──────────────────────────────────
+// Source: special-menus.html — Crab Night section
+
+type CrabDayItem = {
+  _id: string
+  sortOrder: number
+  name: string
+  description?: string
+  price?: string
+}
+
+const crabDayItems: CrabDayItem[] = [
+  { _id: 'crab-stone-claws',        sortOrder: 10,  name: 'Stone Crab Claws',        price: 'Market Price', description: 'Chilled or warm, served with mustard sauce' },
+  { _id: 'crab-snow-legs',          sortOrder: 20,  name: 'Snow Crab Legs',          price: 'Market Price', description: 'Steamed with drawn butter and lemon' },
+  { _id: 'crab-cakes',              sortOrder: 30,  name: 'Crab Cakes',              description: 'Jumbo lump blue crab, served with remoulade' },
+  { _id: 'crab-stuffed-shrimp',     sortOrder: 40,  name: 'Crab-Stuffed Shrimp',     description: 'Jumbo shrimp stuffed with seasoned crab meat, broiled' },
+  { _id: 'crab-stuffed-grouper',    sortOrder: 50,  name: 'Crab-Stuffed Grouper',    description: 'Fresh grouper fillet stuffed with blue crab and herbs' },
+  { _id: 'crab-corn-chowder',       sortOrder: 60,  name: 'Crab & Corn Chowder',     description: 'Creamy Keys-style chowder with sweet corn and blue crab' },
+  { _id: 'crab-soft-shell',         sortOrder: 70,  name: 'Soft Shell Crab',         description: 'Lightly fried, served over greens with remoulade' },
+  { _id: 'crab-mac-cheese',         sortOrder: 80,  name: 'Crab Mac & Cheese',       description: 'House mac topped with lump blue crab and Old Bay breadcrumbs' },
+]
+
+// ─── WINGS DAY ITEMS — Wings Night (Wednesdays) ───────────────────────────────
+// Source: special-menus.html — Wings Night section
+
+type WingsDayItem = {
+  _id: string
+  sortOrder: number
+  name: string
+  description?: string
+}
+
+const wingsDayItems: WingsDayItem[] = [
+  { _id: 'wings-classic-buffalo',   sortOrder: 10,  name: 'Classic Buffalo',         description: 'Hot sauce and butter — the original, done right' },
+  { _id: 'wings-garlic-parm',       sortOrder: 20,  name: 'Garlic Parmesan',         description: 'Roasted garlic, real parm, fresh herbs' },
+  { _id: 'wings-honey-old-bay',     sortOrder: 30,  name: 'Honey Old Bay',           description: 'A Florida Keys original — sweet heat with a coastal kick' },
+  { _id: 'wings-mango-habanero',    sortOrder: 40,  name: 'Mango Habanero',          description: 'Tropical sweet and blazing hot — island style' },
+  { _id: 'wings-bbq',               sortOrder: 50,  name: 'BBQ',                     description: 'Slow-smoked flavor, tangy house BBQ sauce' },
+  { _id: 'wings-naked-dry-rub',     sortOrder: 60,  name: 'Naked (Dry Rub)',         description: 'House-seasoned, crispy fried with no sauce — Tonio\'s dry rub' },
+  { _id: 'wings-tenders',           sortOrder: 70,  name: 'Tenders',                 description: 'Hand-breaded chicken tenders, choice of dipping sauce' },
+  { _id: 'wings-loaded-platter',    sortOrder: 80,  name: 'Loaded Wing Platter',     description: 'Your choice of two sauces with celery, carrots and house ranch' },
+]
+
 // ─── HELPERS ─────────────────────────────────────────────────────────────────
 
 async function createIfMissing(doc: Record<string, unknown>): Promise<{ created: boolean }> {
@@ -506,12 +549,45 @@ async function seed() {
     created ? pastaC++ : pastaS++
   }
 
+  let crabC = 0, crabS = 0
+  console.log('\n── Crab Day Items ──────────────────────────────────────────')
+  for (const item of crabDayItems) {
+    const doc: Record<string, unknown> = {
+      _id: item._id,
+      _type: 'crabDayItem',
+      name: item.name,
+      sortOrder: item.sortOrder,
+      featured: false,
+    }
+    if (item.description) doc.description = item.description
+    if (item.price)       doc.price = item.price
+    const { created } = await safeCreate(doc)
+    created ? crabC++ : crabS++
+  }
+
+  let wingsC = 0, wingsS = 0
+  console.log('\n── Wings Day Items ─────────────────────────────────────────')
+  for (const item of wingsDayItems) {
+    const doc: Record<string, unknown> = {
+      _id: item._id,
+      _type: 'wingsDayItem',
+      name: item.name,
+      sortOrder: item.sortOrder,
+      featured: false,
+    }
+    if (item.description) doc.description = item.description
+    const { created } = await safeCreate(doc)
+    created ? wingsC++ : wingsS++
+  }
+
   console.log('\n── Summary ─────────────────────────────────────────────────')
   console.log(`Categories :  ${catC} created, ${catS} skipped`)
   console.log(`Menu Items :  ${itemC} created, ${itemS} skipped`)
   console.log(`Sushi Rolls:  ${sushiC} created, ${sushiS} skipped`)
   console.log(`Pasta Items:  ${pastaC} created, ${pastaS} skipped`)
-  console.log(`Total docs :  ${catC + itemC + sushiC + pastaC} created`)
+  console.log(`Crab Day   :  ${crabC} created, ${crabS} skipped`)
+  console.log(`Wings Day  :  ${wingsC} created, ${wingsS} skipped`)
+  console.log(`Total docs :  ${catC + itemC + sushiC + pastaC + crabC + wingsC} created`)
   console.log('\n✅  Seed complete.\n')
 }
 

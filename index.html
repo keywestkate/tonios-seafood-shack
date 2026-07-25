@@ -79,7 +79,7 @@
     "telephone":"+13057453322",
     "servesCuisine":["Seafood","American","Florida Keys"],
     "priceRange":"$$",
-    "sameAs":["https://www.facebook.com/ToniosTiki/","https://www.instagram.com/toniosseafoodtiki/","https://www.tiktok.com/@toniostiki"],
+    "sameAs":["https://www.facebook.com/ToniosTiki/","https://www.instagram.com/toniosseafoodtiki/"],
     "hasMenu":"https://www.toniostiki.com/menu-lunch.html"
   }
   </script>
@@ -119,9 +119,10 @@
         </div>
       </div>
       <a href="meet-the-crew.html">Crew</a>
+      <a href="gallery.html">Gallery</a>
       <a href="shop-the-shack.html">Shop</a>
       <a href="visit.html">Visit</a>
-      <a href="tel:+13057453322" class="nav-cta">Call Tonio's</a>
+
     </div>
     <button class="burger" id="burger" aria-label="Toggle menu" aria-expanded="false" aria-controls="mob-menu">
       <span></span><span></span><span></span>
@@ -148,6 +149,7 @@
     <a href="events.html">Events</a>
   </div>
   <a href="meet-the-crew.html">Crew</a>
+  <a href="gallery.html">Gallery</a>
   <a href="shop-the-shack.html">Shop</a>
   <a href="visit.html">Visit</a>
   <div class="mob-social">
@@ -165,20 +167,14 @@
 <section id="hero" aria-labelledby="hero-heading">
   <div class="hero-left">
     <div class="hero-content">
-      <span class="hero-stamp">Fresh Catch Daily · Mile Marker 25</span>
+      <span class="hero-stamp" id="hero-stamp">Fresh Catch Daily · Mile Marker 25</span>
       <h1 class="hero-h1" id="hero-heading">
-        Seafood.
-        <span class="line-coral">Cold Drinks.</span>
-        <span class="line-aqua">Good Trouble.</span>
+        Come Hang With Your<span class="line-coral"> Favorite People</span>
       </h1>
-      <p class="hero-sub">Fresh seafood, live music and local flavor at Mile Marker 25, Summerland Key, Florida.</p>
-      <div class="hero-btns">
-        <a href="#today" class="btn btn-primary">See Today's Specials</a>
-        <a href="fresh-catch.html" class="btn btn-ghost">Today's Fresh Catch</a>
-      </div>
+      <p class="hero-sub" id="hero-sub">Fresh seafood, cold drinks, live music, and the kind of good times that turn friends into family right here in the Lower Florida Keys at Mile Marker 25.</p>
     </div>
   </div>
-  <div class="hero-right" role="img" aria-label="Tonio's Seafood Shack — blue building with bamboo sign, palm trees and tiki bar at Summerland Key">
+  <div class="hero-right" id="hero-bg-photo" role="img" aria-label="Tonio's Seafood Shack — blue building with bamboo sign, palm trees and tiki bar at Summerland Key">
     <div class="hero-right-blend"></div>
   </div>
 </section>
@@ -247,7 +243,7 @@
   <!-- Section header -->
   <div class="ds-header">
     <span class="ds-eyebrow" aria-hidden="true">✦ &nbsp;From the Shack Kitchen&nbsp; ✦</span>
-    <h2 class="ds-h2 reveal" id="ds-heading">Daily Specials</h2>
+    <h2 class="ds-h2 reveal" id="ds-heading">What's Cooking This Week</h2>
     <p class="ds-subhead reveal reveal-d1">Fresh Today. Gone Tomorrow.</p>
     <!-- Nautical rope divider -->
     <div class="ds-rope" aria-hidden="true">
@@ -270,68 +266,10 @@
 </section>
 
 <!-- ══════════════════════════════════════
-     3. INTRODUCTION
-══════════════════════════════════════ -->
-<section id="intro" aria-labelledby="intro-heading">
-  <div class="intro-grid">
-    <div class="intro-photo" role="img" aria-label="Tonio's Seafood Shack exterior on the waterfront at Mile Marker 25"></div>
-    <div class="intro-copy">
-      <span class="hand-label">Welcome</span>
-      <h2 class="intro-h2 reveal" id="intro-heading">THE SHACK AT<br>MILE MARKER 25</h2>
-      <p class="reveal reveal-d1">Fresh local seafood, cold drinks, live music and a working fish market—all in one waterfront neighborhood hangout. Come by boat, come by car or follow the sound of the music.</p>
-      <a href="visit.html" class="btn btn-dark reveal reveal-d2">Find the Shack</a>
-      <img src="images/mascot-small.png" alt="" aria-hidden="true" class="mascot mascot--sm" style="margin-top:1.5rem;" />
-    </div>
-  </div>
-</section>
-
-<!-- ══════════════════════════════════════
-     4. MENUS TEASER
-══════════════════════════════════════ -->
-<section id="menus-teaser" aria-labelledby="menus-heading">
-  <div class="menus-teaser-photo" role="img" aria-label="Fresh seafood platter and cold beer at Tonio's"></div>
-  <div class="menus-teaser-copy">
-    <span class="hand-label">On the Menu</span>
-    <h2 class="menus-teaser-h2 reveal" id="menus-heading">COME HUNGRY.<br>STAY FOR ANOTHER ROUND.</h2>
-    <nav class="menus-teaser-links reveal reveal-d1" aria-label="Menu pages">
-      <a href="menu-breakfast.html">Breakfast &amp; Brunch <span aria-hidden="true">→</span></a>
-      <a href="menu-lunch.html">Lunch <span aria-hidden="true">→</span></a>
-      <a href="menu-dinner.html">Dinner <span aria-hidden="true">→</span></a>
-      <a href="menu-drinks.html">Drinks <span aria-hidden="true">→</span></a>
-      <a href="menu-happy-hour.html">Happy Hour <span aria-hidden="true">→</span></a>
-      <a href="special-menus.html">Special Menus <span aria-hidden="true">→</span></a>
-    </nav>
-  </div>
-
-</section>
-
-<!-- ══════════════════════════════════════
-     5. FRESH CATCH
-══════════════════════════════════════ -->
-<section id="catch-teaser" aria-labelledby="catch-teaser-heading">
-  <div class="catch-teaser-inner">
-    <div class="catch-teaser-copy">
-      <span class="hand-label">Fresh Catch · Summerland Key</span>
-      <h2 class="catch-teaser-h2 reveal" id="catch-teaser-heading">WHAT CAME<br>OFF THE BOAT?</h2>
-      <p class="catch-teaser-cook reveal reveal-d1">WE COOK<br>YOUR CATCH!</p>
-      <p class="catch-teaser-p reveal reveal-d1">Fresh off your boat? Bring your catch to Tonio's and let the Shack kitchen take it from there. Ask us about preparation options, availability and pricing.</p>
-      <div class="catch-teaser-actions reveal reveal-d2">
-        <a href="fresh-catch.html" class="btn btn-primary">See Today's Fresh Catch</a>
-        <a href="tel:+13057453322" class="catch-teaser-ask">Ask About Cook Your Catch</a>
-      </div>
-    </div>
-    <div class="catch-teaser-photo-wrap">
-      <img src="images/cook-your-catch-tonies.png" alt="Fresh-caught fish beautifully plated at Tonio's Seafood Shack" class="catch-teaser-img" width="1448" height="1086" loading="lazy" />
-      <div class="catch-teaser-photo-scrim"></div>
-      <span class="catch-teaser-badge" aria-hidden="true">FRESH<br>OFF<br>THE<br>BOAT</span>
-    </div>
-  </div>
-</section>
-
-<!-- ══════════════════════════════════════
-     6. WEEKLY SPECIALS
+     4. WEEKLY SPECIALS
 ══════════════════════════════════════ -->
 <section id="specials" aria-labelledby="specials-heading">
+  <div class="specials-box">
   <div class="specials-intro">
     <span class="hand-label">Weekly Specials</span>
     <h2 class="specials-h2 reveal" id="specials-heading">FROM THE SHACK KITCHEN</h2>
@@ -356,38 +294,48 @@
   <div class="specials-footer">
     <a href="menu-lunch.html" class="btn btn-ghost-dark">See the Menus</a>
   </div>
+  </div><!-- /.specials-box -->
 </section>
 
 <!-- ══════════════════════════════════════
-     7. SHOP THE SHACK
+     5. MENUS TEASER
 ══════════════════════════════════════ -->
-<section id="shop-teaser" aria-labelledby="crew-heading">
-  <div class="crew-frame">
-    <img src="images/gallery-people-1.jpg" alt="The Tonio's crew at the Shack" class="crew-frame-img" width="1200" height="800" loading="lazy" />
-    <div class="crew-frame-scrim"></div>
-    <div class="crew-frame-content">
-      <span class="crew-frame-eyebrow reveal">The People Behind the Shack</span>
-      <h2 class="crew-frame-h2 reveal" id="crew-heading">MEET THE<br>CREW</h2>
-      <p class="crew-frame-p reveal reveal-d1">Tonio's is more than seafood and cold drinks—it's the people, personalities, and history behind the Shack.</p>
-      <a href="meet-the-crew.html" class="btn btn-primary reveal reveal-d2">Crew</a>
-    </div>
+<section id="menus-teaser" aria-labelledby="menus-heading">
+  <div class="menus-teaser-photo" id="menus-bg-photo" role="img" aria-label="Fresh seafood platter and cold beer at Tonio's"></div>
+  <div class="menus-teaser-copy">
+    <span class="hand-label">On the Menu</span>
+    <h2 class="menus-teaser-h2 reveal" id="menus-heading">COME HUNGRY.<br>STAY FOR ANOTHER ROUND.</h2>
+    <nav class="menus-teaser-links reveal reveal-d1" aria-label="Menu pages">
+      <a href="menu-breakfast.html">Breakfast &amp; Brunch <span aria-hidden="true">→</span></a>
+      <a href="menu-lunch.html">Lunch <span aria-hidden="true">→</span></a>
+      <a href="menu-dinner.html">Dinner <span aria-hidden="true">→</span></a>
+      <a href="menu-drinks.html">Drinks <span aria-hidden="true">→</span></a>
+      <a href="menu-happy-hour.html">Happy Hour <span aria-hidden="true">→</span></a>
+      <a href="special-menus.html">Special Menus <span aria-hidden="true">→</span></a>
+    </nav>
   </div>
+
 </section>
 
 <!-- ══════════════════════════════════════
-     8. VISIT
+     5. FRESH CATCH
 ══════════════════════════════════════ -->
-<section id="visit" aria-labelledby="visit-heading">
-  <div class="visit-compact">
-    <div>
-      <h2 class="visit-compact-h2 reveal" id="visit-heading">TONIO'S SEAFOOD SHACK<br>&amp; TIKI BAR</h2>
-      <p class="visit-compact-addr reveal reveal-d1">Mile Marker 25 · Summerland Key, Florida</p>
-      <p class="visit-compact-hours reveal reveal-d1" id="visit-compact-hours">Today's Hours: Loading…</p>
+<section id="catch-teaser" aria-labelledby="catch-teaser-heading">
+  <div class="catch-teaser-inner">
+    <div class="catch-teaser-copy">
+      <span class="hand-label">Fresh Catch · Summerland Key</span>
+      <h2 class="catch-teaser-h2 reveal" id="catch-teaser-heading">WHAT CAME<br>OFF THE BOAT?</h2>
+      <p class="catch-teaser-cook reveal reveal-d1" id="catch-cook-label">WE COOK<br>YOUR CATCH!</p>
+      <p class="catch-teaser-p reveal reveal-d1" id="catch-body">Fresh off your boat? Bring your catch to Tonio's and let the Shack kitchen take it from there. Ask us about preparation options, availability and pricing.</p>
+      <div class="catch-teaser-actions reveal reveal-d2">
+        <a href="fresh-catch.html" class="btn btn-primary" id="catch-cta1">See Today's Fresh Catch</a>
+        <a href="tel:+13057453322" class="catch-teaser-ask" id="catch-cta2">Ask About Cook Your Catch</a>
+      </div>
     </div>
-    <div class="visit-compact-btns reveal reveal-d2">
-      <a href="tel:+13057453322" class="btn btn-primary">Call</a>
-      <a href="https://maps.google.com/?q=Tonio%27s+Seafood+Shack+Summerland+Key+FL" target="_blank" rel="noopener" class="btn btn-ghost-dark">Get Directions</a>
-      <a href="visit.html" class="btn btn-ghost-dark">Full Visit Info</a>
+    <div class="catch-teaser-photo-wrap">
+      <img src="images/cook-your-catch-tonies.png" alt="Fresh-caught fish beautifully plated at Tonio's Seafood Shack" id="catch-main-photo" class="catch-teaser-img" width="1448" height="1086" loading="lazy" />
+      <div class="catch-teaser-photo-scrim"></div>
+      <span class="catch-teaser-badge" aria-hidden="true">FRESH<br>OFF<br>THE<br>BOAT</span>
     </div>
   </div>
 </section>
@@ -486,9 +434,12 @@
       </div>
       <p class="foot-tagline">A waterfront seafood shack, fish market and neighborhood tiki bar at Mile Marker 25, Summerland Key, FL.</p>
       <div class="foot-soc">
-        <a href="https://www.instagram.com/toniosseafoodtiki/" target="_blank" rel="noopener">IG</a>
-        <a href="https://www.facebook.com/ToniosTiki/" target="_blank" rel="noopener">FB</a>
-        <a href="https://www.tiktok.com/@toniostiki" target="_blank" rel="noopener">TK</a>
+        <a href="https://www.instagram.com/toniosseafoodtiki/" target="_blank" rel="noopener" aria-label="Tonio's on Instagram" class="soc-ig">
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" width="20" height="20" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5.5" ry="5.5" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="4.5" stroke="currentColor" stroke-width="1.8"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>
+        </a>
+        <a href="https://www.facebook.com/ToniosTiki/" target="_blank" rel="noopener" aria-label="Tonio's on Facebook" class="soc-fb">
+          <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" aria-hidden="true"><path d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.41c0-3.025 1.792-4.697 4.533-4.697 1.312 0 2.686.236 2.686.236v2.97h-1.513c-1.491 0-1.956.93-1.956 1.886v2.268h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/></svg>
+        </a>
       </div>
     </div>
     <nav class="foot-col" aria-label="Eat and Drink">
@@ -509,6 +460,7 @@
         <li><a href="live-music.html">Live Music</a></li>
         <li><a href="events.html">Events</a></li>
         <li><a href="meet-the-crew.html">Crew</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
         <li><a href="shop-the-shack.html">Shop</a></li>
       </ul>
     </nav>

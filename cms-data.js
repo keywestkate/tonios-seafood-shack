@@ -25,7 +25,7 @@ const CMS = {
     active: true,
     messages: [
       "🐟 Today's Fresh Catch: Hogfish · Yellowtail Snapper · Local Shrimp",
-      "🍺 Happy Hour Daily 3–6 PM — $4 drafts · $6 wells · $8 house cocktails",
+      "🍺 Happy Hour Daily 3–6 PM — drafts · wells · house cocktails",
       "🎸 Live Music Tonight · 8 PM · No Cover — follow us on social for tonight's lineup",
     ]
   },
@@ -37,13 +37,13 @@ const CMS = {
     special: {
       eyebrow: "Today's Special",
       headline: "Grilled Hogfish Plate",
-      description: "Fresh-caught hogfish from the reef, grilled with garlic butter, served with black beans, yellow rice and a cold slaw. $24",
+      description: "Fresh-caught hogfish from the reef, grilled with garlic butter, served with black beans, yellow rice and a cold slaw.",
       tag: "Fresh Off the Boat"
     },
     bar: {
       eyebrow: "At the Bar",
       headline: "Cold & Trouble",
-      description: "The Keys Mule is on tap. Dark rum, fresh lime, ginger beer and a sprig of mint. Trouble never tasted this cold. $10",
+      description: "The Keys Mule is on tap. Dark rum, fresh lime, ginger beer and a sprig of mint. Trouble never tasted this cold.",
       tag: "Drink of the Day"
     },
     stage: {
@@ -61,11 +61,11 @@ const CMS = {
     days: "Monday – Friday",
     time: "3:00 PM – 6:00 PM",
     deals: [
-      { item: "Draft Beer", price: "$4" },
-      { item: "House Wells", price: "$6" },
-      { item: "House Cocktails", price: "$8" },
-      { item: "Shrimp Basket", price: "$10" },
-      { item: "Fish Tacos (2)", price: "$9" },
+      { item: "Draft Beer", price: "" },
+      { item: "House Wells", price: "" },
+      { item: "House Cocktails", price: "" },
+      { item: "Shrimp Basket", price: "" },
+      { item: "Fish Tacos (2)", price: "" },
     ]
   },
 
@@ -190,25 +190,25 @@ const CMS = {
     {
       name: "Fishing Club Badge Tee",
       description: "Heavyweight cotton with our classic patch-style mark. Faded navy.",
-      price: "$32",
+      price: "",
       tag: "Best Seller"
     },
     {
       name: "Fresh Catch Full-Back Tee",
       description: "Bold market art on a natural cotton tee. Oversized fit.",
-      price: "$38",
+      price: "",
       tag: "New"
     },
     {
       name: "Cold Beer Koozie",
       description: "Neoprene koozie with our type-stack design. Keeps it cold like us.",
-      price: "$10",
+      price: "",
       tag: ""
     },
     {
       name: "MM25 Patch Hat",
       description: "Unstructured dad hat with embroidered Mile Marker 25 mark. Tan or Navy.",
-      price: "$28",
+      price: "",
       tag: "Fan Favorite"
     },
   ],

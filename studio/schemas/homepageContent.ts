@@ -6,142 +6,175 @@ export default defineType({
   type: 'document',
   __experimental_actions: ['update', 'publish'],
   groups: [
-    { name: 'today', title: "Today's Updates" },
+    { name: 'announcement', title: '📢 Announcement Bar' },
+    { name: 'hero',         title: '🏠 Hero' },
+    { name: 'intro',        title: '🏡 Intro Section' },
+    { name: 'catchTeaser',  title: '🐟 Fresh Catch Teaser' },
+    { name: 'crew',         title: '👥 Crew Section' },
+    { name: 'seo',          title: '🔍 SEO' },
   ],
   fields: [
-    // Announcement Bar
+
+    // ── ANNOUNCEMENT BAR ─────────────────────────────────────────────────────
     defineField({
       name: 'announcementMessages',
-      title: 'Scrolling Announcement Bar Messages',
-      description: 'Each line scrolls across the top of the site',
+      title: 'Scrolling Messages',
+      description: 'Each line scrolls across the top bar. Keep them short and punchy.',
       type: 'array',
       of: [{ type: 'string' }],
+      group: 'announcement',
     }),
 
-    // Hero
+    // ── HERO ─────────────────────────────────────────────────────────────────
+    defineField({
+      name: 'heroStamp',
+      title: 'Stamp Text',
+      description: 'Small label above the headline — e.g. "Fresh Catch Daily · Mile Marker 25"',
+      type: 'string',
+      group: 'hero',
+    }),
     defineField({
       name: 'heroHeadline',
-      title: 'Hero Headline',
+      title: 'Headline',
+      description: 'Main hero headline (currently: Seafood. Cold Drinks. Good Trouble.)',
       type: 'string',
+      group: 'hero',
     }),
     defineField({
       name: 'heroSubheadline',
-      title: 'Hero Subheadline',
+      title: 'Subheadline',
+      description: 'Paragraph below the headline',
       type: 'text',
       rows: 2,
+      group: 'hero',
+    }),
+    defineField({
+      name: 'heroCta1Label',
+      title: 'Button 1 — Label',
+      type: 'string',
+      group: 'hero',
+    }),
+    defineField({
+      name: 'heroCta1Url',
+      title: 'Button 1 — Link',
+      type: 'string',
+      group: 'hero',
+    }),
+    defineField({
+      name: 'heroCta2Label',
+      title: 'Button 2 — Label',
+      type: 'string',
+      group: 'hero',
+    }),
+    defineField({
+      name: 'heroCta2Url',
+      title: 'Button 2 — Link',
+      type: 'string',
+      group: 'hero',
     }),
 
-    // Today — Special
+    // ── INTRO SECTION ────────────────────────────────────────────────────────
     defineField({
-      name: 'todaySpecialEyebrow',
-      title: "Today's Special — Eyebrow Label",
+      name: 'introHeadline',
+      title: 'Headline',
+      description: 'Currently: "THE SHACK AT MILE MARKER 25"',
       type: 'string',
-      group: 'today',
+      group: 'intro',
     }),
     defineField({
-      name: 'todaySpecialHeadline',
-      title: "Today's Special — Headline",
-      type: 'string',
-      group: 'today',
-    }),
-    defineField({
-      name: 'todaySpecialDescription',
-      title: "Today's Special — Description",
+      name: 'introBody',
+      title: 'Body Text',
+      description: 'The paragraph below the intro headline',
       type: 'text',
       rows: 3,
-      group: 'today',
+      group: 'intro',
     }),
     defineField({
-      name: 'todaySpecialTag',
-      title: "Today's Special — Tag",
+      name: 'introCtaLabel',
+      title: 'Button Label',
       type: 'string',
-      group: 'today',
+      group: 'intro',
+    }),
+    defineField({
+      name: 'introCtaUrl',
+      title: 'Button Link',
+      type: 'string',
+      group: 'intro',
     }),
 
-    // Today — Bar
+    // ── FRESH CATCH TEASER ───────────────────────────────────────────────────
     defineField({
-      name: 'todayBarEyebrow',
-      title: 'At the Bar — Eyebrow Label',
+      name: 'catchTeaserHeadline',
+      title: 'Headline',
+      description: 'Currently: "WHAT CAME OFF THE BOAT?"',
       type: 'string',
-      group: 'today',
+      group: 'catchTeaser',
     }),
     defineField({
-      name: 'todayBarHeadline',
-      title: 'At the Bar — Headline',
+      name: 'catchTeaserCookLabel',
+      title: '"Cook Your Catch" Label',
+      description: 'Currently: "WE COOK YOUR CATCH!"',
       type: 'string',
-      group: 'today',
+      group: 'catchTeaser',
     }),
     defineField({
-      name: 'todayBarDescription',
-      title: 'At the Bar — Description',
+      name: 'catchTeaserBody',
+      title: 'Body Text',
       type: 'text',
       rows: 3,
-      group: 'today',
+      group: 'catchTeaser',
     }),
     defineField({
-      name: 'todayBarTag',
-      title: 'At the Bar — Tag',
+      name: 'catchTeaserCta1Label',
+      title: 'Button 1 — Label',
       type: 'string',
-      group: 'today',
+      group: 'catchTeaser',
+    }),
+    defineField({
+      name: 'catchTeaserCta2Label',
+      title: 'Button 2 — Label',
+      type: 'string',
+      group: 'catchTeaser',
     }),
 
-    // Today — Stage
+    // ── CREW SECTION ─────────────────────────────────────────────────────────
     defineField({
-      name: 'todayStageEyebrow',
-      title: 'On Stage — Eyebrow Label',
+      name: 'crewEyebrow',
+      title: 'Eyebrow Text',
+      description: 'Currently: "The People Behind the Shack"',
       type: 'string',
-      group: 'today',
+      group: 'crew',
     }),
     defineField({
-      name: 'todayStageHeadline',
-      title: 'On Stage — Headline',
+      name: 'crewHeadline',
+      title: 'Headline',
+      description: 'Currently: "MEET THE CREW"',
       type: 'string',
-      group: 'today',
+      group: 'crew',
     }),
     defineField({
-      name: 'todayStageDescription',
-      title: 'On Stage — Description',
+      name: 'crewBody',
+      title: 'Body Text',
       type: 'text',
-      rows: 3,
-      group: 'today',
+      rows: 2,
+      group: 'crew',
     }),
     defineField({
-      name: 'todayStageTag',
-      title: 'On Stage — Tag',
+      name: 'crewCtaLabel',
+      title: 'Button Label',
       type: 'string',
-      group: 'today',
+      group: 'crew',
     }),
 
-    // CTAs
-    defineField({
-      name: 'ctaLabel1',
-      title: 'Button 1 Label',
-      type: 'string',
-    }),
-    defineField({
-      name: 'ctaUrl1',
-      title: 'Button 1 Link',
-      type: 'string',
-    }),
-    defineField({
-      name: 'ctaLabel2',
-      title: 'Button 2 Label',
-      type: 'string',
-    }),
-    defineField({
-      name: 'ctaUrl2',
-      title: 'Button 2 Link',
-      type: 'string',
-    }),
-
-    // SEO
+    // ── SEO ──────────────────────────────────────────────────────────────────
     defineField({
       name: 'seo',
       title: 'SEO Settings',
       type: 'object',
+      group: 'seo',
       fields: [
-        defineField({ name: 'pageTitle',       title: 'Page Title',        type: 'string' }),
-        defineField({ name: 'metaDescription', title: 'Meta Description',  type: 'text', rows: 2 }),
+        defineField({ name: 'pageTitle',       title: 'Page Title',         type: 'string' }),
+        defineField({ name: 'metaDescription', title: 'Meta Description',   type: 'text', rows: 2 }),
         defineField({ name: 'ogImage',         title: 'Social Share Image', type: 'image', options: { hotspot: true } }),
       ],
     }),
