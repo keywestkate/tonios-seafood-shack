@@ -115,14 +115,13 @@ ul { list-style: none; }
   line-height: 1;
 }
 .nav-logo-img {
-  height: 52px;
-  width: auto;
+  width: 110px;
+  height: auto;
   max-height: 52px;
   display: block;
-  border-radius: 4px;
 }
 @media (max-width: 767px) {
-  .nav-logo-img { height: 44px; max-height: 44px; }
+  .nav-logo-img { width: 85px; max-height: 44px; }
   .nav-wrap { height: 62px; }
 }
 .nav-logo-name {
@@ -2811,7 +2810,7 @@ ul { list-style: none; }
 
 /* ── Nav: ensure logo doesn't overflow at 320px ── */
 @media (max-width: 390px) {
-  .nav-logo-img { height: 40px; max-height: 40px; }
+  .nav-logo-img { width: 76px; max-height: 40px; }
 }
 
 /* ── Homepage hero: prevent text overflow at 320px ── */
