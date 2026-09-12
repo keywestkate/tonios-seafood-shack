@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Drinks Menu | Tonio's Seafood Shack · Summerland Key, FL</title>
-  <meta name="description" content="Cocktails, craft beer, wine and tiki drinks at Tonio's Seafood Shack & Tiki Bar, Mile Marker 25, Summerland Key, Florida." />
+  <title>Kids Menu | Tonio's Seafood Shack · Summerland Key, FL</title>
+  <meta name="description" content="Kids Menu at Tonio's Seafood Shack — pasta, fried shrimp, grilled cheese and chicken tenders at Mile Marker 25.5, Summerland Key." />
   <link rel="icon" type="image/x-icon" href="images/favicon.ico" />
   <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png" />
   <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png" />
@@ -19,15 +19,15 @@
     "@graph": [
       {
         "@type": "Menu",
-        "@id": "https://www.toniostiki.com/menu-drinks.html",
-        "url": "https://www.toniostiki.com/menu-drinks.html",
-        "name": "Drinks Menu | Tonio's Seafood Shack",
-        "description": "Cocktails, craft beer, wine and tiki drinks at Tonio's Seafood Shack & Tiki Bar, Mile Marker 25, Summerland Key, Florida.",
+        "@id": "https://www.toniostiki.com/menu-kids.html",
+        "url": "https://www.toniostiki.com/menu-kids.html",
+        "name": "Kids Menu | Tonio's Seafood Shack",
+        "description": "Kids Menu at Tonio's Seafood Shack — pasta, fried shrimp, grilled cheese and chicken tenders at Mile Marker 25.5, Summerland Key.",
         "inLanguage": "en",
         "isPartOf": { "@id": "https://www.toniostiki.com/#restaurant" }
       },
       {
-        "@type": ["Restaurant", "BarOrPub"],
+        "@type": ["Restaurant", "FoodEstablishment"],
         "@id": "https://www.toniostiki.com/#restaurant",
         "name": "Tonio's Seafood Shack & Tiki Bar",
         "url": "https://www.toniostiki.com",
@@ -35,13 +35,14 @@
         "servesCuisine": ["Seafood", "Florida Keys", "American"],
         "address": {
           "@type": "PostalAddress",
-          "streetAddress": "Mile Marker 25, US-1",
+          "streetAddress": "Mile Marker 25.5, US-1",
           "addressLocality": "Summerland Key",
           "addressRegion": "FL",
           "postalCode": "33042",
           "addressCountry": "US"
         },
-        "priceRange": "$$"
+        "priceRange": "$$",
+        "hasMenu": "https://www.toniostiki.com/menu-kids.html"
       }
     ]
   }
@@ -60,14 +61,14 @@
     <div class="nav-links">
       <a href="/">Home</a>
       <div class="has-drop">
-        <a href="menu-lunch.html">Menus ▾</a>
+        <a href="menu-lunch.html" aria-current="page">Menus ▾</a>
         <div class="nav-drop">
           <a href="menu-breakfast.html">Breakfast &amp; Brunch</a>
           <a href="menu-lunch.html">Lunch</a>
           <a href="menu-dinner.html">Dinner</a>
-          <a href="menu-drinks.html" aria-current="page">Drinks</a>
+          <a href="menu-drinks.html">Drinks</a>
           <a href="menu-happy-hour.html">Happy Hour</a>
-          <a href="menu-kids.html">Kids Menu</a>
+          <a href="menu-kids.html" aria-current="page">Kids Menu</a>
           <a href="special-menus.html">Special Menus</a>
         </div>
       </div>
@@ -117,13 +118,14 @@
   </div>
 </div>
 
+<!-- HERO -->
 <section class="menu-page-hero">
-  <span class="menu-page-hero-letter" aria-hidden="true">Dr</span>
+  <span class="menu-page-hero-letter" aria-hidden="true">K</span>
   <div class="menu-page-hero-inner">
     <div class="menu-page-hero-text">
       <span class="menu-page-eyebrow">Tonio's Menu</span>
-      <h1 class="menu-page-title"><em>Drinks</em></h1>
-      <p class="menu-page-sub">Cold, stiff and unforgettable. That's the standard.</p>
+      <h1 class="menu-page-title"><em>Kids Menu</em></h1>
+      <p class="menu-page-sub">Easy favorites for the little ones in your crew.</p>
     </div>
   </div>
 </section>
@@ -133,121 +135,52 @@
     <a href="menu-breakfast.html" class="menu-tab">Breakfast &amp; Brunch</a>
     <a href="menu-lunch.html" class="menu-tab">Lunch</a>
     <a href="menu-dinner.html" class="menu-tab">Dinner</a>
-    <a href="menu-drinks.html" class="menu-tab active">Drinks</a>
+    <a href="menu-drinks.html" class="menu-tab">Drinks</a>
     <a href="menu-happy-hour.html" class="menu-tab">Happy Hour</a>
-    <a href="menu-kids.html" class="menu-tab">Kids Menu</a>
+    <a href="menu-kids.html" class="menu-tab active">Kids Menu</a>
     <a href="special-menus.html" class="menu-tab">Special Menus</a>
   </div>
 </nav>
 
-<main class="menu-body" data-menu-page="drinks">
+<main class="menu-body" data-menu-page="kids">
 
-  <!-- SIGNATURE COCKTAILS -->
+  <!-- KIDS MENU -->
   <section class="menu-section reveal">
     <div class="menu-section-label">
-      <h2 class="menu-section-name">Signature Cocktails</h2>
-      <span class="menu-section-line" aria-hidden="true"></span>
-    </div>
-    <span class="menu-section-note">Made with house-made syrups, fresh-squeezed citrus and actual effort.</span>
-    <div class="menu-items menu-items-2col">
-      <div class="menu-item-row">
-        <div class="menu-item-info">
-          <div class="menu-item-name">The Keys Mule</div>
-          <div class="menu-item-desc">Dark rum, fresh squeezed lime, house-made ginger beer, mint. Served in a copper mug. This one has a reputation.</div>
-        </div>
-      </div>
-      <div class="menu-item-row">
-        <div class="menu-item-info">
-          <div class="menu-item-name">Summerland Rum Punch</div>
-          <div class="menu-item-desc">Light and dark rum, pineapple, orange and passion fruit juice, grenadine float, orange slice. A true Keys classic.</div>
-        </div>
-      </div>
-      <div class="menu-item-row">
-        <div class="menu-item-info">
-          <div class="menu-item-name">Coconut Old Fashioned</div>
-          <div class="menu-item-desc">Coconut-washed bourbon, toasted coconut syrup, Angostura bitters, king ice cube. Slow down. You're on an island.</div>
-        </div>
-      </div>
-      <div class="menu-item-row">
-        <div class="menu-item-info">
-          <div class="menu-item-name">MM 25 Paloma</div>
-          <div class="menu-item-desc">Tequila blanco, fresh grapefruit and lime, pink salt rim, splash of sparkling water. Light and honestly dangerous.</div>
-        </div>
-      </div>
-      <div class="menu-item-row">
-        <div class="menu-item-info">
-          <div class="menu-item-name">The Pink Shrimp</div>
-          <div class="menu-item-desc">Gin, elderflower liqueur, fresh strawberry, lime and a hibiscus salt rim. Sounds silly. Tastes great. Named for the shrimp.</div>
-        </div>
-      </div>
-      <div class="menu-item-row">
-        <div class="menu-item-info">
-          <div class="menu-item-name">Tinio's Tiki Punch (for 2)</div>
-          <div class="menu-item-desc">A full bowl: rum, passion fruit, mango, lime, ginger. Served with two straws and questionable judgment.</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- BEER -->
-  <section class="menu-section reveal">
-    <div class="menu-section-label">
-      <h2 class="menu-section-name">Beer</h2>
-      <span class="menu-section-line" aria-hidden="true"></span>
-    </div>
-    <div class="drink-category">
-      <span class="drink-cat-label">On Draft</span>
-      <div class="drinks-grid menu-items">
-        <div class="menu-item-row"><div class="menu-item-info"><div class="menu-item-name">Rotating Local IPA</div><div class="menu-item-desc">Ask your server what's on tap. We keep it Florida.</div></div></div>
-        <div class="menu-item-row"><div class="menu-item-info"><div class="menu-item-name">Yuengling Lager</div><div class="menu-item-desc">The American classic. Cold and reliable.</div></div></div>
-        <div class="menu-item-row"><div class="menu-item-info"><div class="menu-item-name">Blue Moon</div><div class="menu-item-desc">With an orange, because it's the right move.</div></div></div>
-        <div class="menu-item-row"><div class="menu-item-info"><div class="menu-item-name">Seasonal Florida Craft</div><div class="menu-item-desc">Changes with the season. Ask your server.</div></div></div>
-      </div>
-    </div>
-    <div class="drink-category">
-      <span class="drink-cat-label">Canned &amp; Bottled</span>
-      <div class="drinks-grid menu-items">
-        <div class="menu-item-row"><div class="menu-item-info"><div class="menu-item-name">Bud Light / Budweiser</div></div></div>
-        <div class="menu-item-row"><div class="menu-item-info"><div class="menu-item-name">Miller Lite</div></div></div>
-        <div class="menu-item-row"><div class="menu-item-info"><div class="menu-item-name">Modelo Especial</div></div></div>
-        <div class="menu-item-row"><div class="menu-item-info"><div class="menu-item-name">Corona Extra</div></div></div>
-        <div class="menu-item-row"><div class="menu-item-info"><div class="menu-item-name">Dos Equis Lager</div></div></div>
-        <div class="menu-item-row"><div class="menu-item-info"><div class="menu-item-name">Cigar City Jai Alai IPA</div></div></div>
-        <div class="menu-item-row"><div class="menu-item-info"><div class="menu-item-name">Truly / White Claw</div></div></div>
-        <div class="menu-item-row"><div class="menu-item-info"><div class="menu-item-name">Heineken 0.0 (N/A)</div></div></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- WINE & SPIRIT-FREE -->
-  <section class="menu-section reveal">
-    <div class="menu-section-label">
-      <h2 class="menu-section-name">Wine &amp; Spirit-Free</h2>
+      <h2 class="menu-section-name">Kids Menu</h2>
       <span class="menu-section-line" aria-hidden="true"></span>
     </div>
     <div class="menu-items menu-items-2col">
-      <div class="menu-item-row"><div class="menu-item-info"><div class="menu-item-name">House White (Pinot Grigio)</div></div></div>
-      <div class="menu-item-row"><div class="menu-item-info"><div class="menu-item-name">House Rosé</div></div></div>
-      <div class="menu-item-row"><div class="menu-item-info"><div class="menu-item-name">House Red (Malbec)</div></div></div>
-      <div class="menu-item-row"><div class="menu-item-info"><div class="menu-item-name">Sparkling Wine</div></div></div>
-      <div class="menu-item-row"><div class="menu-item-info"><div class="menu-item-name">Keys Mule — Zero Proof</div><div class="menu-item-desc">Ginger beer, fresh lime, cucumber, mint.</div></div></div>
-      <div class="menu-item-row"><div class="menu-item-info"><div class="menu-item-name">Agua Fresca</div><div class="menu-item-desc">Seasonal fruit, water, lime, honey. Ask your server.</div></div></div>
-    </div>
-  </section>
-
-  <!-- NON-ALCOHOLIC -->
-  <section class="menu-section reveal">
-    <div class="menu-section-label">
-      <h2 class="menu-section-name">Non-Alcoholic</h2>
-      <span class="menu-section-line" aria-hidden="true"></span>
-    </div>
-    <div class="menu-items menu-items-2col">
-      <div class="menu-item-row"><div class="menu-item-info"><div class="menu-item-name">Drip Coffee</div></div></div>
-      <div class="menu-item-row"><div class="menu-item-info"><div class="menu-item-name">Iced Coffee</div></div></div>
-      <div class="menu-item-row"><div class="menu-item-info"><div class="menu-item-name">Cuban Colada</div></div></div>
-      <div class="menu-item-row"><div class="menu-item-info"><div class="menu-item-name">Fresh-Squeezed Lemonade</div></div></div>
-      <div class="menu-item-row"><div class="menu-item-info"><div class="menu-item-name">Arnold Palmer</div></div></div>
-      <div class="menu-item-row"><div class="menu-item-info"><div class="menu-item-name">Soft Drinks</div><div class="menu-item-desc">Coke, Diet Coke, Sprite, ginger ale.</div></div></div>
+      <div class="menu-item-row">
+        <div class="menu-item-info">
+          <div class="menu-item-name">Pasta</div>
+          <div class="menu-item-desc">With marinara or butter</div>
+        </div>
+      </div>
+      <div class="menu-item-row">
+        <div class="menu-item-info">
+          <div class="menu-item-name">Linguine</div>
+          <div class="menu-item-desc">With marinara or butter</div>
+        </div>
+      </div>
+      <div class="menu-item-row">
+        <div class="menu-item-info">
+          <div class="menu-item-name">Fried Shrimp</div>
+          <div class="menu-item-desc">Served with French fries</div>
+        </div>
+      </div>
+      <div class="menu-item-row">
+        <div class="menu-item-info">
+          <div class="menu-item-name">Grilled Cheese</div>
+          <div class="menu-item-desc">Served with French fries</div>
+        </div>
+      </div>
+      <div class="menu-item-row">
+        <div class="menu-item-info">
+          <div class="menu-item-name">Chicken Tenders</div>
+          <div class="menu-item-desc">Served with French fries</div>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -255,11 +188,11 @@
 
 <div class="menu-cta-strip">
   <div class="menu-cta-left">
-    <h2>Happy Hour: 3–6 PM.</h2>
-    <p>$4 drafts · $6 wells · $8 house cocktails. Monday through Friday.</p>
+    <h2>Come hungry.</h2>
+    <p>Walk-ins welcome daily 11 AM – 4 PM. Call ahead for large groups.</p>
   </div>
   <div class="menu-cta-btns">
-    <a href="menu-happy-hour.html" class="btn btn-primary">See Happy Hour Menu</a>
+    <a href="index.html#visit" class="btn btn-primary">Hours &amp; Location</a>
     <a href="tel:+13057453322" class="btn btn-ghost-dark">Call Tonio's</a>
   </div>
 </div>
@@ -270,7 +203,7 @@
       <div class="foot-brand">
         <img src="images/logo-nav.png" alt="Tonio's Seafood Shack &amp; Tiki Bar" class="foot-logo" />
       </div>
-      <p class="foot-tagline">A waterfront seafood shack, fish market and neighborhood tiki bar at Mile Marker 25, Summerland Key, FL.</p>
+      <p class="foot-tagline">A waterfront seafood shack, fish market and neighborhood tiki bar at Mile Marker 25.5, Summerland Key, FL.</p>
       <div class="foot-soc">
         <a href="https://www.instagram.com/toniosseafoodtiki/" target="_blank" rel="noopener">IG</a>
         <a href="https://www.facebook.com/ToniosTiki/" target="_blank" rel="noopener">FB</a>
