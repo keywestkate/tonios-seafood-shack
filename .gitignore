@@ -5,3 +5,6 @@ studio/.sanity/
 .vercel/
 .DS_Store
 *.zip
+.env
+.env.*
+!.env.example
