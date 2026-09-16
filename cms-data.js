@@ -184,36 +184,6 @@ const CMS = {
   },
 
   // ─────────────────────────────────────────────
-  // APPAREL
-  // ─────────────────────────────────────────────
-  apparel: [
-    {
-      name: "Fishing Club Badge Tee",
-      description: "Heavyweight cotton with our classic patch-style mark. Faded navy.",
-      price: "",
-      tag: "Best Seller"
-    },
-    {
-      name: "Fresh Catch Full-Back Tee",
-      description: "Bold market art on a natural cotton tee. Oversized fit.",
-      price: "",
-      tag: "New"
-    },
-    {
-      name: "Cold Beer Koozie",
-      description: "Neoprene koozie with our type-stack design. Keeps it cold like us.",
-      price: "",
-      tag: ""
-    },
-    {
-      name: "MM25 Patch Hat",
-      description: "Unstructured dad hat with embroidered Mile Marker 25 mark. Tan or Navy.",
-      price: "",
-      tag: "Fan Favorite"
-    },
-  ],
-
-  // ─────────────────────────────────────────────
   // MENUS — headlines and descriptions
   // ─────────────────────────────────────────────
   menus: {

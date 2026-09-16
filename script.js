@@ -107,31 +107,6 @@ document.addEventListener('DOMContentLoaded', () => {
   const parkingEl = document.getElementById('visit-parking');
   if (parkingEl) parkingEl.textContent = CMS.location.parking;
 
-  /* ── Apparel ─────────────────────────────────────────── */
-  const apparelList = document.getElementById('apparel-list');
-  if (apparelList) {
-    const icons = [
-      `<svg class="a-icon" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M15 10 L5 20 L15 24 L15 50 L45 50 L45 24 L55 20 L45 10 Q38 18 30 18 Q22 18 15 10Z" stroke="currentColor" stroke-width="2" fill="none"/></svg>`,
-      `<svg class="a-icon" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M15 10 L5 20 L15 24 L15 50 L45 50 L45 24 L55 20 L45 10 Q38 18 30 18 Q22 18 15 10Z" stroke="currentColor" stroke-width="2" fill="none"/><path d="M22 18 Q30 22 38 18" stroke="currentColor" stroke-width="1.5" fill="none"/></svg>`,
-      `<svg class="a-icon" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M18 15 L42 15 L38 50 L22 50 Z" stroke="currentColor" stroke-width="2" fill="none"/><ellipse cx="30" cy="15" rx="12" ry="4" stroke="currentColor" stroke-width="2" fill="none"/><line x1="20" y1="28" x2="40" y2="28" stroke="currentColor" stroke-width="1.5"/></svg>`,
-      `<svg class="a-icon" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M10 35 Q30 15 50 35" stroke="currentColor" stroke-width="2" fill="none"/><path d="M8 38 Q30 36 52 38" stroke="currentColor" stroke-width="3" stroke-linecap="round" fill="none"/><path d="M8 38 L4 42 L56 42 L52 38" stroke="currentColor" stroke-width="1.5" fill="none"/></svg>`,
-    ];
-    apparelList.innerHTML = CMS.apparel.map((item, i) => `
-      <div class="a-item reveal${i > 0 ? ' reveal-d' + Math.min(i,4) : ''}">
-        <div class="a-left">
-          ${icons[i] || icons[0]}
-          <div>
-            ${item.tag ? `<span class="a-tag">${item.tag}</span>` : ''}
-            <div class="a-name">${item.name}</div>
-            <div class="a-desc">${item.description}</div>
-          </div>
-        </div>
-        <div class="a-price">${item.price}</div>
-        <span class="a-arrow" aria-hidden="true">→</span>
-      </div>
-    `).join('');
-  }
-
   /* ── Scroll reveal ───────────────────────────────────── */
   initReveal();
 
