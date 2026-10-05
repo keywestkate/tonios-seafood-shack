@@ -510,7 +510,7 @@ function renderDailySpecials() {
 
     const photoHtml = s.photo
       ? `<div class="ds-card-photo">
-           <img src="${s.photo}" alt="${s.title}" loading="lazy" width="600" height="340"/>
+           <img src="${s.photo}" alt="${s.title}" loading="lazy" width="600" height="340"${s.photoPosition ? ` style="object-position:${s.photoPosition}"` : ''}/>
          </div>`
       : '';
 

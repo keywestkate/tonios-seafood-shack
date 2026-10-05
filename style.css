@@ -3266,7 +3266,7 @@ ul { list-style: none; }
 /* Optional photo strip at top of card */
 .ds-card-photo {
   margin: -2.25rem -1.75rem 1.25rem;
-  height: 180px;
+  height: 260px;
   overflow: hidden;
   background: var(--navy);
 }
@@ -3274,7 +3274,7 @@ ul { list-style: none; }
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center;
+  object-position: center 40%;
   opacity: .9;
   display: block;
 }
@@ -3282,6 +3282,7 @@ ul { list-style: none; }
 /* ── "Today Only" flair badge ──────────────────────────────── */
 .ds-badge {
   position: absolute;
+  z-index: 2;
   top: -13px;
   right: 1.25rem;
   background: #F3C74F;  /* amber gold — not in CSS vars, intentional accent */

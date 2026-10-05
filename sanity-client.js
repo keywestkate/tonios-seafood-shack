@@ -188,6 +188,9 @@ async function loadCMSFromSanity() {
       buttonText:  s.buttonText || '',
       buttonLink:  s.buttonLink || '',
       photo:       sanityImageUrl(s.photo, 800),
+      photoPosition: s.photo && s.photo.hotspot
+        ? `${Math.round(s.photo.hotspot.x * 100)}% ${Math.round(s.photo.hotspot.y * 100)}%`
+        : '',
       active:      s.active !== false,
       sortOrder:   s.sortOrder || 99,
     }));
