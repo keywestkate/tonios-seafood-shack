@@ -39,7 +39,7 @@
 
 /* ── Base ──────────────────────────────────────────────────── */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-html { scroll-behavior: smooth; }
+html { scroll-behavior: smooth; overflow-x: clip; }
 body {
   font-family: var(--f-body);
   background: var(--cream);
@@ -1517,7 +1517,7 @@ ul { list-style: none; }
   bottom: 0; left: 0; right: 0;
   z-index: 97;
   display: grid;
-  grid-template-columns: repeat(4,1fr);
+  grid-template-columns: repeat(4,minmax(0,1fr));
   background: var(--dark);
   border-top: 1px solid rgba(77,174,177,.18);
   padding-bottom: env(safe-area-inset-bottom);
@@ -1538,6 +1538,7 @@ ul { list-style: none; }
   transition: color .2s;
   -webkit-tap-highlight-color: transparent;
   text-decoration: none;
+  min-width: 0;
 }
 .mbb:hover, .mbb:focus { color: var(--yellow); }
 .mbb svg { width: 20px; height: 20px; }
@@ -3239,7 +3240,7 @@ ul { list-style: none; }
   .ds-grid[data-count="2"],
   .ds-grid[data-count="3"],
   .ds-grid[data-count="4"] {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
     max-width: 100%;
   }
 }
@@ -3783,3 +3784,11 @@ ul { list-style: none; }
   border-radius: 4px;
 }
 .skip-link:focus { top: 1rem; }
+
+/* ── Honor the hidden attribute over component display rules ── */
+[hidden] { display: none !important; }
+
+/* ── Let long button labels wrap on the smallest phones ───── */
+@media (max-width: 400px) {
+  .btn { white-space: normal; text-align: center; justify-content: center; }
+}

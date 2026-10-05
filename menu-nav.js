@@ -14,26 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
     nav?.classList.toggle('scrolled', window.scrollY > 10);
   }, { passive: true });
 
-  // Hamburger
-  const burger = document.getElementById('burger');
-  const mobMenu = document.getElementById('mob-menu');
-  burger?.addEventListener('click', () => {
-    const open = mobMenu.classList.toggle('open');
-    burger.classList.toggle('open', open);
-    document.body.style.overflow = open ? 'hidden' : '';
-  });
-  mobMenu?.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
-    mobMenu.classList.remove('open');
-    burger?.classList.remove('open');
-    document.body.style.overflow = '';
-  }));
-  document.addEventListener('keydown', e => {
-    if (e.key === 'Escape' && mobMenu?.classList.contains('open')) {
-      mobMenu.classList.remove('open');
-      burger?.classList.remove('open');
-      document.body.style.overflow = '';
-    }
-  });
+  // Hamburger menu is handled by script.js (loaded on every page).
 
   // Scroll reveal
   const obs = new IntersectionObserver(entries => {

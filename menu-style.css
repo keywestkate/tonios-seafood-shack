@@ -728,7 +728,7 @@ ul { list-style: none; }
   bottom: 0; left: 0; right: 0;
   z-index: 97;
   display: grid;
-  grid-template-columns: repeat(4,1fr);
+  grid-template-columns: repeat(4,minmax(0,1fr));
   background: var(--white);
   border-top: 1px solid rgba(16,47,52,.12);
   padding-bottom: env(safe-area-inset-bottom);
@@ -750,6 +750,7 @@ ul { list-style: none; }
   transition: color .2s;
   -webkit-tap-highlight-color: transparent;
   text-decoration: none;
+  min-width: 0;
 }
 .mbb:hover { color: var(--navy); }
 .mbb svg { width: 20px; height: 20px; }
