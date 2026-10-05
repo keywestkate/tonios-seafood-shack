@@ -1,14 +1,14 @@
 import { StructureBuilder } from 'sanity/structure'
 
 /* Per-page filtered menu items view */
-function menuPageItems(S: StructureBuilder, label: string, page: string) {
+function menuPageItems(S: StructureBuilder, label: string, page: string, excludeCategory = '') {
   return S.listItem()
     .title(label)
     .child(
       S.documentList()
         .title(label)
-        .filter('_type == "menuItem" && category->menuPage == $page')
-        .params({ page })
+        .filter('_type == "menuItem" && category->menuPage == $page && category._ref != $exclude')
+        .params({ page, exclude: excludeCategory })
         .defaultOrdering([
           { field: 'sortOrder', direction: 'asc' },
           { field: 'name',      direction: 'asc' },
@@ -48,7 +48,7 @@ export const structure = (S: StructureBuilder) =>
               menuPageItems(S, 'Breakfast',  'breakfast'),
               menuPageItems(S, 'Lunch',      'lunch'),
               menuPageItems(S, 'Dinner',     'dinner'),
-              menuPageItems(S, 'Drinks',     'drinks'),
+              menuPageItems(S, 'Drinks',     'drinks', 'cat-drinks-cocktails'),
               S.listItem()
                 .title('Signature Drinks')
                 .schemaType('menuItem')
