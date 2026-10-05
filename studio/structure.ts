@@ -49,6 +49,21 @@ export const structure = (S: StructureBuilder) =>
               menuPageItems(S, 'Lunch',      'lunch'),
               menuPageItems(S, 'Dinner',     'dinner'),
               menuPageItems(S, 'Drinks',     'drinks'),
+              S.listItem()
+                .title('Signature Drinks')
+                .schemaType('menuItem')
+                .child(
+                  S.documentList()
+                    .title('Signature Drinks')
+                    .schemaType('menuItem')
+                    .filter('_type == "menuItem" && category._ref == $cat')
+                    .params({ cat: 'cat-drinks-cocktails' })
+                    .initialValueTemplates([S.initialValueTemplateItem('menuItem-signature-drink')])
+                    .defaultOrdering([
+                      { field: 'sortOrder', direction: 'asc' },
+                      { field: 'name',      direction: 'asc' },
+                    ])
+                ),
               menuPageItems(S, 'Happy Hour', 'happy-hour'),
               S.divider(),
               S.listItem()

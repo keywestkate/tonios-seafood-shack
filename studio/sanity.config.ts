@@ -24,6 +24,15 @@ export default defineConfig({
 
   schema: {
     types: schemaTypes,
+    templates: (prev) => [
+      ...prev,
+      {
+        id: 'menuItem-signature-drink',
+        title: 'Signature Drink',
+        schemaType: 'menuItem',
+        value: { category: { _type: 'reference', _ref: 'cat-drinks-cocktails' } },
+      },
+    ],
   },
 
   studio: {
