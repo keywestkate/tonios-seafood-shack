@@ -88,6 +88,7 @@ async function loadCMSFromSanity() {
     galleryPhotosData,
     sitePhotosData,
     pageVisibilityData,
+    monthlyHappeningsData,
   ] = await Promise.all([
     fetchSanityData(`*[_type == "homepageContent"][0]`),
     fetchSanityData(`*[_type == "dailySpecial" && active != false] | order(sortOrder asc) { _id, title, label, description, price, marketPrice, tag, icon, buttonText, buttonLink, photo, dayOfWeek, active, sortOrder }`),
@@ -106,6 +107,7 @@ async function loadCMSFromSanity() {
     fetchSanityData(`*[_type == "galleryPhoto" && visible != false] | order(sortOrder asc, _createdAt asc) { _id, photo, caption, category, featured, sortOrder }`),
     fetchSanityData(`*[_type == "sitePhotos"][0]`),
     fetchSanityData(`*[_type == "pageVisibility"][0]`),
+    fetchSanityData(`*[_id == "monthlyHappenings"][0]{ showSection, monthLabel, heading, buttonText, items[]{ when, title, detail, link, photo } }`),
   ]);
 
   // Make sure CMS object exists (cms-data.js should have created it already)
@@ -474,6 +476,24 @@ async function loadCMSFromSanity() {
       category: p.category || 'food',
       featured: p.featured || false,
     })).filter(p => p.photo);
+  }
+
+  // ── What's Happening This Month (homepage) ───────────────────────────────
+  if (monthlyHappeningsData) {
+    const mh = monthlyHappeningsData;
+    CMS.monthlyHappenings = {
+      showSection: mh.showSection !== false,
+      monthLabel:  mh.monthLabel || '',
+      heading:     mh.heading    || "What's Happening This Month",
+      buttonText:  mh.buttonText || 'See the Full Calendar',
+      items: (mh.items || []).slice(0, 8).map(i => ({
+        when:   i.when   || '',
+        title:  i.title  || '',
+        detail: i.detail || '',
+        link:   i.link   || '',
+        photo:  sanityImageUrl(i.photo, 600),
+      })).filter(i => i.title),
+    };
   }
 
   // ── Page Visibility ───────────────────────────────────────────────────────

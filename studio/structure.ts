@@ -124,6 +124,8 @@ export const structure = (S: StructureBuilder) =>
       S.divider(),
 
       /* ── DAILY UPDATES — top-level for quick access ────── */
+      singleton(S, "📣 What's Happening This Month", 'monthlyHappenings', 'monthlyHappenings'),
+
       S.listItem()
         .title('Daily Specials')
         .schemaType('dailySpecial')

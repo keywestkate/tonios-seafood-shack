@@ -18,10 +18,12 @@ import newsletterSignup     from './newsletterSignup'
 import newsletterSettings   from './newsletterSettings'
 import sitePhotos           from './sitePhotos'
 import pageVisibility       from './pageVisibility'
+import monthlyHappenings    from './monthlyHappenings'
 
 export const schemaTypes = [
   // Singletons
   homepageContent,
+  monthlyHappenings,
   sitePhotos,
   branding,
   siteSettings,

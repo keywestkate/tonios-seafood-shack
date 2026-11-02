@@ -63,6 +63,75 @@
       .mcal-head { font-size: .5rem; letter-spacing: .08em; padding: .45rem .1rem; }
       .mcal-day  { min-height: 38px; padding: .3rem .25rem; font-size: .75rem; }
     }
+    /* ── What's Happening This Month — homepage only ────────── */
+    #happenings {
+      background: var(--navy);
+      padding: clamp(2.75rem,6vw,4.5rem) clamp(1rem,4vw,2.5rem);
+      color: var(--cream);
+    }
+    #happenings[hidden] { display: none; }
+    .mh-header { text-align: center; max-width: var(--max); margin: 0 auto clamp(1.75rem,4vw,2.75rem); }
+    .mh-month {
+      display: block;
+      font-family: var(--f-hand);
+      font-size: clamp(1.3rem,3vw,1.8rem);
+      color: var(--aqua);
+      margin-bottom: .35rem;
+    }
+    .mh-h2 {
+      font-family: var(--f-display);
+      font-size: clamp(2.4rem,6.5vw,4.75rem);
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: -.02em;
+      line-height: .92;
+      color: var(--cream);
+    }
+    .mh-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: clamp(.9rem,2vw,1.4rem);
+      max-width: var(--max);
+      margin: 0 auto;
+    }
+    .mh-card {
+      display: flex;
+      flex-direction: column;
+      background: var(--cream);
+      color: var(--navy);
+      border-top: 4px solid var(--rust);
+      text-decoration: none;
+      transition: transform .25s var(--ease-out), box-shadow .25s var(--ease-out);
+    }
+    .mh-card:hover, .mh-card:focus-visible {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 24px rgba(0,0,0,.28);
+    }
+    .mh-card-photo { aspect-ratio: 4 / 3; overflow: hidden; }
+    .mh-card-photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .mh-card-body { padding: 1rem 1.1rem 1.15rem; display: flex; flex-direction: column; gap: .35rem; flex: 1; }
+    .mh-when {
+      font-family: var(--f-display);
+      font-size: .8rem;
+      font-weight: 800;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      color: var(--rust);
+    }
+    .mh-title {
+      font-family: var(--f-display);
+      font-size: clamp(1.25rem,2vw,1.55rem);
+      font-weight: 800;
+      text-transform: uppercase;
+      line-height: 1.05;
+    }
+    .mh-detail { font-family: var(--f-body); font-size: .88rem; line-height: 1.45; color: var(--green); }
+    .mh-footer { text-align: center; margin-top: clamp(1.75rem,4vw,2.5rem); }
+    @media (max-width: 1000px) { .mh-grid { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 520px)  {
+      .mh-grid { grid-template-columns: 1fr; }
+      .mh-card-photo { aspect-ratio: 16 / 9; }
+    }
   </style>
   <script type="application/ld+json">
   {
@@ -177,6 +246,20 @@
   </div>
   <div class="hero-right" id="hero-bg-photo" role="img" aria-label="Tonio's Seafood Shack — blue building with bamboo sign, palm trees and tiki bar at Summerland Key">
     <div class="hero-right-blend"></div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════
+     1A. WHAT'S HAPPENING THIS MONTH — rendered from Sanity
+══════════════════════════════════════ -->
+<section id="happenings" aria-labelledby="mh-heading" hidden>
+  <div class="mh-header">
+    <span class="mh-month" id="mh-month"></span>
+    <h2 class="mh-h2" id="mh-heading">What's Happening This Month</h2>
+  </div>
+  <div class="mh-grid" id="mh-grid"></div>
+  <div class="mh-footer">
+    <a href="live-music.html#music-calendar" class="btn btn-primary" id="mh-button">See the Full Calendar</a>
   </div>
 </section>
 
@@ -492,6 +575,29 @@
 <script src="cms-data.js"></script>
 <script src="sanity-client.js"></script>
 <script src="script.js"></script>
+<script>
+/* ── What's Happening This Month ──────────────────────────── */
+document.addEventListener('sanityLoaded', () => {
+  const mh = CMS.monthlyHappenings;
+  const section = document.getElementById('happenings');
+  if (!section || !mh || !mh.showSection || !mh.items.length) return;
+  const calendar = 'live-music.html#music-calendar';
+  const esc = (t) => String(t).replace(/[&<>"']/g, c => ({ '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;' }[c]));
+  document.getElementById('mh-month').textContent = mh.monthLabel;
+  document.getElementById('mh-heading').textContent = mh.heading;
+  document.getElementById('mh-button').textContent = mh.buttonText;
+  document.getElementById('mh-grid').innerHTML = mh.items.map(i => `
+    <a class="mh-card" href="${esc(i.link || calendar)}">
+      ${i.photo ? `<div class="mh-card-photo"><img src="${esc(i.photo)}" alt="${esc(i.title)}" loading="lazy"></div>` : ''}
+      <div class="mh-card-body">
+        <span class="mh-when">${esc(i.when)}</span>
+        <h3 class="mh-title">${esc(i.title)}</h3>
+        ${i.detail ? `<p class="mh-detail">${esc(i.detail)}</p>` : ''}
+      </div>
+    </a>`).join('');
+  section.hidden = false;
+});
+</script>
 <script>
 document.addEventListener('DOMContentLoaded', () => {
   // Auto-update month/year label
