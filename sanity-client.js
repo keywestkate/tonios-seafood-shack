@@ -62,6 +62,17 @@ function sanityImageUrl(imageObj, width) {
   return width ? `${baseUrl}?w=${width}&auto=format` : baseUrl;
 }
 
+/**
+ * Square-cropped CDN URL that respects the hotspot set in the Studio.
+ */
+function squarePhotoUrl(imageObj, size) {
+  const url = sanityImageUrl(imageObj, size);
+  if (!url) return null;
+  const h = imageObj.hotspot;
+  const focal = h ? `&crop=focalpoint&fp-x=${h.x.toFixed(3)}&fp-y=${h.y.toFixed(3)}` : '';
+  return `${url}&h=${size}&fit=crop${focal}`;
+}
+
 // ─────────────────────────────────────────────────────────────────────────────
 // Main loader
 // ─────────────────────────────────────────────────────────────────────────────
@@ -491,7 +502,7 @@ async function loadCMSFromSanity() {
         title:  i.title  || '',
         detail: i.detail || '',
         link:   i.link   || '',
-        photo:  sanityImageUrl(i.photo, 600),
+        photo:  squarePhotoUrl(i.photo, 600),
       })).filter(i => i.title),
     };
   }

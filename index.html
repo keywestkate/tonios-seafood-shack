@@ -107,8 +107,25 @@
       transform: translateY(-3px);
       box-shadow: 0 10px 24px rgba(0,0,0,.28);
     }
-    .mh-card-photo { aspect-ratio: 4 / 3; overflow: hidden; }
+    .mh-card-photo { aspect-ratio: 1 / 1; overflow: hidden; background: var(--cream-d); }
     .mh-card-photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .mh-card-photo--soon {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: .5rem;
+      color: var(--steel);
+      border-bottom: 1px dashed rgba(20,36,43,.18);
+    }
+    .mh-card-photo--soon svg { width: 34px; height: 34px; opacity: .7; }
+    .mh-card-photo--soon span {
+      font-family: var(--f-display);
+      font-size: .78rem;
+      font-weight: 800;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+    }
     .mh-card-body { padding: 1rem 1.1rem 1.15rem; display: flex; flex-direction: column; gap: .35rem; flex: 1; }
     .mh-when {
       font-family: var(--f-display);
@@ -129,8 +146,13 @@
     .mh-footer { text-align: center; margin-top: clamp(1.75rem,4vw,2.5rem); }
     @media (max-width: 1000px) { .mh-grid { grid-template-columns: repeat(2, 1fr); } }
     @media (max-width: 520px)  {
-      .mh-grid { grid-template-columns: 1fr; }
-      .mh-card-photo { aspect-ratio: 16 / 9; }
+      .mh-grid { gap: .7rem; }
+      .mh-card-body { padding: .7rem .75rem .85rem; gap: .25rem; }
+      .mh-when { font-size: .66rem; letter-spacing: .1em; }
+      .mh-title { font-size: 1.05rem; }
+      .mh-detail { font-size: .78rem; }
+      .mh-card-photo--soon svg { width: 26px; height: 26px; }
+      .mh-card-photo--soon span { font-size: .62rem; letter-spacing: .1em; text-align: center; }
     }
   </style>
   <script type="application/ld+json">
@@ -588,7 +610,9 @@ document.addEventListener('sanityLoaded', () => {
   document.getElementById('mh-button').textContent = mh.buttonText;
   document.getElementById('mh-grid').innerHTML = mh.items.map(i => `
     <a class="mh-card" href="${esc(i.link || calendar)}">
-      ${i.photo ? `<div class="mh-card-photo"><img src="${esc(i.photo)}" alt="${esc(i.title)}" loading="lazy"></div>` : ''}
+      ${i.photo
+        ? `<div class="mh-card-photo"><img src="${esc(i.photo)}" alt="${esc(i.title)}" loading="lazy"></div>`
+        : `<div class="mh-card-photo mh-card-photo--soon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M23 19a2 2 0 01-2 2H3a2 2 0 01-2-2V8a2 2 0 012-2h4l2-3h6l2 3h4a2 2 0 012 2z"/><circle cx="12" cy="13" r="4"/></svg><span>Photo Coming Soon</span></div>`}
       <div class="mh-card-body">
         <span class="mh-when">${esc(i.when)}</span>
         <h3 class="mh-title">${esc(i.title)}</h3>

@@ -59,9 +59,10 @@ export default defineType({
             }),
             defineField({
               name: 'photo',
-              title: 'Photo (optional)',
+              title: 'Square Photo',
               type: 'image',
               options: { hotspot: true },
+              description: 'Shows as a square above the event. Any photo works — click the crop icon to choose the focus point. Until a photo is added, the card shows "Photo Coming Soon".',
             }),
             defineField({
               name: 'link',
