@@ -108,6 +108,45 @@ export default defineType({
       description: 'If on, this event gets extra visual emphasis on the website.',
     }),
     defineField({
+      name: 'showOnHomepage',
+      title: "⭐ Show in What's Happening This Month",
+      type: 'boolean',
+      initialValue: false,
+      description: 'Turn on to feature this event on the homepage during its month. Pick up to 8 per month — for a weekly show, turn it on for just ONE date and set the card date line to e.g. "Mondays · 6:30 PM".',
+      validation: (Rule) =>
+        Rule.custom(async (value, context) => {
+          const date = (context.document as { date?: string } | undefined)?.date
+          if (!value || !date) return true
+          const start = `${date.slice(0, 7)}-01`
+          const [y, m] = date.split('-').map(Number)
+          const end = m === 12 ? `${y + 1}-01-01` : `${y}-${String(m + 1).padStart(2, '0')}-01`
+          const id = String(context.document?._id || '').replace(/^drafts\./, '')
+          const others = await context.getClient({ apiVersion: '2024-01-01' }).fetch<number>(
+            `count(*[_type == "liveEvent" && showOnHomepage == true && date >= $start && date < $end && !(_id in path("drafts.**")) && _id != $id])`,
+            { start, end, id }
+          )
+          return others >= 8
+            ? `Already 8 events featured for this month — turn one off first (see "🏠 On Homepage This Month").`
+            : true
+        }),
+    }),
+    defineField({
+      name: 'homepageWhen',
+      title: 'Homepage Card — Date Line (optional)',
+      type: 'string',
+      hidden: ({ document }) => !document?.showOnHomepage,
+      validation: (Rule) => Rule.max(40),
+      description: 'Leave blank to show the date & time automatically (e.g. "Sat Nov 14 · 7:00 PM"). For weekly shows type e.g. "Mondays · 6:30 PM".',
+    }),
+    defineField({
+      name: 'homepageTitle',
+      title: 'Homepage Card — Title (optional)',
+      type: 'string',
+      hidden: ({ document }) => !document?.showOnHomepage,
+      validation: (Rule) => Rule.max(50),
+      description: 'Leave blank to use the Event Title.',
+    }),
+    defineField({
       name: 'cancelled',
       title: 'Mark as Cancelled',
       type: 'boolean',
@@ -119,7 +158,7 @@ export default defineType({
       title: 'Event Image / Performer Photo',
       type: 'image',
       options: { hotspot: true },
-      description: 'Optional — shown in the event detail popup.',
+      description: "Shown in the event popup and on the homepage card. If left empty, the musician's photo is used.",
     }),
     defineField({
       name: 'buttonText',
@@ -161,12 +200,13 @@ export default defineType({
       media:     'photo',
       cancelled: 'cancelled',
       active:    'active',
+      home:      'showOnHomepage',
     },
-    prepare({ title, performer, date, media, cancelled, active }: {
+    prepare({ title, performer, date, media, cancelled, active, home }: {
       title: string; performer: string; date: string;
-      media: unknown; cancelled: boolean; active: boolean;
+      media: unknown; cancelled: boolean; active: boolean; home: boolean;
     }) {
-      const flag = cancelled ? '❌ ' : !active ? '👁️ ' : '';
+      const flag = (cancelled ? '❌ ' : !active ? '👁️ ' : '') + (home ? '⭐ ' : '');
       const dateStr = date ? new Date(date + 'T12:00:00').toLocaleDateString('en-US', {
         month: 'short', day: 'numeric', year: 'numeric',
       }) : '';

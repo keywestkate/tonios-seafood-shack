@@ -124,7 +124,7 @@ export const structure = (S: StructureBuilder) =>
       S.divider(),
 
       /* ── DAILY UPDATES — top-level for quick access ────── */
-      singleton(S, "📣 What's Happening This Month", 'monthlyHappenings', 'monthlyHappenings'),
+      singleton(S, "📣 What's Happening — Settings", 'monthlyHappenings', 'monthlyHappenings'),
 
       S.listItem()
         .title('Daily Specials')
@@ -175,6 +175,16 @@ export const structure = (S: StructureBuilder) =>
                 .child(
                   S.documentTypeList('liveEvent')
                     .title('All Events')
+                    .defaultOrdering([{ field: 'date', direction: 'asc' }])
+                ),
+              S.listItem()
+                .title('🏠 On Homepage This Month')
+                .child(
+                  S.documentList()
+                    .title("What's Happening This Month (max 8)")
+                    .schemaType('liveEvent')
+                    .filter(`_type == "liveEvent" && showOnHomepage == true && date >= $start`)
+                    .params({ start: new Date().toLocaleDateString('en-CA', { timeZone: 'America/New_York' }).slice(0, 7) + '-01' })
                     .defaultOrdering([{ field: 'date', direction: 'asc' }])
                 ),
               S.listItem()

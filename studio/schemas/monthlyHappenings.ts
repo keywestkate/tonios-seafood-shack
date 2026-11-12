@@ -14,10 +14,12 @@ export default defineType({
       description: 'Turn off to hide the whole section (shows right under the homepage hero).',
     }),
     defineField({
-      name: 'monthLabel',
-      title: 'Month',
+      name: 'howItWorks',
+      title: 'How this works',
       type: 'string',
-      description: 'Shown above the heading, e.g. "November 2026". Update this each month.',
+      readOnly: true,
+      initialValue: '',
+      description: 'The cards come from your events. Open Live Music & Events → Upcoming Events, open an event, and turn on "⭐ Show in What\'s Happening This Month" (up to 8 per month). The month name updates by itself on the 1st. See the list under Live Music & Events → "🏠 On Homepage This Month".',
     }),
     defineField({
       name: 'heading',
@@ -27,10 +29,10 @@ export default defineType({
     }),
     defineField({
       name: 'items',
-      title: 'Events (up to 8)',
+      title: 'Extra Cards (things that are not calendar events)',
       type: 'array',
-      description: 'Up to 8 placements, 4 per row. Drag to reorder. Every card links to the Live Music calendar unless you add a different link.',
-      validation: (Rule) => Rule.max(8).error('Maximum 8 events — remove one before adding another.'),
+      description: 'Optional — e.g. "Weekly Specials". These show AFTER your featured events and only fill empty spots (8 cards total). Real events go in Live Music & Events instead.',
+      validation: (Rule) => Rule.max(8),
       of: [
         defineArrayMember({
           type: 'object',
@@ -85,7 +87,6 @@ export default defineType({
     }),
   ],
   preview: {
-    select: { subtitle: 'monthLabel' },
-    prepare: ({ subtitle }) => ({ title: "What's Happening This Month", subtitle }),
+    prepare: () => ({ title: "What's Happening This Month" }),
   },
 })

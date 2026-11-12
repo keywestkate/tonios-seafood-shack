@@ -29,6 +29,26 @@ const SANITY_DATASET    = 'production';
  * Fetch a GROQ query from the Sanity CDN.
  * Returns the result array/object, or null on failure.
  */
+/* Current month in Key West time — drives "What's Happening This Month" */
+const MH_MONTH = (() => {
+  const today = new Date().toLocaleDateString('en-CA', { timeZone: 'America/New_York' }); // YYYY-MM-DD
+  const [y, m] = today.split('-').map(Number);
+  const pad = n => String(n).padStart(2, '0');
+  return {
+    start: `${y}-${pad(m)}-01`,
+    end:   m === 12 ? `${y + 1}-01-01` : `${y}-${pad(m + 1)}-01`,
+    label: new Date(y, m - 1, 1).toLocaleDateString('en-US', { month: 'long', year: 'numeric' }),
+  };
+})();
+
+/* "2026-11-14" + "7:00 pm" → "Sat Nov 14 · 7:00 PM" */
+function eventWhenLine(date, time) {
+  const d = new Date(date + 'T12:00:00');
+  const day = d.toLocaleDateString('en-US', { weekday: 'short', month: 'short', day: 'numeric' }).replace(',', '');
+  const t = (time || '').trim().replace(/\s*(am|pm)$/i, (_, ap) => ' ' + ap.toUpperCase());
+  return t ? `${day} · ${t}` : day;
+}
+
 async function fetchSanityData(query) {
   if (!SANITY_PROJECT_ID || SANITY_PROJECT_ID === 'YOUR_PROJECT_ID_HERE') {
     return null; // Not configured yet — silent skip
@@ -100,6 +120,7 @@ async function loadCMSFromSanity() {
     sitePhotosData,
     pageVisibilityData,
     monthlyHappeningsData,
+    homepageEventsData,
   ] = await Promise.all([
     fetchSanityData(`*[_type == "homepageContent"][0]`),
     fetchSanityData(`*[_type == "dailySpecial" && active != false] | order(sortOrder asc) { _id, title, label, description, price, marketPrice, tag, icon, buttonText, buttonLink, photo, dayOfWeek, active, sortOrder }`),
@@ -118,7 +139,8 @@ async function loadCMSFromSanity() {
     fetchSanityData(`*[_type == "galleryPhoto" && visible != false] | order(sortOrder asc, _createdAt asc) { _id, photo, caption, category, featured, sortOrder }`),
     fetchSanityData(`*[_type == "sitePhotos"][0]`),
     fetchSanityData(`*[_type == "pageVisibility"][0]`),
-    fetchSanityData(`*[_id == "monthlyHappenings"][0]{ showSection, monthLabel, heading, buttonText, items[]{ when, title, detail, link, photo } }`),
+    fetchSanityData(`*[_id == "monthlyHappenings"][0]{ showSection, heading, buttonText, items[]{ when, title, detail, link, photo } }`),
+    fetchSanityData(`*[_type == "liveEvent" && showOnHomepage == true && active != false && cancelled != true && date >= "${MH_MONTH.start}" && date < "${MH_MONTH.end}"] | order(date asc, sortOrder asc)[0...8]{ title, homepageTitle, homepageWhen, date, time, photo, "musicianPhoto": musicianRef->photo }`),
   ]);
 
   // Make sure CMS object exists (cms-data.js should have created it already)
@@ -490,20 +512,30 @@ async function loadCMSFromSanity() {
   }
 
   // ── What's Happening This Month (homepage) ───────────────────────────────
-  if (monthlyHappeningsData) {
-    const mh = monthlyHappeningsData;
+  // Cards = events toggled "Show in What's Happening" for the current month,
+  // then the optional "Extra Cards" from the settings doc, 8 max.
+  if (monthlyHappeningsData || (homepageEventsData && homepageEventsData.length)) {
+    const mh = monthlyHappeningsData || {};
+    const eventCards = (homepageEventsData || []).map(e => ({
+      when:   (e.homepageWhen || '').trim() || eventWhenLine(e.date, e.time),
+      title:  ((e.homepageTitle || '').trim() || e.title || '').replace(/\s+/g, ' ').trim(),
+      detail: '',
+      link:   '',
+      photo:  squarePhotoUrl(e.photo, 600) || squarePhotoUrl(e.musicianPhoto, 600),
+    }));
+    const extraCards = (mh.items || []).map(i => ({
+      when:   i.when   || '',
+      title:  i.title  || '',
+      detail: i.detail || '',
+      link:   i.link   || '',
+      photo:  squarePhotoUrl(i.photo, 600),
+    }));
     CMS.monthlyHappenings = {
       showSection: mh.showSection !== false,
-      monthLabel:  mh.monthLabel || '',
+      monthLabel:  MH_MONTH.label,
       heading:     mh.heading    || "What's Happening This Month",
       buttonText:  mh.buttonText || 'See the Full Calendar',
-      items: (mh.items || []).slice(0, 8).map(i => ({
-        when:   i.when   || '',
-        title:  i.title  || '',
-        detail: i.detail || '',
-        link:   i.link   || '',
-        photo:  squarePhotoUrl(i.photo, 600),
-      })).filter(i => i.title),
+      items: [...eventCards, ...extraCards].filter(i => i.title).slice(0, 8),
     };
   }
 
