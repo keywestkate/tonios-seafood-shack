@@ -140,7 +140,7 @@ async function loadCMSFromSanity() {
     fetchSanityData(`*[_type == "sitePhotos"][0]`),
     fetchSanityData(`*[_type == "pageVisibility"][0]`),
     fetchSanityData(`*[_id == "monthlyHappenings"][0]{ showSection, heading, buttonText, items[]{ when, title, detail, link, photo } }`),
-    fetchSanityData(`*[_type == "liveEvent" && showOnHomepage == true && active != false && cancelled != true && date >= "${MH_MONTH.start}" && date < "${MH_MONTH.end}"] | order(date asc, sortOrder asc)[0...8]{ title, homepageTitle, homepageWhen, date, time, photo, "musicianPhoto": musicianRef->photo }`),
+    fetchSanityData(`*[_type == "liveEvent" && showOnHomepage == true && active != false && cancelled != true && date >= "${MH_MONTH.start}" && date < "${MH_MONTH.end}"] | order(date asc, sortOrder asc)[0...8]{ title, homepageTitle, homepageWhen, date, time, photo, "musicianPhoto": musicianRef->photo, "showPhoto": coalesce(*[_type == "liveEvent" && defined(photo) && !(_id in path("drafts.**")) && defined(^.musicianRef) && musicianRef._ref == ^.musicianRef._ref] | order(date asc)[0].photo, *[_type == "liveEvent" && defined(photo) && !(_id in path("drafts.**")) && !defined(^.musicianRef) && title match ^.title] | order(date asc)[0].photo) }`),
   ]);
 
   // Make sure CMS object exists (cms-data.js should have created it already)
@@ -521,7 +521,8 @@ async function loadCMSFromSanity() {
       title:  ((e.homepageTitle || '').trim() || e.title || '').replace(/\s+/g, ' ').trim(),
       detail: '',
       link:   '',
-      photo:  squarePhotoUrl(e.photo, 600) || squarePhotoUrl(e.musicianPhoto, 600),
+      // this date's photo → same show's photo on another date → musician profile photo
+      photo:  squarePhotoUrl(e.photo, 600) || squarePhotoUrl(e.showPhoto, 600) || squarePhotoUrl(e.musicianPhoto, 600),
     }));
     const extraCards = (mh.items || []).map(i => ({
       when:   i.when   || '',
